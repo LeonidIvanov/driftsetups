@@ -1,0 +1,9 @@
+<ul>
+    {% for car in top_drift_cars %}
+        {% if car.car_model %}
+            <li><a href="{% url 'car_sub_model_detail' car.car_model.brand.slug car.car_model.slug car.slug %}">{{ car }}</a></li>
+        {% else %}
+            <li><a href="{% url 'car_model_detail' car.brand.slug car.slug %}">{{ car }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

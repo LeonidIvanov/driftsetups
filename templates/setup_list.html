@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if car %}
+        {{ car }} Drift Setups
+    {% else %}
+        TOP 32 Best Drift Car Setups
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="post-header-container">
+    {% if car %}
+    <h1>{{ car }} Drift Setups</h1>
+    {% else %}
+    <h1>Top 32 Best Drift Car Setups</h1>
+    {% endif %}
+    <div class="setup-list-container">
+        {% if setups %}
+        <ul class="setup-list">
+            {% for setup in setups %}
+                <li class="setup-list-item">
+                    <div class="setup-list-item-image-container">
+                        <a href="{% url 'setup_detail' setup.slug %}">
+                            <img width="300px" src="{{ setup.get_main_image }}" alt="{{ setup }}">
+                        </a>
+                    </div>
+
+                    <div class="setup-list-item-heading-container">
+                        <a href="{% url 'setup_detail' setup.slug %}">
+                            <h2>{{ setup }}</h2>
+                        </a>
+                        <div>
+                            <a href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
+                            by {{ setup.creator }} updated {{ setup.timestamp|date:"F Y" }}
+                        </div>
+                        <div class="setup-characteristics-section">
+                            <div class="round">
+                                {% if setup.power %}
+                                <div class="power">{{ setup.power }}hp</div>
+                                {% else %}
+                                <div class="power">----hp</div>
+                                {% endif %}
+                                <div class="char-title">Power</div>
+                            </div>
+                            <div class="round">
+                                {% if setup.torque %}
+                                <div class="torque">{{ setup.torque }}Nm</div>
+                                {% else %}
+                                <div class="torque">----Nm</div>
+                                {% endif %}
+                                <div class="char-title">Torque</div>
+                            </div>
+                            <div class="round">
+                                {% if setup.rev_limit %}
+                                <div class="rev-limit">{{ setup.rev_limit }}rpm</div>
+                                {% else %}
+                                <div class="rev-limit">----rpm</div>
+                                {% endif %}
+                                <div class="char-title">Rev Limit</div>
+                            </div>
+                            <div class="round">
+                               {% if setup.weight %}
+                                <div class="weight">{{ setup.weight }}kg</div>
+                                {% else %}
+                                <div class="weight">----kg</div>
+                                {% endif %}
+                                <div class="char-title">Weight</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setup-list-item-votes-container">
+                        <div class="setup-info-total"><span>votes:</span> {{ setup.get_votes_total }}</div>
+                        <div class="votes-bar">
+                            <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
+                        </div>
+                        <div class="setup-info-total"><span>views:</span> {{ setup.views }}</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+        {% endif %}
+    </div>
+    <div>
+        {% if setups.has_other_pages %}
+            <ul class="pagination">
+            {% if setups.has_previous %}
+                {% if setups.previous_page_number == 1 %}
+                    <li><a href="{{ base_url }}">&laquo;</a></li>
+                {% else %}
+                    <li><a href="{{ base_url }}page/{{ setups.previous_page_number }}/">&laquo;</a></li>
+                {% endif %}
+            {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+            {% endif %}
+            {% for i in setups.paginator.page_range %}
+                {% if setups.number == i %}
+                    <li class="active"><span>{{ i }}</span></li>
+                {% else %}
+                    {% if i == 1 %}
+                     <li><a href="{{ base_url }}">{{ i }}</a></li>
+                    {% else %}
+                        <li><a href="{{ base_url }}page/{{ i }}/">{{ i }}</a></li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% if setups.has_next %}
+                <li><a href="{{ base_url }}page/{{ setups.next_page_number }}/">&raquo;</a></li>
+            {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+            {% endif %}
+             </ul>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

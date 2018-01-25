@@ -1,0 +1,118 @@
+from autoslug import AutoSlugField
+
+from django.db import models
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.utils import timezone
+
+from accounts.models import User
+
+
+class Setup(models.Model):
+    name = models.CharField(max_length=200)
+    engine = models.ForeignKey('car.Engine')
+    power = models.IntegerField(default=None, blank=True, null=True)
+    torque = models.IntegerField(default=None, blank=True, null=True)
+    rev_limit = models.IntegerField(default=None, blank=True, null=True)
+    weight = models.IntegerField(default=None, blank=True, null=True)
+    description = models.TextField(default=None, blank=True, null=True)
+    creator = models.ForeignKey(User)
+    content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
+    object_id = models.PositiveIntegerField()
+    car = GenericForeignKey('content_type', 'object_id')
+    views = models.PositiveIntegerField(default=0)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
+
+    def get_main_image(self):
+        return SetupImage.objects.get(setup=self, is_main=True)
+
+    def get_additional_images(self):
+        return SetupImage.objects.filter(setup=self, is_main=False)
+
+    def get_engine_fields(self):
+        return SetupField.objects.filter(setup=self, category=0)
+
+    def get_drivetrain_fields(self):
+        return SetupField.objects.filter(setup=self, category=1)
+
+    def get_suspension_fields(self):
+        return SetupField.objects.filter(setup=self, category=2)
+
+    def get_brakes_fields(self):
+        return SetupField.objects.filter(setup=self, category=3)
+
+    def get_wheels_fields(self):
+        return SetupField.objects.filter(setup=self, category=4)
+
+    def get_exterior_fields(self):
+        return SetupField.objects.filter(setup=self, category=5)
+
+    def get_interior_fields(self):
+        return SetupField.objects.filter(setup=self, category=6)
+
+    def get_votes_total(self):
+        return SetupVote.objects.filter(setup=self).count()
+
+    def get_up_votes_total(self):
+        return SetupVote.objects.filter(setup=self, vote=1).count()
+
+    def get_votes_percentage(self):
+        votes_total = self.get_votes_total()
+        votes_up = self.get_up_votes_total()
+        if votes_total != 0 and votes_up != 0:
+            percentage = votes_up / votes_total * 100
+            return percentage
+        else:
+            return 0
+
+    def get_full_name(self):
+        return self.car.name()
+
+    def increase_views(self):
+        self.views += 1
+        self.save()
+
+    def __str__(self):
+        return self.name
+
+
+class SetupImage(models.Model):
+    image = models.ImageField(upload_to='setups/', blank=True, default=None, null=True)
+    is_main = models.BooleanField()
+    setup = models.ForeignKey(Setup)
+
+    def __str__(self):
+        return self.image.url
+
+
+class SetupField(models.Model):
+    CATEGORIES = (
+        (0, 'Engine'),
+        (1, 'Drivetrain'),
+        (2, 'Steering/Suspension'),
+        (3, 'Brakes'),
+        (4, 'Wheels'),
+        (5, 'Exterior'),
+        (6, 'Interior'),
+
+    )
+    field = models.CharField(max_length=300)
+    setup = models.ForeignKey(Setup)
+    category = models.SmallIntegerField(choices=CATEGORIES)
+
+    def __str__(self):
+        return self.field
+
+
+class SetupVote(models.Model):
+    VOTES = (
+        (0, 'Vote Down'),
+        (1, 'Vote Up')
+    )
+    vote = models.BooleanField(default=0, choices=VOTES)
+    setup = models.ForeignKey(Setup)
+    user = models.ForeignKey(User)
+
+    def __str__(self):
+        return self.vote

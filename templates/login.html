@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="login-container">
+            <h1>Login</h1>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">Log in with Google+</div></div></a>
+            <a href="{% url 'social:begin' 'facebook' %}"><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">Log in with Facebook</div></div></a>
+            <div class="center">or</div>
+            <div class="login-form">
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <input class="center" type="email" name="username" id="id_username" maxlength="254" required autofocus placeholder="Email address">
+                    <input class="center" type="password" name="password" id="id_password" required placeholder="Password">
+                    <button class="center" type="submit">Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

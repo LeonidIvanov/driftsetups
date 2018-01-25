@@ -1,0 +1,103 @@
+{% load static %}
+{% load car_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} | DriftSetups</title>
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Oswald:400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/">
+                    <div class="logo">DriftSetups</div>
+                </a>
+            </div>
+            <div class="nav-right">
+                <li class="search-container">
+                    <form id="searchform" action="{% url 'search_list' %}" method="get" accept-charset="utf-8">
+                        <input type="text" placeholder="Search..." name="q">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li class="setup-create"><a href="{% url 'setup_create' %}">Create Setup</a></li>
+                <li><a href="{% url 'setup_list' %}">Top Setups</a></li>
+                <li><a href="{% url 'car_brand_list' %}">Cars</a></li>
+                <li class="coming">Engines</li>
+                {% if user.is_authenticated %}
+                <li class="dropdown">
+                    <div class="dropbtn">
+                        <img class="small-avatar" src="{{ user.get_avatar }}" height="50px" width="50px" alt="{{ user.first_name }}">
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </li>
+                {% else %}
+                <li id="sign-up">Sign up</li>
+                <li id="login">Login</li>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    {% block body %}{% endblock %}
+
+<footer>
+    {% block footer %}{% endblock %}
+        <div class="bottom-top-cars">
+            <h3>Drift Setups Car List</h3>
+            {% top_drift_cars %}
+        </div>
+    <div class="copyright">© DriftSetups.com</div>
+</footer>
+    <!-- Popups -->
+    <div class="popup-background"></div>
+    <div class="popup-login-content">
+        <span class="popup-close">&times;</span>
+        <a href="{% url 'social:begin' 'google-oauth2' %}"><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">Log in with Google+</div></div></a>
+        <a href="{% url 'social:begin' 'facebook' %}"><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">Log in with Facebook</div></div></a>
+        <div class="center">or</div>
+        <div class="login-form">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <input class="center" type="email" name="username" id="id_username" maxlength="254" required autofocus placeholder="Email address">
+                <input class="center" type="password" name="password" id="id_password" required placeholder="Password">
+                <button class="center" type="submit">Log in</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup-sign-up-content">
+        <span class="popup-close">&times;</span>
+        <div class="popup-sign-up-choice">
+            <a href='{% url "social:begin" "google-oauth2" %}'><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">Sign up with Google+</div></div></a>
+            <a href='{% url "social:begin" "facebook" %}'><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">Sign up with Facebook</div></div></a>
+            <div class="center">or</div>
+            <div class="sign-up-with-email center">Email</div>
+        </div>
+        <div class="sign-up-with-email-form">
+            <div class="center">Sign up with <a href='{% url "social:begin" "facebook" %}'>Facebook</a>, <a href='{% url "social:begin" "google-oauth2" %}'>Google+</a></div>
+            <div class="center">or</div>
+            <form action="{% url 'sign_up' %}" method="post">
+                {% csrf_token %}
+                <input class="center" type="email" name="email" autofocus id="id_email" required placeholder="Email address">
+                <input class="center" type="text" name="first_name" id="id_first_name" maxlength="30" placeholder="First name">
+                <input class="center" type="text" name="last_name" id="id_last_name" maxlength="30" placeholder="Last name">
+                <input class="center" type="password" name="password1" required="" id="id_password1" placeholder="Password">
+                <input class="center" type="password" name="password2" required="" id="id_password2" placeholder="Repeat password">
+                <button class="center" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <!-- Popups end -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

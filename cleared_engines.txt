@@ -1,0 +1,2145 @@
+Aston Martin;AM11
+Aston Martin;AM28
+Aston Martin;AM29
+Aston Martin;AM3
+Aston Martin;AM4R9
+BMW;Alpina N55
+BMW;Alpina N55R20A
+BMW;B38A15
+BMW;B38A15M0
+BMW;B38B15
+BMW;B38K15T0
+BMW;B47C20O1
+BMW;B47D20
+BMW;B48A20
+BMW;B48A20M0
+BMW;B48A20M1
+BMW;B48B20
+BMW;B57B30TOP
+BMW;B57D30
+BMW;B58B30
+BMW;B58B30M0
+BMW;B58B30M5
+BMW;B58B30O0
+BMW;M102
+BMW;M106
+BMW;M20B20
+BMW;M20B23
+BMW;M20B25
+BMW;M20B27
+BMW;M30B25
+BMW;M30B25V
+BMW;M30B28
+BMW;M30B28V
+BMW;M30B30
+BMW;M30B30V
+BMW;M30B32
+BMW;M30B33V
+BMW;M30B34
+BMW;M30B35
+BMW;M40B16
+BMW;M40B18
+BMW;M42B18
+BMW;M43B16
+BMW;M43B18
+BMW;M43B19
+BMW;M43T?B19
+BMW;M44B19
+BMW;M47D20
+BMW;M47TU2D20
+BMW;M47TUD20
+BMW;M50B20
+BMW;M50B20TU
+BMW;M50B24
+BMW;M50B25
+BMW;M50B25TU
+BMW;M51D25
+BMW;M51D25TU
+BMW;M52B20
+BMW;M52B25
+BMW;M52B28
+BMW;M52T?B20
+BMW;M52T?B25
+BMW;M52T?B28
+BMW;M52TUB20
+BMW;M52TUB24
+BMW;M52TUB25
+BMW;M52TUB28
+BMW;M54B22
+BMW;M54B25
+BMW;M54B30
+BMW;M56
+BMW;M57D25
+BMW;M57D30
+BMW;M57D30OLT?
+BMW;M57D30T?
+BMW;M57D30T?2
+BMW;M57D30TOP
+BMW;M57D30TOPT?
+BMW;M57D30UL
+BMW;M57TU2D30
+BMW;M57TUD30
+BMW;M60B30
+BMW;M60B40
+BMW;M62B35
+BMW;M62B35TU
+BMW;M62B44
+BMW;M62B44T?
+BMW;M62B44TU
+BMW;M62B46
+BMW;M62B48
+BMW;M62TUB35
+BMW;M62TUB44
+BMW;M70B50
+BMW;M73B54
+BMW;M73TUB54
+BMW;M88/1
+BMW;M88/2
+BMW;M88/3
+BMW;M90
+BMW;N12B16
+BMW;N13B16
+BMW;N14B16
+BMW;N14B16C
+BMW;N20B16
+BMW;N20B20
+BMW;N20B20B
+BMW;N20B20O0
+BMW;N20B20U0
+BMW;N26B20
+BMW;N40B16
+BMW;N42B18
+BMW;N42B20
+BMW;N43B16
+BMW;N43B20
+BMW;N43B20OL
+BMW;N45B16
+BMW;N45B20S
+BMW;N46B18
+BMW;N46B20
+BMW;N46B20O0
+BMW;N46B20O1
+BMW;N46B20U1
+BMW;N46B20U2
+BMW;N46NB20
+BMW;N47D20
+BMW;N47D20O1
+BMW;N47D20T0
+BMW;N47D20U1
+BMW;N52B25
+BMW;N52B25A
+BMW;N52B25UL
+BMW;N52B30
+BMW;N53B25-U0
+BMW;N53B25UL
+BMW;N53B30
+BMW;N53B30-O0
+BMW;N53B30-U0
+BMW;N53B30OL
+BMW;N53B30UL
+BMW;N54B25
+BMW;N54B25OL
+BMW;N54B30
+BMW;N54B30TO
+BMW;N55
+BMW;N55B30
+BMW;N55B30M0
+BMW;N55B30O0
+BMW;N55B30T0
+BMW;N55HP
+BMW;N57D30
+BMW;N57D30L
+BMW;N57D30OL
+BMW;N57D30S1
+BMW;N57D30TOP
+BMW;N57S
+BMW;N62B36
+BMW;N62B40
+BMW;N62B44
+BMW;N62B48
+BMW;N63B40A
+BMW;N63B44
+BMW;N63B44O0
+BMW;N63B44O1
+BMW;N63B44O2
+BMW;N63B44TU
+BMW;N73B60
+BMW;N73B67
+BMW;N73B68
+BMW;N74B60
+BMW;N74B66
+BMW;N74B66TU
+BMW;N74B68
+BMW;P60B40
+BMW;P65B44
+BMW;S14B20
+BMW;S14B23
+BMW;S14B23 EVO2
+BMW;S14B25 EVO3
+BMW;S50B30
+BMW;S50B30US
+BMW;S50B32
+BMW;S52B32
+BMW;S54B32
+BMW;S55B30
+BMW;S55B30T0
+BMW;S62B50
+BMW;S63B44
+BMW;S63B44O0
+BMW;S63B44T0
+BMW;S63B44T2
+BMW;S63B44T4
+BMW;S63B44Tx
+BMW;S65B40
+BMW;S65B44
+BMW;S70/2
+BMW;S70/3
+BMW;S70B56
+BMW;S85B50
+BMW;W20K06U0
+Brilliance;4A92S
+Brilliance;BM15L
+Brilliance;BM15T
+Chevrolet;10 HM
+Chevrolet;A 22 DMH
+Chevrolet;T20SED
+Chevrolet;X 20 D1
+Chevrolet;X 25 D1
+Chevrolet;Z 24 SED
+Chevrolet;Z20D1
+Chrysler;3.5CSP
+Chrysler;Pentastar
+Daewoo;A14SMS
+Daewoo;A15DMS
+Daewoo;A15MF
+Daewoo;A15SMS
+Daewoo;A16DMS
+Daewoo;B10S1
+Daewoo;B15D2
+Daewoo;C18LE
+Daewoo;C20LE
+Daewoo;C20NED
+Daewoo;C20SED
+Daewoo;F15MF
+Daewoo;F8CV
+Daewoo;G15MF
+Daewoo;T18SED
+Daewoo;U20SED
+Daewoo;X20D1
+Daewoo;X25D1
+Daewoo;Z20DM
+Daewoo;Z20SFXS
+Daihatsu;CB
+Daihatsu;CB-36
+Daihatsu;CB-37
+Daihatsu;CB-51
+Daihatsu;CB-70
+Daihatsu;CL
+Daihatsu;CL-30
+Daihatsu;CL-70/51
+Daihatsu;DL
+Daihatsu;EB
+Daihatsu;EF
+Daihatsu;EF-CL
+Daihatsu;EF-DEM
+Daihatsu;EF-DET
+Daihatsu;EF-EL
+Daihatsu;EF-FL
+Daihatsu;EF-GL
+Daihatsu;EF-GS
+Daihatsu;EF-GS/ZS
+Daihatsu;EF-HL
+Daihatsu;EF-HL/EL
+Daihatsu;EF-JL
+Daihatsu;EF-KL
+Daihatsu;EF-NS
+Daihatsu;EF-RL
+Daihatsu;EF-RS
+Daihatsu;EF-SE
+Daihatsu;EF-TS
+Daihatsu;EF-VD
+Daihatsu;EF-VE
+Daihatsu;EF-VE2
+Daihatsu;EF-ZL
+Daihatsu;EF-ZS
+Daihatsu;FE-CL
+Daihatsu;FE-HL
+Daihatsu;FE-JL
+Daihatsu;HC-E
+Daihatsu;HC-F
+Daihatsu;HD-E
+Daihatsu;HD-EG
+Daihatsu;HD-EP
+Daihatsu;HD-F
+Daihatsu;HE-EG
+Daihatsu;JB-DET
+Daihatsu;JB-EL
+Daihatsu;JB-JL
+Daihatsu;JC-DET
+Daihatsu;KJ-VET
+Dodge;Chrysler Hellcat
+Dodge;Chrysler Hemi
+Dodge;ECB
+Dodge;ECH
+Dodge;EDV
+Dodge;EDZ
+Dodge;EER
+Dodge;ESH
+Ferrari;F136-FB
+Ferrari;F140
+Ferrari;F140 ED
+Ferrari;F140EB
+Ferrari;F140FC
+Ferrari;F140FE
+Ferrari;F154 BB
+Ferrari;F154 BD
+Ferrari;F154 CB
+Fiat;169 A3.000
+Fiat;169 A4.000
+Fiat;187 A1.000
+Fiat;188 A4.000
+Fiat;198 A4.000
+Fiat;199 B6.000
+Fiat;350 A1.000
+Fiat;843 A1.000
+Fiat;939 A4.000
+Fiat;939 A5.000
+Fiat;940 A2.000
+Fiat;940 B7.000
+Fiat;955 A2.000
+Fiat;955 A6.000
+Fiat;955 B1.000
+Fiat;960 A1.000
+Ford;332
+Ford;352
+Ford;361 Edsel
+Ford;360 Truck
+Ford;390
+Ford;406
+Ford;410
+Ford;427
+Ford;427 SOHC "Cammer"
+Ford;428
+Ford;4V Ti-VCT
+Ford;BOB
+Ford;BRG
+Ford;CD345
+Ford;Cologne
+Ford;Cologne V6 OHV EFI
+Ford;Coyote
+Ford;DV6ATED4
+Ford;DV6C
+Ford;DV6CTED
+Ford;DV6TED4
+Ford;DW12 C
+Ford;Duratec
+Ford;Duratec 23
+Ford;Duratec 30
+Ford;Duratec 35
+Ford;Duratec 37
+Ford;Duratec Ti-VCT
+Ford;Duratorq TDCi
+Ford;Ecoboost
+Ford;F4B
+Ford;GBVAJQJ
+Ford;HUBA
+Ford;HUWA
+Ford;HYDB
+Ford;IQDB
+Ford;JTMA
+Ford;KGBA
+Ford;KKDA
+Ford;KNBA
+Ford;L1E
+Ford;LCBD
+Ford;M9MA
+Ford;MEBA
+Ford;Modular V8
+Ford;N3A
+Ford;N7A
+Ford;NSD
+Ford;PNDA
+Ford;Q4BA
+Ford;Q4WA
+Ford;QQDB
+Ford;QYWA
+Ford;R9DA
+Ford;RDA
+Ford;REBA
+Ford;RFN
+Ford;RVA
+Ford;SAFA
+Ford;SCC
+Ford;SEBA
+Ford;SEWA
+Ford;SIDA
+Ford;TNBA
+Ford;TNWA
+Ford;TPBA
+Ford;TPWA
+Ford;TXDA
+Ford;Triton V8
+Ford;U5JA
+Ford;UFDB
+Ford;UFMA
+Ford;Vulcan
+Ford;WLAA
+Ford;XQDA
+Ford;XTDA
+Ford;Y5A
+GAZ;Chrysler 2.4L
+GAZ;GAZ-21Б
+GAZ;GAZ-560
+GAZ;GAZ-5601
+GAZ;XD2P
+GAZ;ZMZ-21А
+GAZ;ZMZ-24-01
+GAZ;ZMZ-2407
+GAZ;ZMZ-24Д
+GAZ;ZMZ-402
+GAZ;ZMZ-402.10
+GAZ;ZMZ-4021
+GAZ;ZMZ-4022.10
+GAZ;ZMZ-407
+GM;23DTR
+GM;2H0
+GM;2LT
+GM;3LT
+GM;3LZ
+GM;4JB1T
+GM;A 12 XEL
+GM;A 14 XEL
+GM;A 14 XER
+GM;A10XEP
+GM;A12XER
+GM;A14NEL
+GM;A14NET
+GM;A14XER
+GM;A16LET
+GM;A16SHT
+GM;A16XER
+GM;A16XHT
+GM;A17DT
+GM;A17DTC
+GM;A17DTS
+GM;A18XEL
+GM;A18XER
+GM;A20DTH
+GM;A20DTR
+GM;A20NFT
+GM;A20NHT
+GM;A22DM
+GM;A22DMH
+GM;A24XE
+GM;A28NER
+GM;B 10 XFL
+GM;B 10 XFT
+GM;C20NE
+GM;C24NE
+GM;F14D3
+GM;F14D4
+GM;F15S3
+GM;F16D3
+GM;F16D4
+GM;L2C
+GM;L31
+GM;L35
+GM;L43
+GM;L56
+GM;L59
+GM;L83
+GM;L86
+GM;L95
+GM;L99
+GM;LE9
+GM;LF1
+GM;LFX
+GM;LFY
+GM;LGX
+GM;LH2
+GM;LL0
+GM;LL8
+GM;LLT
+GM;LM7
+GM;LMU
+GM;LQ4
+GM;LSA
+GM;LT1
+GM;LT4
+GM;LTG
+GM;LTG Ecotec
+GM;LUJ
+GM;LUU
+GM;LWH
+GM;LY5
+GM;LY6
+GM;LY7
+GM;LZ1
+GM;LS1
+GM;LS2
+GM;LS3
+GM;LS6
+GM;LS7
+GM;LS9
+GM;LQ9
+GM;L33
+GM;LR4
+GM;LM7
+GM;L59
+GM;LM4
+GM;L76
+GM;L98
+GM;L77
+GM;LY6
+GM;L96
+GM;LFA
+GM;LZ1
+GM;LY2
+GM;L20
+GM;VM41B
+GM;X14XE
+GM;X16SZR
+GM;X16XEL
+GM;X18XE1
+GM;X20DTH
+GM;X20SE
+GM;X25XE
+GM;X30XE
+GM;Y22DTH
+GM;Y25DT
+GM;Y26SE
+GM;Y32SE
+GM;Y57XE
+GM;Z12XEP
+GM;Z13DTH
+GM;Z14XE
+GM;Z14XEP
+GM;Z16SE
+GM;Z16XE
+GM;Z16XEP
+GM;Z16XER
+GM;Z18XE
+GM;Z18XER
+GM;Z19DT
+GM;Z19DTH
+GM;Z20LEH
+GM;Z20LEL
+GM;Z20LER
+GM;Z20NET
+GM;Z22SE
+GM;Z22YH
+GM;Z28NET
+Hemi;EES
+Hemi;ESF
+Honda;4EE2
+Honda;4JG2
+Honda;4JX1
+Honda;6VD1
+Honda;6VE1
+Honda;A18A
+Honda;B16A
+Honda;B16B
+Honda;B18A
+Honda;B18B
+Honda;B18C
+Honda;B20A
+Honda;B20B
+Honda;B20Z1
+Honda;C20A
+Honda;C25A
+Honda;C27A
+Honda;C30A
+Honda;C32A
+Honda;C32B
+Honda;C35A
+Honda;D12A
+Honda;D13B
+Honda;D13C
+Honda;D14Z6
+Honda;D15B
+Honda;D16A
+Honda;D16A VTEC
+Honda;D16B6
+Honda;D16V1
+Honda;D16Y
+Honda;D17A
+Honda;D17A VTEC
+Honda;DAA-FD3
+Honda;E05A
+Honda;E07A
+Honda;E07Z
+Honda;ECA-MF2
+Honda;EJ
+Honda;EK
+Honda;EL1
+Honda;EM
+Honda;EP
+Honda;ER
+Honda;ES
+Honda;EV
+Honda;EW
+Honda;EX
+Honda;EY
+Honda;F18A
+Honda;F18B
+Honda;F18B2
+Honda;F20A
+Honda;F20B
+Honda;F20B6
+Honda;F20C
+Honda;F22A
+Honda;F22B
+Honda;F22C
+Honda;F23A
+Honda;F23Z5
+Honda;G20A
+Honda;G25A
+Honda;H22A
+Honda;H22A7
+Honda;H23A
+Honda;J25A
+Honda;J30A
+Honda;J30A4
+Honda;J30A5
+Honda;J32A
+Honda;J35A
+Honda;J35Y
+Honda;J35Y5
+Honda;J35Y6
+Honda;J35Z2
+Honda;J35Z4
+Honda;J37A
+Honda;J37A1
+Honda;J37A3
+Honda;JNA1
+Honda;JNB
+Honda;JNC
+Honda;K20A
+Honda;K20A i-VTEC
+Honda;K20A2
+Honda;K20A3
+Honda;K20A9
+Honda;K20B
+Honda;K20C
+Honda;K20Z2
+Honda;K20Z4
+Honda;K24A
+Honda;K24A3
+Honda;K24A4
+Honda;K24A8
+Honda;K24W
+Honda;K24W4
+Honda;K24W7
+Honda;K24YA
+Honda;K24Z2
+Honda;K24Z3
+Honda;K24Z4
+Honda;K24Z7
+Honda;L12A
+Honda;L13A
+Honda;L13B
+Honda;L13Z1
+Honda;L15A
+Honda;L15B
+Honda;L15C
+Honda;LDA
+Honda;LDA-MF5
+Honda;LEA
+Honda;LEB
+Honda;LFA
+Honda;MCF4
+Honda;P07A
+Honda;R18A
+Honda;R18A1
+Honda;R18A2
+Honda;R18Z1
+Honda;R20A
+Honda;R20A2
+Honda;R20A3
+Honda;R20A9
+Honda;Rover 20T2N
+Honda;S07A
+Honda;S07B
+Honda;V8i
+Honda;ZC
+Hyundai;2.0 VM Motori CRDi
+Hyundai;2.2 CRDI VGT R-Line
+Hyundai;2.4 Theta MPi
+Hyundai;3.0 Lambda II MPi
+Hyundai;3.3 Lambda II MPi
+Hyundai;D4BA
+Hyundai;D4CB
+Hyundai;D4EA
+Hyundai;D4EB-V
+Hyundai;D4FA
+Hyundai;D4FB
+Hyundai;D4FC
+Hyundai;D4FD
+Hyundai;D4HA
+Hyundai;D4HB
+Hyundai;D6EA
+Hyundai;G3LA
+Hyundai;G4BA
+Hyundai;G4CM
+Hyundai;G4CN
+Hyundai;G4CP
+Hyundai;G4CPD
+Hyundai;G4CU
+Hyundai;G4EA
+Hyundai;G4EB
+Hyundai;G4EC
+Hyundai;G4EC-G
+Hyundai;G4ED
+Hyundai;G4ED-G
+Hyundai;G4EE
+Hyundai;G4EK
+Hyundai;G4FA
+Hyundai;G4FC
+Hyundai;G4FD
+Hyundai;G4FG
+Hyundai;G4FJ
+Hyundai;G4GB-G
+Hyundai;G4GC
+Hyundai;G4GF
+Hyundai;G4GR
+Hyundai;G4HE
+Hyundai;G4HG
+Hyundai;G4JN
+Hyundai;G4JP
+Hyundai;G4JS
+Hyundai;G4KA
+Hyundai;G4KC
+Hyundai;G4KD
+Hyundai;G4KE
+Hyundai;G4KF
+Hyundai;G4KJ
+Hyundai;G4LA
+Hyundai;G4LC
+Hyundai;G4LD
+Hyundai;G4NA
+Hyundai;G4NB
+Hyundai;G4NBB
+Hyundai;G4NC
+Hyundai;G4NH
+Hyundai;G6BA
+Hyundai;G6BV
+Hyundai;G6CU
+Hyundai;G6DA
+Hyundai;G6DB
+Hyundai;G6DG
+Hyundai;G6DJ
+Hyundai;G6EA
+Hyundai;G6EN
+Hyundai;G8BA
+Hyundai;G8BB
+Hyundai;G8BE
+Hyundai;Gamma 1.6 Turbo-GDi
+Hyundai;J3
+Hyundai;L4FA
+Hyundai;Lambda II 3.0 GDI D-CVVT
+Hyundai;R2.2 VGT CRDi Diesel
+Hyundai;S6D
+Hyundai;Theta II
+Jaguar;306DT
+Jaguar;AJ30
+Jeep;A630
+Jeep;Chrysler 2.4 Tigershark
+Jeep;EHB
+Jeep;ERB
+Jeep;ESG
+Jeep;EXF
+Jeep;Fiat 1.4 FIRE
+Jeep;Fiat 1.6 E.torQ
+Jeep;Hemi
+Jeep;Multijet II
+Jeep;OM642
+Jeep;PowerTech
+Jeep;RA 428
+Jeep;Tigershark
+Jeep;World Engine
+Lada;21129
+Lada;21129 CNG
+Lada;21179
+Lada;TJ376QEI
+Lada;VAZ 2103
+Lada;VAZ 2104
+Lada;VAZ 2105
+Lada;VAZ 2106
+Lada;VAZ 21067-10
+Lada;VAZ 21067-20
+Lada;VAZ 21213
+Lada;VAZ 4132
+Lada;VAZ-1111
+Lada;VAZ-11113
+Lada;VAZ-11183
+Lada;VAZ-11183-50
+Lada;VAZ-11186
+Lada;VAZ-11194
+Lada;VAZ-2101
+Lada;VAZ-21011
+Lada;VAZ-2103
+Lada;VAZ-2105
+Lada;VAZ-21080
+Lada;VAZ-21081
+Lada;VAZ-21083
+Lada;VAZ-21084
+Lada;VAZ-210990
+Lada;VAZ-210993
+Lada;VAZ-210994
+Lada;VAZ-21099i
+Lada;VAZ-2111
+Lada;VAZ-2111-80
+Lada;VAZ-21114
+Lada;VAZ-21116
+Lada;VAZ-21120
+Lada;VAZ-21126
+Lada;VAZ-21127
+Lada;VAZ-21128
+Lada;VAZ-21129
+Lada;VAZ-21179
+Lada;VAZ-21213
+Lada;VAZ-21214
+Lada;VAZ-2123
+Lada;VAZ-415
+Lada;X20XEV
+Land Rover;11 K2D
+Land Rover;14 K2F
+Land Rover;14 K4F
+Land Rover;16 K4F
+Land Rover;18 K4F
+Land Rover;18 K4K
+Land Rover;20 T2N
+Land Rover;20 T2R
+Land Rover;204D3
+Land Rover;204PT
+Land Rover;204PT Ingenium
+Land Rover;224DT
+Land Rover;25 K4F
+Land Rover;30DDTX
+Land Rover;368DT
+Land Rover;428PS
+Land Rover;448DT
+Land Rover;448PN
+Land Rover;508PN
+Land Rover;508PS
+Land Rover;AJ126
+Land Rover;AJ133
+Land Rover;AJ200 Ingenium
+Land Rover;AJ33S
+Land Rover;AJ41
+Land Rover;AJD
+Land Rover;D180
+Land Rover;D240
+Land Rover;D300
+Land Rover;LJ46G
+Land Rover;LR-V6
+Land Rover;LR-V8
+Land Rover;P250
+Land Rover;P300
+Land Rover;P380
+Land Rover;P400e
+Land Rover;SDV6
+Land Rover;Si4
+Lincoln;Ford Triton
+Lincoln;Lincoln InTech
+Maserati;A630 HP
+Maserati;Ferrari F160
+MAST;550
+MAST;600
+MAST;630
+MAST;650
+MAST;685
+MAST;800
+MAST;900
+MAST;850
+MAST;LS7 427
+Mazda;13B
+Mazda;13B-MSP
+Mazda;13B-REW
+Mazda;20B
+Mazda;4EE1-T
+Mazda;4EEI-T
+Mazda;AJ
+Mazda;AJ-DE
+Mazda;AJ-V6
+Mazda;B3
+Mazda;B3-ME
+Mazda;B3-MI
+Mazda;B3E
+Mazda;B5
+Mazda;B5-DE
+Mazda;B5-ME
+Mazda;B5-MI
+Mazda;B5-ZE
+Mazda;B5E
+Mazda;B6
+Mazda;B6-DE
+Mazda;B6-ZE
+Mazda;B6-ZE(RS)
+Mazda;B6-ZE[RS]
+Mazda;B64F
+Mazda;B6D
+Mazda;BP
+Mazda;BP-VE
+Mazda;BP-VE(RS)
+Mazda;BP-Z3
+Mazda;BP-ZE
+Mazda;BP-ZE(RS)
+Mazda;BP-ZET(RS)
+Mazda;BP-ZE[RS]
+Mazda;BPD
+Mazda;BPF1
+Mazda;CYC4
+Mazda;E3
+Mazda;E5
+Mazda;F8
+Mazda;F8-DE
+Mazda;F8-E
+Mazda;FE
+Mazda;FE-DE
+Mazda;FE-E
+Mazda;FE-ZE
+Mazda;FP
+Mazda;FP-DE
+Mazda;FS
+Mazda;FS-DE
+Mazda;FS-ZE
+Mazda;G5
+Mazda;G5-E
+Mazda;G6
+Mazda;GA15
+Mazda;GY
+Mazda;GY-DE
+Mazda;J5-D
+Mazda;J5-DE
+Mazda;JE
+Mazda;JE-E
+Mazda;JE-ZE
+Mazda;K8
+Mazda;K8-ZE
+Mazda;K8ZE
+Mazda;KF-ZE
+Mazda;KJ-ZEM
+Mazda;KL-DE
+Mazda;KL-ZE
+Mazda;L3
+Mazda;L3-DE
+Mazda;L3-VDT
+Mazda;L3-VE
+Mazda;L5-VE
+Mazda;L8
+Mazda;LF-DE
+Mazda;LF-VD
+Mazda;LF-VDS
+Mazda;LF-VE
+Mazda;MZ-CD F6JA
+Mazda;MZ-CD Y4
+Mazda;MZ-CD Y601
+Mazda;MZ-CD Y655
+Mazda;MZI AJ-V6
+Mazda;MZI CA
+Mazda;MZI FUJA
+Mazda;MZI FXJA
+Mazda;MZI FYJA
+Mazda;MZR DISI L3-VDT
+Mazda;MZR DISI LF5H
+Mazda;MZR L3-VE
+Mazda;MZR L3C1
+Mazda;MZR L5-VE
+Mazda;MZR L8-DE
+Mazda;MZR L813
+Mazda;MZR L823
+Mazda;MZR L850
+Mazda;MZR LF-DE
+Mazda;MZR LF-VE
+Mazda;MZR LF17
+Mazda;MZR LFF7
+Mazda;MZR Z6
+Mazda;MZR ZJ-VE
+Mazda;MZR ZY-DE
+Mazda;MZR ZY-VE
+Mazda;MZR-CD
+Mazda;MZR-CD BLA2Y
+Mazda;MZR-CD R2AA
+Mazda;MZR-CD R2BF
+Mazda;MZR-CD RF5C
+Mazda;MZR-CD RF7J
+Mazda;MZR-CD WLAA
+Mazda;MZR-DISI L3KG
+Mazda;MZR-DISI LF-DE
+Mazda;MZR-DISI LF17
+Mazda;MZR-DISI LF5H
+Mazda;P3-VPS
+Mazda;P5-VP
+Mazda;P5-VPR
+Mazda;P5-VPS
+Mazda;PE-VPH
+Mazda;PE-VPR
+Mazda;PE-VPR[RS]
+Mazda;PE-VPS
+Mazda;PN
+Mazda;PY-VPR
+Mazda;PY-VPS
+Mazda;R2
+Mazda;R2BF
+Mazda;RF
+Mazda;RF-CX
+Mazda;RF7J
+Mazda;S5-DPTS
+Mazda;SH-VPTR
+Mazda;SH-VPTS
+Mazda;SR18
+Mazda;WL
+Mazda;WL-T
+Mazda;YF
+Mazda;Z5-DE
+Mazda;Z5-DEL
+Mazda;ZJ-VE
+Mazda;ZJ-VEM
+Mazda;ZL
+Mazda;ZL-DE
+Mazda;ZL-VE
+Mazda;ZM-DE
+Mazda;ZY-VE
+Mercedes-Benz;M 102
+Mercedes-Benz;M 102 E 18
+Mercedes-Benz;M 102 V 20
+Mercedes-Benz;M 102 V 23
+Mercedes-Benz;M 103
+Mercedes-Benz;M 103 E 30
+Mercedes-Benz;M 104 E 28
+Mercedes-Benz;M 104 E 32
+Mercedes-Benz;M 104 E 36
+Mercedes-Benz;M 104 E36
+Mercedes-Benz;M 111 E 18
+Mercedes-Benz;M 111 E 20
+Mercedes-Benz;M 111 E 20 EVO
+Mercedes-Benz;M 111 E 20 ML
+Mercedes-Benz;M 111 E 20 ML EVO
+Mercedes-Benz;M 111 E 22
+Mercedes-Benz;M 111 E 23
+Mercedes-Benz;M 111 E 23 ML
+Mercedes-Benz;M 112 E 24
+Mercedes-Benz;M 112 E 26
+Mercedes-Benz;M 112 E 28
+Mercedes-Benz;M 112 E 32
+Mercedes-Benz;M 112 E 32 ML
+Mercedes-Benz;M 112 E 36
+Mercedes-Benz;M 112 E 37
+Mercedes-Benz;M 113 E 32
+Mercedes-Benz;M 113 E 43
+Mercedes-Benz;M 113 E 50
+Mercedes-Benz;M 113 E 55
+Mercedes-Benz;M 113 E 55 ML
+Mercedes-Benz;M 119 E 42
+Mercedes-Benz;M 119 E 50
+Mercedes-Benz;M 119 E 60
+Mercedes-Benz;M 120 E 60
+Mercedes-Benz;M 133 DE 20 AL
+Mercedes-Benz;M 137 E 58
+Mercedes-Benz;M 152 DE 55
+Mercedes-Benz;M 156 E 63
+Mercedes-Benz;M 156 KE 63
+Mercedes-Benz;M 157
+Mercedes-Benz;M 157 DE 55 AL
+Mercedes-Benz;M 157 DE 55 LA
+Mercedes-Benz;M 159 E 63
+Mercedes-Benz;M 176 DE 40 AL
+Mercedes-Benz;M 177 DE 40 AL
+Mercedes-Benz;M 178 DE 40 AL
+Mercedes-Benz;M 270 DE 16 AL
+Mercedes-Benz;M 270 DE 20 AL
+Mercedes-Benz;M 271 DE 18
+Mercedes-Benz;M 271 DE 18 AL
+Mercedes-Benz;M 271 E 18 ML
+Mercedes-Benz;M 271 E 18 ML /1
+Mercedes-Benz;M 271 E 18 ML LR
+Mercedes-Benz;M 271 E 20
+Mercedes-Benz;M 271 E18 ML
+Mercedes-Benz;M 271 KE 18 ML
+Mercedes-Benz;M 271 KE 18 ML red.
+Mercedes-Benz;M 272 DE 30
+Mercedes-Benz;M 272 DE 35
+Mercedes-Benz;M 272 E 30
+Mercedes-Benz;M 272 E 35
+Mercedes-Benz;M 272 KE 25
+Mercedes-Benz;M 272 KE 30
+Mercedes-Benz;M 272 KE 35
+Mercedes-Benz;M 273 E 55
+Mercedes-Benz;M 273 KE 46
+Mercedes-Benz;M 273 KE 55
+Mercedes-Benz;M 274 DE 16 AL
+Mercedes-Benz;M 274 DE 20 AL
+Mercedes-Benz;M 274 DES 20 AL
+Mercedes-Benz;M 275 E 55 AL
+Mercedes-Benz;M 275 E 60 AL
+Mercedes-Benz;M 276 DE 30 AL
+Mercedes-Benz;M 276 DE 35
+Mercedes-Benz;M 278 DE 46 AL
+Mercedes-Benz;M 278 DE 46 LA
+Mercedes-Benz;M 279 E 60 AL
+Mercedes-Benz;M178
+Mercedes-Benz;M266.940
+Mercedes-Benz;M266.960
+Mercedes-Benz;OM 601 D 20
+Mercedes-Benz;OM 601.911
+Mercedes-Benz;OM 602 D 25 A
+Mercedes-Benz;OM 602.911
+Mercedes-Benz;OM 602.961
+Mercedes-Benz;OM 603 D 30 A
+Mercedes-Benz;OM 603 D 35 A
+Mercedes-Benz;OM 604 D 20
+Mercedes-Benz;OM 604 D22
+Mercedes-Benz;OM 605 D 25
+Mercedes-Benz;OM 605 D25
+Mercedes-Benz;OM 606 D 30
+Mercedes-Benz;OM 607 DE 15 LA
+Mercedes-Benz;OM 611 DE 22
+Mercedes-Benz;OM 611 DE 22 LA
+Mercedes-Benz;OM 611 DE 22 LA red.
+Mercedes-Benz;OM 612 DE 27 LA
+Mercedes-Benz;OM 613 DE 32 LA
+Mercedes-Benz;OM 622 DE 16 LA
+Mercedes-Benz;OM 628 DE 40 LA
+Mercedes-Benz;OM 642 DE 30 LA
+Mercedes-Benz;OM 642 DE30LA
+Mercedes-Benz;OM 642 LS DE 30 LA
+Mercedes-Benz;OM 646 DE 22 LA
+Mercedes-Benz;OM 647 DE 27 LA
+Mercedes-Benz;OM 648 DE 32 LA
+Mercedes-Benz;OM 651 DE 18 LA
+Mercedes-Benz;OM 651 DE 22 LA
+Mercedes-Benz;OM 651 DE22LA
+Mercedes-Benz;OM 654 DE 20 LA
+Mitsubishi;3A90
+Mitsubishi;3A92
+Mitsubishi;3B20
+Mitsubishi;3G81
+Mitsubishi;3G83
+Mitsubishi;4A30
+Mitsubishi;4A30T
+Mitsubishi;4A31
+Mitsubishi;4A90
+Mitsubishi;4A91
+Mitsubishi;4A91 MIVEC
+Mitsubishi;4A92
+Mitsubishi;4B10
+Mitsubishi;4B11
+Mitsubishi;4B12
+Mitsubishi;4D56
+Mitsubishi;4D56 HP
+Mitsubishi;4D65
+Mitsubishi;4D65T
+Mitsubishi;4D68
+Mitsubishi;4D68T
+Mitsubishi;4DR5
+Mitsubishi;4G13
+Mitsubishi;4G15
+Mitsubishi;4G15 MIVEC TURBO
+Mitsubishi;4G15(GDI)
+Mitsubishi;4G18
+Mitsubishi;4G19
+Mitsubishi;4G32
+Mitsubishi;4G37
+Mitsubishi;4G52
+Mitsubishi;4G63
+Mitsubishi;4G63S4T
+Mitsubishi;4G63T
+Mitsubishi;4G64
+Mitsubishi;4G64(GDI)
+Mitsubishi;4G64MPI
+Mitsubishi;4G67
+Mitsubishi;4G69
+Mitsubishi;4G69MIVEC
+Mitsubishi;4G91
+Mitsubishi;4G92
+Mitsubishi;4G93
+Mitsubishi;4G93 GDI
+Mitsubishi;4G93(GDI)
+Mitsubishi;4G93T
+Mitsubishi;4G94
+Mitsubishi;4J10
+Mitsubishi;4J11
+Mitsubishi;4J12
+Mitsubishi;4M40
+Mitsubishi;4M41
+Mitsubishi;4M41(DI)
+Mitsubishi;4N14
+Mitsubishi;4N15
+Mitsubishi;6A10
+Mitsubishi;6A11
+Mitsubishi;6A12
+Mitsubishi;6A13
+Mitsubishi;6B31
+Mitsubishi;6G64
+Mitsubishi;6G71
+Mitsubishi;6G72
+Mitsubishi;6G72(GDI)
+Mitsubishi;6G73
+Mitsubishi;6G73(GDI)
+Mitsubishi;6G74
+Mitsubishi;6G74(GDI)
+Mitsubishi;6G75
+Mitsubishi;8A80
+Mitsubishi;G37B
+Mitsubishi;G54B
+Mitsubishi;G63B
+Mitsubishi;Y4F1
+Mitsubishi;Y51
+Nissan;274930
+Nissan;274A
+Nissan;C
+Nissan;CA16DE
+Nissan;CA16S
+Nissan;CA18DE
+Nissan;CA18DET
+Nissan;CA18ET
+Nissan;CA18S
+Nissan;CA18i
+Nissan;CA20S
+Nissan;CD17
+Nissan;CD20
+Nissan;CD20E
+Nissan;CD20ET
+Nissan;CD20ETi
+Nissan;CD20T
+Nissan;CD20Ti
+Nissan;CG10DE
+Nissan;CG12DE
+Nissan;CG13DE
+Nissan;CGA-3DE
+Nissan;CGA3DE
+Nissan;CR10DE
+Nissan;CR12DE
+Nissan;CR14DE
+Nissan;E15ET
+Nissan;E15S
+Nissan;EM57
+Nissan;EM61
+Nissan;GA13DE
+Nissan;GA13DS
+Nissan;GA14DE
+Nissan;GA14DS
+Nissan;GA15DE
+Nissan;GA15DS
+Nissan;GA15S
+Nissan;GA16DE
+Nissan;GA16DS
+Nissan;HR12DDR
+Nissan;HR12DE
+Nissan;HR15DE
+Nissan;HR16DE/H4M
+Nissan;J
+Nissan;K4M
+Nissan;KA20DE
+Nissan;KA24DE
+Nissan;KA24E
+Nissan;KD24DE
+Nissan;LD20II
+Nissan;LD20T-II
+Nissan;LD20TII
+Nissan;MA09ERT
+Nissan;MA10ET
+Nissan;MA10S
+Nissan;MR16DDT
+Nissan;MR18DE
+Nissan;MR20DD
+Nissan;MR20DE
+Nissan;MRA8DE
+Nissan;NA20
+Nissan;NA20P
+Nissan;NA20PE
+Nissan;NA20S
+Nissan;QC18DE
+Nissan;QD32
+Nissan;QD32ETi
+Nissan;QG13DE
+Nissan;QG15DE
+Nissan;QG15DE LEV
+Nissan;QG16DE
+Nissan;QG18DD
+Nissan;QG18DE
+Nissan;QG18DEN
+Nissan;QR20DD
+Nissan;QR20DE
+Nissan;QR25DD
+Nissan;QR25DE
+Nissan;QR25DE NEO
+Nissan;QR25DER
+Nissan;RB20DE
+Nissan;RB20DET
+Nissan;RB20E
+Nissan;RB20ET
+Nissan;RB25DE
+Nissan;RB25DET
+Nissan;RB26DETT
+Nissan;RD28
+Nissan;RD28E
+Nissan;RD28ETi
+Nissan;RD28T
+Nissan;SR16VE
+Nissan;SR18DE
+Nissan;SR18Di
+Nissan;SR20DE
+Nissan;SR20DET
+Nissan;SR20SE
+Nissan;SR20VE
+Nissan;SR20VET
+Nissan;TB42E
+Nissan;TB45E
+Nissan;TB48DE
+Nissan;TD23
+Nissan;TD27
+Nissan;TD27B
+Nissan;TD27BETi
+Nissan;TD27ETi
+Nissan;TD27T
+Nissan;TD27Ti
+Nissan;TD42
+Nissan;TD42T
+Nissan;V9X
+Nissan;VE30DE
+Nissan;VG20DET
+Nissan;VG20E
+Nissan;VG20ET
+Nissan;VG20P
+Nissan;VG30DE
+Nissan;VG30DET
+Nissan;VG30DETT
+Nissan;VG30E
+Nissan;VG30ET
+Nissan;VG33E
+Nissan;VH41DE
+Nissan;VH45DE
+Nissan;VK45DD
+Nissan;VK45DE
+Nissan;VK50VE
+Nissan;VK56DE
+Nissan;VK56VD
+Nissan;VQ20DE
+Nissan;VQ23DE
+Nissan;VQ25DD
+Nissan;VQ25DE
+Nissan;VQ25DET
+Nissan;VQ25HR
+Nissan;VQ30DD
+Nissan;VQ30DE
+Nissan;VQ30DE NEO
+Nissan;VQ30DET
+Nissan;VQ30E
+Nissan;VQ35DE
+Nissan;VQ35DE(NEO)
+Nissan;VQ35HR
+Nissan;VQ37VHR
+Nissan;VQ40
+Nissan;VQ40DE
+Nissan;VR30DDTT
+Nissan;VR38DETT
+Nissan;XH1
+Nissan;YD22D
+Nissan;YD22DD
+Nissan;YD22DDTi
+Nissan;YD25
+Nissan;YD25DDTi
+Nissan;Z20
+Nissan;Z24i
+Nissan;ZD30DD
+Nissan;ZD30DDTi
+PSA;5FE-J
+PSA;5FS-9
+PSA;DW12TED4/FAP
+PSA;DEW10J4
+PSA;DT20C
+PSA;DV6D
+PSA;DV6DBM
+PSA;DV6DTED
+PSA;DV6DUM
+PSA;DW10ATED
+PSA;DW10BTED4
+PSA;DW10C
+PSA;DW10CTED4
+PSA;DW10FC
+PSA;DW10FD
+PSA;DW10UTED4
+PSA;DW12C
+PSA;DW8B
+PSA;EB0
+PSA;EB2
+PSA;EB2DT
+PSA;EB2F
+PSA;EB2M
+PSA;EC5
+PSA;EP3
+PSA;EP6
+PSA;EP6C
+PSA;EP6CDT
+PSA;EP6CDTMD
+PSA;EP6CDTX
+PSA;EP6DT
+PSA;EP6DTX
+PSA;EP6FDTM
+PSA;ES9
+PSA;ES9A
+PSA;ES9J4S
+PSA;ET3J4
+PSA;EW10
+PSA;EW10 J4S
+PSA;EW10A
+PSA;EW10D
+PSA;EW10J4
+PSA;EW10J4S
+PSA;EW12A
+PSA;EW12J4
+PSA;EW7A
+PSA;EW7J4
+PSA;N6A-C
+PSA;TU3
+PSA;TU3A
+PSA;TU5
+PSA;TU5JP4
+PSA;TU5JP4B
+PSA;XU7JP4
+Porsche;M 46.20
+Porsche;M 48.00
+Porsche;M 48.02
+Porsche;M 48.20
+Porsche;M 48.40
+Porsche;M 48.50
+Porsche;M 48.52
+Porsche;M 48.70
+Porsche;M 55.02
+Porsche;M 97.70
+Porsche;M 97.74
+Porsche;M02.2Y
+Porsche;MA1.01
+Porsche;MA1.02
+Porsche;MA1.03
+Porsche;MA1.04
+Porsche;MA1.20
+Porsche;MA1.21
+Porsche;MA1.22
+Porsche;MA1.23
+Porsche;MA1.71
+Porsche;MA1.75
+Porsche;MCF.TB
+Porsche;MCR.CA
+Porsche;MCR.CC
+Porsche;MCT.LA
+Porsche;MCT.MA
+Porsche;MCU.DB
+Porsche;MCU.DC
+Porsche;MCU.RA
+Porsche;MCW.BA
+Porsche;MCW.DA
+Porsche;MCX.ZA
+Renault;2TR
+Renault;3CG
+Renault;D4F
+Renault;E7J
+Renault;F3R
+Renault;F4P
+Renault;F4R
+Renault;F4R 811
+Renault;F4RT
+Renault;F5R
+Renault;F7R
+Renault;F8Q
+Renault;F9Q
+Renault;G9T
+Renault;H5FT
+Renault;K4J
+Renault;K4M 800
+Renault;K7J
+Renault;K7M
+Renault;K7M 812
+Renault;K9K
+Renault;K9K 612
+Renault;L7X
+Renault;M4R
+Renault;M5M
+Renault;M5MT
+Renault;M9R
+Renault;MR20
+Renault;P9X
+Renault;R9M
+Renault;V4U
+Renault;V4Y
+Smart;M 132.910
+Smart;M 132.930
+Smart;M 281.910
+Smart;M 281.920
+Subaru;EA82
+Subaru;EF10
+Subaru;EF12
+Subaru;EG33
+Subaru;EJ15
+Subaru;EJ16
+Subaru;EJ161
+Subaru;EJ18
+Subaru;EJ20
+Subaru;EJ201
+Subaru;EJ202
+Subaru;EJ203
+Subaru;EJ204
+Subaru;EJ205
+Subaru;EJ207
+Subaru;EJ20J
+Subaru;EJ20X
+Subaru;EJ22
+Subaru;EJ25
+Subaru;EJ251
+Subaru;EJ253
+Subaru;EJ255
+Subaru;EJ257
+Subaru;EL15
+Subaru;EL154
+Subaru;EN05
+Subaru;EN07
+Subaru;ER27
+Subaru;EZ204
+Subaru;EZ30
+Subaru;EZ30D
+Subaru;EZ36
+Subaru;EZ36D
+Subaru;FA20
+Subaru;FA20-GR
+Subaru;FA20D
+Subaru;FA20F
+Subaru;FB16
+Subaru;FB20
+Subaru;FB20B
+Subaru;FB25
+Subaru;FB25B
+Subaru;FJ20
+Subaru;Z18
+Subaru;Z22
+Suzuki;F10A
+Suzuki;F5A
+Suzuki;F5B
+Suzuki;F6A
+Suzuki;F6B
+Suzuki;G10
+Suzuki;G13
+Suzuki;G13A
+Suzuki;G13B
+Suzuki;G15A
+Suzuki;G16A
+Suzuki;G16B
+Suzuki;H20A
+Suzuki;H25A
+Suzuki;H27A
+Suzuki;J18A
+Suzuki;J20A
+Suzuki;J24B
+Suzuki;K10A
+Suzuki;K10C
+Suzuki;K12B
+Suzuki;K12C
+Suzuki;K14C
+Suzuki;K14C-DITC
+Suzuki;K6A
+Suzuki;K6A (lean burn)
+Suzuki;K6A VVT
+Suzuki;K6AVVT
+Suzuki;M13A
+Suzuki;M15A
+Suzuki;M16A
+Suzuki;M18A
+Suzuki;M6A
+Suzuki;MEV40K
+Suzuki;N32A
+Suzuki;R06A
+Suzuki;М16А
+Toyota;12H-T
+Toyota;13B-T
+Toyota;15B-FT
+Toyota;1A-C
+Toyota;1A-U
+Toyota;1AD-FTV
+Toyota;1AR-FE
+Toyota;1AZ-FE
+Toyota;1AZ-FSE
+Toyota;1AZ-FSE(D-4)
+Toyota;1C
+Toyota;1C-II
+Toyota;1C-III
+Toyota;1CD-FTV
+Toyota;1FZ-FE
+Toyota;1G-E
+Toyota;1G-EU
+Toyota;1G-FE
+Toyota;1G-FE+1GM
+Toyota;1G-GE
+Toyota;1G-GEU
+Toyota;1G-GPE
+Toyota;1G-GTE
+Toyota;1G-GTEU
+Toyota;1G-GZE
+Toyota;1GD-FTV
+Toyota;1GR-FE
+Toyota;1GZ-FE
+Toyota;1GZ-FNE
+Toyota;1HD
+Toyota;1HD-FT
+Toyota;1HD-FTE
+Toyota;1HD-T
+Toyota;1HZ
+Toyota;1HZ-Z
+Toyota;1JZ-FSE
+Toyota;1JZ-GE
+Toyota;1JZ-GTE
+Toyota;1KD-FTV
+Toyota;1KR-FE
+Toyota;1KR-VET
+Toyota;1KZ-TE
+Toyota;1LR-GUE
+Toyota;1MZ-FE
+Toyota;1N
+Toyota;1N-T
+Toyota;1ND-TV
+Toyota;1NR-FE
+Toyota;1NR-FKE
+Toyota;1NZ-FE
+Toyota;1NZ-FNE
+Toyota;1NZ-FXE
+Toyota;1NZ-FXP
+Toyota;1PZ
+Toyota;1RZ
+Toyota;1RZ-E
+Toyota;1S-i
+Toyota;1S-iLU
+Toyota;1SZ-FE
+Toyota;1TR-FE
+Toyota;1TR-FPE
+Toyota;1UR-FE
+Toyota;1UR-FSE
+Toyota;1UZ-FE
+Toyota;1VD-FTV
+Toyota;1VZ-FE
+Toyota;1WZ
+Toyota;1ZR-FAE
+Toyota;1ZR-FE
+Toyota;1ZZ-FE
+Toyota;1С
+Toyota;2-LT
+Toyota;2A
+Toyota;2A-L
+Toyota;2A-LC
+Toyota;2A-LU
+Toyota;2A-U
+Toyota;2AD-FTV
+Toyota;2AR-FE
+Toyota;2AR-FSE
+Toyota;2AR-FXE
+Toyota;2AZ-FE
+Toyota;2AZ-FSE
+Toyota;2AZ-FXE
+Toyota;2C
+Toyota;2C-E
+Toyota;2C-III
+Toyota;2C-T
+Toyota;2CT
+Toyota;2E
+Toyota;2E-E
+Toyota;2F
+Toyota;2GD-FTV
+Toyota;2GR-FE
+Toyota;2GR-FKS
+Toyota;2GR-FSE
+Toyota;2GR-FXE
+Toyota;2GR-FXS
+Toyota;2H
+Toyota;2JZ-FSE
+Toyota;2JZ-GE
+Toyota;2JZ-GTE
+Toyota;2KD-FTV
+Toyota;2L
+Toyota;2L-T
+Toyota;2L-TE
+Toyota;2L-THE
+Toyota;2MZ-FE
+Toyota;2NR-FKE
+Toyota;2NZ-FE
+Toyota;2RZ-E
+Toyota;2SZ-FE
+Toyota;2T-C
+Toyota;2TR-FE
+Toyota;2TZ-FE
+Toyota;2TZ-FZE
+Toyota;2UR-FSE
+Toyota;2UR-GSE
+Toyota;2UZ-FE
+Toyota;2VZ-FE
+Toyota;2Y
+Toyota;2Y-J
+Toyota;2Y-U
+Toyota;2ZR-FAE
+Toyota;2ZR-FE
+Toyota;2ZR-FXE
+Toyota;2ZZ-GE
+Toyota;3A
+Toyota;3A-C
+Toyota;3A-HU
+Toyota;3A-LU
+Toyota;3A-SU
+Toyota;3A-U
+Toyota;3B
+Toyota;3C-E
+Toyota;3C-T
+Toyota;3C-TE
+Toyota;3E
+Toyota;3F
+Toyota;3F-E
+Toyota;3GR-FSE
+Toyota;3K
+Toyota;3K-C
+Toyota;3L
+Toyota;3MZ-FE
+Toyota;3RZ-FE
+Toyota;3S-FE
+Toyota;3S-FSE
+Toyota;3S-FSE(D-4
+Toyota;3S-GE
+Toyota;3S-GELU
+Toyota;3S-GTE
+Toyota;3SFE
+Toyota;3SZ-VE
+Toyota;3UR-FE
+Toyota;3UZ-FE
+Toyota;3VZ-E
+Toyota;3VZ-FE
+Toyota;3Y
+Toyota;3Y-E
+Toyota;3Y-EU
+Toyota;3Y-PE
+Toyota;3Y-U
+Toyota;3ZR-FAE
+Toyota;3ZR-FE
+Toyota;3ZZ-FE
+Toyota;3ZZFE
+Toyota;4A
+Toyota;4A-C
+Toyota;4A-ELU
+Toyota;4A-F
+Toyota;4A-FE
+Toyota;4A-FHE
+Toyota;4A-GE (16-valve)
+Toyota;4A-GE (20-valve)
+Toyota;4A-GELU
+Toyota;4A-GEU
+Toyota;4A-GZE
+Toyota;4A-GZELU
+Toyota;4A-L
+Toyota;4A-LC
+Toyota;4AFE
+Toyota;4E-F
+Toyota;4E-FE
+Toyota;4E-FTE
+Toyota;4GR-FSE
+Toyota;4JM
+Toyota;4K-J
+Toyota;4L-T
+Toyota;4S-FE
+Toyota;4S-FI
+Toyota;4U-GSE
+Toyota;4VZ-FE
+Toyota;4ZZ-FE
+Toyota;4ZZFE
+Toyota;5A-F
+Toyota;5A-FE
+Toyota;5A-FHE
+Toyota;5E-FE
+Toyota;5E-FHE
+Toyota;5K
+Toyota;5K-J
+Toyota;5K-U
+Toyota;5L
+Toyota;5M-EU
+Toyota;5M-GEU
+Toyota;5S-FE
+Toyota;5V-EU
+Toyota;5VZ-FE
+Toyota;6A-FC
+Toyota;6AR-FSE
+Toyota;7A-FE
+Toyota;7AFE
+Toyota;7K
+Toyota;7K-E
+Toyota;7M-GE
+Toyota;7M-GTE
+Toyota;7M-GTEU
+Toyota;8A-FE
+Toyota;8AR-FTS
+Toyota;8GR-FXS
+Toyota;8NR-FTS
+Toyota;A25A-FXS
+Toyota;EJ-DE
+Toyota;EJ-VE
+Toyota;HC-EJ
+Toyota;IHZ
+Toyota;IMZ-FE
+Toyota;IN-T
+Toyota;K
+Toyota;K3-VE
+Toyota;K3-VE2
+Toyota;K3-VET
+Toyota;KF
+Toyota;L
+Toyota;M-EU
+Toyota;M-TEU
+Toyota;M-U
+Toyota;MCV31
+Toyota;R36V
+Toyota;T2
+Toyota;V35A-FTS
+UAZ;451
+UAZ;VM-425 LTRU
+UAZ;ZMZ-40905
+UAZ;ZMZ-40906
+UAZ;ZMZ-4091
+UAZ;ZMZ-51432
+UAZ;ZMZ-PRO
+Volkswagen;1Z
+Volkswagen;4B/C5KN
+Volkswagen;6A
+Volkswagen;AAB
+Volkswagen;AAC
+Volkswagen;AAH
+Volkswagen;AAZ
+Volkswagen;ABC
+Volkswagen;ABK
+Volkswagen;ABL
+Volkswagen;ABT
+Volkswagen;ACE
+Volkswagen;ADP
+Volkswagen;ADY
+Volkswagen;AEB
+Volkswagen;AES
+Volkswagen;AFN
+Volkswagen;AGN
+Volkswagen;AGZ
+Volkswagen;AHH
+Volkswagen;AHU
+Volkswagen;AJA
+Volkswagen;AJH
+Volkswagen;AJL
+Volkswagen;AJM
+Volkswagen;AJS
+Volkswagen;ALH
+Volkswagen;ALT
+Volkswagen;ALZ
+Volkswagen;AMV
+Volkswagen;AQN
+Volkswagen;ARL
+Volkswagen;ASB
+Volkswagen;ASN
+Volkswagen;ASZ
+Volkswagen;ATJ
+Volkswagen;AUE
+Volkswagen;AUK
+Volkswagen;AVB
+Volkswagen;AVF
+Volkswagen;AVG
+Volkswagen;AVJ
+Volkswagen;AVQ
+Volkswagen;AWA
+Volkswagen;AWT
+Volkswagen;AWX
+Volkswagen;AX
+Volkswagen;AXA
+Volkswagen;AXB
+Volkswagen;AXD
+Volkswagen;AXJ
+Volkswagen;AXQ
+Volkswagen;AXZ
+Volkswagen;AYM
+Volkswagen;AZN
+Volkswagen;AZV
+Volkswagen;BAD
+Volkswagen;BAN
+Volkswagen;BAR
+Volkswagen;BAT
+Volkswagen;BBJ
+Volkswagen;BCA
+Volkswagen;BCZ
+Volkswagen;BDG
+Volkswagen;BDL
+Volkswagen;BDV
+Volkswagen;BDW
+Volkswagen;BDX
+Volkswagen;BEX
+Volkswagen;BFB
+Volkswagen;BFC
+Volkswagen;BFS
+Volkswagen;BGU
+Volkswagen;BHK
+Volkswagen;BKD
+Volkswagen;BKN
+Volkswagen;BKP
+Volkswagen;BLF
+Volkswagen;BLS
+Volkswagen;BMK
+Volkswagen;BMM
+Volkswagen;BMN
+Volkswagen;BMX
+Volkswagen;BMY
+Volkswagen;BNS
+Volkswagen;BPJ
+Volkswagen;BPK
+Volkswagen;BPP
+Volkswagen;BRR
+Volkswagen;BRS
+Volkswagen;BSW
+Volkswagen;BTR
+Volkswagen;BTS
+Volkswagen;BUG
+Volkswagen;BVJ
+Volkswagen;BWA
+Volkswagen;BWS
+Volkswagen;BXJ
+Volkswagen;BYH
+Volkswagen;BZB
+Volkswagen;BZG
+Volkswagen;CAAA
+Volkswagen;CAAB
+Volkswagen;CAAD
+Volkswagen;CABD
+Volkswagen;CAHA
+Volkswagen;CAJA
+Volkswagen;CAKA
+Volkswagen;CALA
+Volkswagen;CALB
+Volkswagen;CANA
+Volkswagen;CANC
+Volkswagen;CAVC
+Volkswagen;CAVD
+Volkswagen;CAVE
+Volkswagen;CAWB
+Volkswagen;CAXA
+Volkswagen;CAXC
+Volkswagen;CAYB
+Volkswagen;CAYC
+Volkswagen;CAYD
+Volkswagen;CAYE
+Volkswagen;CBAB
+Volkswagen;CBAC
+Volkswagen;CBBB
+Volkswagen;CBDC
+Volkswagen;CBWA
+Volkswagen;CBZA
+Volkswagen;CBZB
+Volkswagen;CCDA
+Volkswagen;CCEA
+Volkswagen;CCWA
+Volkswagen;CCZA
+Volkswagen;CCZB
+Volkswagen;CCZC
+Volkswagen;CCZD
+Volkswagen;CDAA
+Volkswagen;CDAB
+Volkswagen;CDGA
+Volkswagen;CDHB
+Volkswagen;CDLA
+Volkswagen;CDLB
+Volkswagen;CDLF
+Volkswagen;CDLG
+Volkswagen;CDNB
+Volkswagen;CDNC
+Volkswagen;CDSB
+Volkswagen;CDUC
+Volkswagen;CDUD
+Volkswagen;CDVA
+Volkswagen;CEPA
+Volkswagen;CEPB
+Volkswagen;CESA
+Volkswagen;CEUA
+Volkswagen;CEUC
+Volkswagen;CFCA
+Volkswagen;CFFB
+Volkswagen;CFFE
+Volkswagen;CFGB
+Volkswagen;CFGC
+Volkswagen;CFHC
+Volkswagen;CFHF
+Volkswagen;CFJA
+Volkswagen;CFNA
+Volkswagen;CFNB
+Volkswagen;CFSA
+Volkswagen;CFW
+Volkswagen;CGGA
+Volkswagen;CGGB
+Volkswagen;CGLC
+Volkswagen;CGNA
+Volkswagen;CGPA
+Volkswagen;CGPB
+Volkswagen;CGPC
+Volkswagen;CGRA
+Volkswagen;CGTA
+Volkswagen;CGWD
+Volkswagen;CHGA
+Volkswagen;CHHA
+Volkswagen;CHHB
+Volkswagen;CHHC
+Volkswagen;CHJA
+Volkswagen;CHPA
+Volkswagen;CHPB
+Volkswagen;CHVA
+Volkswagen;CHYA
+Volkswagen;CHYB
+Volkswagen;CJEB
+Volkswagen;CJED
+Volkswagen;CJEE
+Volkswagen;CJKA
+Volkswagen;CJKB
+Volkswagen;CJSA
+Volkswagen;CJSB
+Volkswagen;CJXA
+Volkswagen;CJXC
+Volkswagen;CJXE
+Volkswagen;CJZA
+Volkswagen;CJZB
+Volkswagen;CJZC
+Volkswagen;CJZD
+Volkswagen;CKDA
+Volkswagen;CLCA
+Volkswagen;CLLB
+Volkswagen;CMPA
+Volkswagen;CMTA
+Volkswagen;CMUA
+Volkswagen;CNCD
+Volkswagen;CNCE
+Volkswagen;CNDA
+Volkswagen;CNFB
+Volkswagen;CNHA
+Volkswagen;CPSA
+Volkswagen;CRDB
+Volkswagen;CREC
+Volkswagen;CRFC
+Volkswagen;CRLB
+Volkswagen;CRTC
+Volkswagen;CRVC
+Volkswagen;CSJB
+Volkswagen;CTBA
+Volkswagen;CTEC
+Volkswagen;CTGA
+Volkswagen;CTGE
+Volkswagen;CTHA
+Volkswagen;CTPA
+Volkswagen;CTSA
+Volkswagen;CUAA
+Volkswagen;CULB
+Volkswagen;CULC
+Volkswagen;CUNA
+Volkswagen;CUSA
+Volkswagen;CUSB
+Volkswagen;CUWA
+Volkswagen;CVKB
+Volkswagen;CVNA
+Volkswagen;CWVA
+Volkswagen;CXSB
+Volkswagen;CYGA
+Volkswagen;CYPA
+Volkswagen;CYRB
+Volkswagen;CYVB
+Volkswagen;CZAC
+Volkswagen;CZCA
+Volkswagen;CZCB
+Volkswagen;CZDA
+Volkswagen;CZDA/CZEA
+Volkswagen;CZEA
+Volkswagen;CZGA
+Volkswagen;CZPA
+Volkswagen;CZPB
+Volkswagen;DAJB
+Volkswagen;DAXB
+Volkswagen;DAZA
+Volkswagen;DCXA
+Volkswagen;DDAA
+Volkswagen;DETA
+Volkswagen;DEUA
+Volkswagen;DFGA
+Volkswagen;EA390
+Volkswagen;NG
+Volvo;B19E
+Volvo;B19ET
+Volvo;B200E
+Volvo;B200ET
+Volvo;B200F
+Volvo;B200FT
+Volvo;B200K
+Volvo;B204E
+Volvo;B204FT
+Volvo;B204GT
+Volvo;B230A
+Volvo;B230E
+Volvo;B230ET
+Volvo;B230F
+Volvo;B230FT
+Volvo;B230K
+Volvo;B234F
+Volvo;B23E
+Volvo;B23ET
+Volvo;B23FT
+Volvo;B280E
+Volvo;B280F
+Volvo;B28A
+Volvo;B28E
+Volvo;B28F
+Volvo;B4154T4
+Volvo;B4164S3
+Volvo;B4164T
+Volvo;B4164T3
+Volvo;B4202T21
+Volvo;B4204S3
+Volvo;B4204T11
+Volvo;B4204T19
+Volvo;B4204T20
+Volvo;B4204T21
+Volvo;B4204T27
+Volvo;B4204T35
+Volvo;B4204T7
+Volvo;B4204T9
+Volvo;B5204T5
+Volvo;B5204T8
+Volvo;B5204T9
+Volvo;B5244S
+Volvo;B5244T3
+Volvo;B5254T10
+Volvo;B5254T12
+Volvo;B5254T14
+Volvo;B5254T2
+Volvo;B5254T5
+Volvo;B5254T6
+Volvo;B5254T7
+Volvo;B6284T
+Volvo;B6294T
+Volvo;B6304T4
+Volvo;B6324S
+Volvo;B6324S5
+Volvo;B8444S
+Volvo;D24
+Volvo;D24T
+Volvo;D24TIC
+Volvo;D4162T
+Volvo;D4204T11
+Volvo;D4204T14
+Volvo;D4204T23
+Volvo;D4204T4
+Volvo;D4204T5
+Volvo;D4204T8
+Volvo;D5204T3
+Volvo;D5204T7
+Volvo;D5244T
+Volvo;D5244T10
+Volvo;D5244T12
+Volvo;D5244T14
+Volvo;D5244T15
+Volvo;D5244T18
+Volvo;D5244T20
+Volvo;D5244T21
+Volvo;D5244T4
+Volvo;D5244T5
+Volvo;D5252T
+Vortex;SQR 477F
+Vortex;SQR 481FC
+ZAZ;MEMZ-307

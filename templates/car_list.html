@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if car %}
+        {{ car }} Drift Chassis
+    {% else %}
+        Drift Cars Chassis By Brand
+    {% endif %}
+{% endblock %}
+{% block body %}
+<div class="post-header-container">
+    {% if car %}
+    <h1>{{ car }} Drift Chassis</h1>
+    {% else %}
+    <h1>Drift Car Chassis By Brand</h1>
+    {% endif %}
+    <div class="car-list">
+        <ul>
+            {% for car_list_item in car_list %}
+                {% if car_list_item.brand %}
+                    <li><a href="{% url 'car_model_detail' car.slug car_list_item.slug %}">{{ car_list_item }}</a></li>
+                {% elif car_list_item.car_model %}
+                    <li><a href="{% url 'car_sub_model_detail' car.brand.slug car.slug car_list_item.slug %}">{{ car_list_item }}</a></li>
+                {% else %}
+                    <li><a href="{% url 'car_brand_detail' car_list_item.slug %}">{{ car_list_item }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="car-setups">
+        <div class="setup-list-container">
+        {% if setups %}
+        <ul class="setup-list">
+            {% for setup in setups %}
+                <li class="setup-list-item">
+                    <div class="setup-list-item-image-container">
+                        <a href="{% url 'setup_detail' setup.slug %}">
+                            <img width="300px" src="{{ setup.get_main_image }}" alt="{{ setup }}">
+                        </a>
+                    </div>
+                    <div class="setup-list-item-heading-container">
+                        <a href="{% url 'setup_detail' setup.slug %}">
+                            <h2>{{ setup }}</h2>
+                        </a>
+                        <div>
+                            <a href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
+                            by {{ setup.creator }} updated {{ setup.timestamp|date:"F Y" }}
+                        </div>
+                        <div class="setup-characteristics-section">
+                            <div class="round">
+                                {% if setup.power %}
+                                <div class="power">{{ setup.power }}hp</div>
+                                {% else %}
+                                <div class="power">----hp</div>
+                                {% endif %}
+                                <div class="char-title">Power</div>
+                            </div>
+                            <div class="round">
+                                {% if setup.torque %}
+                                <div class="torque">{{ setup.torque }}Nm</div>
+                                {% else %}
+                                <div class="torque">----Nm</div>
+                                {% endif %}
+                                <div class="char-title">Torque</div>
+                            </div>
+                            <div class="round">
+                                {% if setup.rev_limit %}
+                                <div class="rev-limit">{{ setup.rev_limit }}rpm</div>
+                                {% else %}
+                                <div class="rev-limit">----rpm</div>
+                                {% endif %}
+                                <div class="char-title">Rev Limit</div>
+                            </div>
+                            <div class="round">
+                               {% if setup.weight %}
+                                <div class="weight">{{ setup.weight }}kg</div>
+                                {% else %}
+                                <div class="weight">----kg</div>
+                                {% endif %}
+                                <div class="char-title">Weight</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setup-list-item-votes-container">
+                        <div class="setup-info-total"><span>votes:</span> {{ setup.get_votes_total }}</div>
+                        <div class="votes-bar">
+                            <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
+                        </div>
+                        <div class="setup-info-total"><span>views:</span> {{ setup.views }}</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+        {% endif %}
+    </div>
+    </div>
+</div>
+{% endblock %}
