@@ -118,21 +118,21 @@
                     </div>
                 {% endfor %}
                 <div id="add-wheels_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Interior</h2>
-                {{ interior_fields_formset.management_form }}
-                {% for form in interior_fields_formset %}
-                    <div class="interior_fields-form-row">
-                        {{ form }}
-                        <div id="interior_fields" class="delete-form">&times;</div>
-                    </div>
-                {% endfor %}
-                <div id="add-interior_fields" class="setup-create-form-add-field">+ Add field</div>
                 <h2>Exterior</h2>
                 {{ exterior_fields_formset.management_form }}
                 {% for form in exterior_fields_formset %}
                     <div class="exterior_fields-form-row">
                         {{ form }}
                         <div id="exterior_fields" class="delete-form">&times;</div>
+                    </div>
+                {% endfor %}
+                <div id="add-interior_fields" class="setup-create-form-add-field">+ Add field</div>
+                <h2>Interior</h2>
+                {{ interior_fields_formset.management_form }}
+                {% for form in interior_fields_formset %}
+                    <div class="interior_fields-form-row">
+                        {{ form }}
+                        <div id="interior_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
                 <div id="add-exterior_fields" class="setup-create-form-add-field">+ Add field</div>

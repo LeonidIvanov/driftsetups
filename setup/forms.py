@@ -192,7 +192,7 @@ class SetupExteriorFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'OMP seats',
+                    'placeholder': 'Complete carbon-Kevlar HGK E92 Eurofighter bodykit',
                 }
             )
         }
@@ -216,7 +216,7 @@ class SetupInteriorFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Complete carbon-Kevlar HGK E92 Eurofighter bodykit',
+                    'placeholder': 'OMP seats',
                 }
             )
         }

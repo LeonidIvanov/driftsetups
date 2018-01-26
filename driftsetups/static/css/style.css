@@ -328,10 +328,7 @@ button {
     float: left;
 }
 .setup-header-info-left .profile-avatar{
-    top: -25%;
-    bottom: -25%;
-    left: -25%;
-    right: -25%;
+    height: 100px;
 }
 .setup-h1 {
     width: calc(100% - 126px);
