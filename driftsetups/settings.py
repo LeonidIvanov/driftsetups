@@ -174,7 +174,10 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join("DEFAULT_FILE_STORAGE", os.path.dirname(BASE_DIR), 'media')
 
-MEDIA_URL = 'https://driftsetups.s3-us-west-1.amazonaws.com/media/'
+MEDIA_URL = '/media/'
+MEDIAFILES_DIRS = [
+    os.path.join(BASE_DIR, 'driftsetups', 'media'),
+]
 
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
