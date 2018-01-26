@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'social_django',
+    'storages',
 
     'home',
     'accounts',
@@ -176,3 +177,13 @@ MEDIA_URL = '/'
 
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False
+AWS_ACCESS_KEY_ID = 'AKIAJLUSMA6H3AU5TOVA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = "driftsetups"
+AWS_S3_HOST = "s3-us-west-1.amazonaws.com"
+
+STATICFILES_STORAGE = "driftsetups.s3utils.StaticS3BotoStorage"
+DEFAULT_FILE_STORAGE = "driftsetups.s3utils.MediaS3BotoStorage"
