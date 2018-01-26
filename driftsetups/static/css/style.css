@@ -444,13 +444,13 @@ button {
     cursor:pointer;
 }
 .facebook {
-    background-image: url('/facebook.png');
+    background-image: url('facebook.png');
 }
 .twitter {
-    background-image: url('/twitter.png');
+    background-image: url('twitter.png');
 }
 .vkontakte {
-    background-image: url('/vkontakte.png');
+    background-image: url('vkontakte.png');
 }
 .setup-details-section {
     width: calc(100% - 126px);
