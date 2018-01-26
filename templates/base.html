@@ -16,7 +16,7 @@
         <nav>
             <div class="nav-left">
                 <a href="/">
-                    <div class="logo">DriftSetups</div> <img src="/media/facebook.png"/>
+                    <div class="logo">DriftSetups</div>
                 </a>
             </div>
             <div class="nav-right">
@@ -29,7 +29,7 @@
                 <li class="setup-create"><a href="{% url 'setup_create' %}">Create Setup</a></li>
                 <li><a href="{% url 'setup_list' %}">Top Setups</a></li>
                 <li><a href="{% url 'car_brand_list' %}">Cars</a></li>
-                <li class="coming">Engines</li>
+                <li class="in_dev">Engines</li>
                 {% if user.is_authenticated %}
                 <li class="dropdown">
                     <div class="dropbtn">
