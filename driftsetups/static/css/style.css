@@ -275,7 +275,7 @@ button {
 .setup-main-image {
     width: 100%;
     position: absolute;
-    top:-50%;
+    bottom: -25%;
 }
 .setup-characteristics-section {
     width: 1125px;
@@ -301,8 +301,7 @@ button {
     font-style: italic;
     font-weight: bold;
     text-shadow: -1px 0px #d34a42, 2px -2px #d34a42, -2px 2px #d34a42, -3px 3px #d34a42, -4px 4px #d34a42,
-    -5px 5px #d34a42, -6px 6px #d34a42, -7px 7px #d34a42, -8px 8px #d34a42, -9px 9px #d34a42, -10px 10px #d34a42, -11px 11px #d34a42,
-    -12px 12px #d34a42, -13px 13px #d34a42, -14px 14px #d34a42, -15px 15px #d34a42;
+    -5px 5px #d34a42, -6px 6px #d34a42, -7px 7px #d34a42, -8px 8px #d34a42;
 }
 .round .char-title {
     border-top: 3px solid #ffffff2f;

@@ -126,7 +126,7 @@
                         <div id="exterior_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-interior_fields" class="setup-create-form-add-field">+ Add field</div>
+                <div id="add-exterior_fields" class="setup-create-form-add-field">+ Add field</div>
                 <h2>Interior</h2>
                 {{ interior_fields_formset.management_form }}
                 {% for form in interior_fields_formset %}
@@ -135,7 +135,7 @@
                         <div id="interior_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-exterior_fields" class="setup-create-form-add-field">+ Add field</div>
+                <div id="add-interior_fields" class="setup-create-form-add-field">+ Add field</div>
             </div>
             <div class="setup-create-form-half">
                 <button class="setup-create-form-top-button" type="submit">Save Setup</button>
