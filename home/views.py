@@ -19,7 +19,7 @@ class HomeView(TemplateView):
                     CarModel.objects.all()
                 )
             ), key=lambda instance: instance.views, reverse=True
-        )[:5]
+        )[:4]
         context['top_setups_by_views'] = Setup.objects.order_by('-views')[:5]
         setups_by_votes = sorted(
             Setup.objects.all(),
