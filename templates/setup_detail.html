@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{ setup }}{% endblock %}
+{% block head %}
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ setup }} | DriftSetups"/>
+    <meta property="og:description" content="{{ setup.description|slice:':300' }}..."/>
+    <meta property="og:url" content="{{ setup.get_absolute_url }}" />
+    <meta property="og:site_name" content="DriftSetups" />
+    {% for tag in setup.car.split_tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+    {% endfor %}
+    <meta property="article:tag" content="{{ setup.engine }}" />
+    <meta property="article:tag" content="drift" />
+    <meta property="article:tag" content="Drifting" />
+    <meta property="article:section" content="Car Setups" />
+    <meta property="article:modified_time" content="{{ setup.timestamp }}" />
+    <meta property="og:updated_time" content="{{ setup.timestamp }}" />
+    <meta property="og:image" content="{{ setup.get_main_image }}" />
+{% endblock %}
 {% block body %}
 <div class="setup-header-section">
     <img class="setup-main-image" src="{{ setup.get_main_image }}">
