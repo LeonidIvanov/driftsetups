@@ -178,7 +178,7 @@ MEDIA_URL = '/'
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_S3_SECURE_URLS = True      # use http instead of https
 AWS_QUERYSTRING_AUTH = False
 AWS_STORAGE_BUCKET_NAME = "driftsetups"
 AWS_S3_HOST = "s3-us-west-1.amazonaws.com"
