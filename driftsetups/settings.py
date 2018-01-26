@@ -184,11 +184,12 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 
 AWS_STATIC_LOCATION = 'static'
-STATICFILES_STORAGE = 'storage_backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_STATIC_LOCATION)
-
 AWS_MEDIA_LOCATION = 'media'
-DEFAULT_FILE_STORAGE = 'storage_backends.MediaStorage'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_MEDIA_LOCATION)
+
+DEFAULT_FILE_STORAGE = 'driftsetups.storage_backends.MediaStorage'
 
 
 # EMAIL
