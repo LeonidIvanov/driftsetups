@@ -12,8 +12,8 @@ class StaticStorage(S3Boto3Storage):
         if not name.endswith('/'):
             name += "/"
 
-        name += self.location
-        return name
+        self.location += name
+        return self.location
 
 
 class MediaStorage(S3Boto3Storage):
@@ -27,5 +27,5 @@ class MediaStorage(S3Boto3Storage):
         if not name.endswith('/'):
             name += "/"
 
-        name += self.location
-        return name
+        self.location += name
+        return self.location
