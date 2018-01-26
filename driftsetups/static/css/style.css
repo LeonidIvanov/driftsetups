@@ -846,10 +846,10 @@ div[class*='_fields-form-row'] input:last-of-type{
     display: inline-block;
 }
 .google-signup .google-signup-icon{
-    background-image: url('/google.png');
+    background-image: url('google.png');
 }
 .facebook-signup .facebook-signup-icon{
-    background-image: url('/facebook.png');
+    background-image: url('facebook.png');
     background-color: #fff;
 
 }
