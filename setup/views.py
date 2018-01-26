@@ -243,7 +243,8 @@ class SetupDetailView(TemplateView):
 class SetupVoteUp(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
-        vote = SetupVote.objects.get(setup=kwargs.get('setup_slug'), user=request.user)
+        setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
+        vote = SetupVote.objects.get(setup=setup, user=request.user)
         vote = 1
         vote.save()
         return super(SetupVoteUp, self).get(request, *args, **kwargs)
@@ -252,7 +253,8 @@ class SetupVoteUp(LoginRequiredMixin, View):
 class SetupVoteDown(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
-        vote = SetupVote.objects.get(setup=kwargs.get('setup_slug'), user=request.user)
+        setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
+        vote = SetupVote.objects.get(setup=setup, user=request.user)
         vote = 0
         vote.save()
         return super(SetupVoteDown, self).get(request, *args, **kwargs)
