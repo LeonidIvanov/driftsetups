@@ -379,7 +379,7 @@ button {
     margin-top: 10px;
 }
 .vote-up:before {
-    background-image: url('/vote-up.png');
+    background-image: url('/media/vote-up.png');
     -webkit-background-size: 28px;
     background-size: 28px;
     display: inline-block;
@@ -388,7 +388,7 @@ button {
     content: "";
 }
 .vote-down:before{
-    background-image: url('/vote-down.png');
+    background-image: url('/media/vote-down.png');
     -webkit-background-size: 28px;
     background-size: 28px;
     display: inline-block;
@@ -444,13 +444,13 @@ button {
     cursor:pointer;
 }
 .facebook {
-    background-image: url('facebook.png');
+    background-image: url('/media/facebook.png');
 }
 .twitter {
-    background-image: url('twitter.png');
+    background-image: url('/media/twitter.png');
 }
 .vkontakte {
-    background-image: url('vkontakte.png');
+    background-image: url('/media/vkontakte.png');
 }
 .setup-details-section {
     width: calc(100% - 126px);
@@ -846,10 +846,10 @@ div[class*='_fields-form-row'] input:last-of-type{
     display: inline-block;
 }
 .google-signup .google-signup-icon{
-    background-image: url('google.png');
+    background-image: url('/media/google.png');
 }
 .facebook-signup .facebook-signup-icon{
-    background-image: url('facebook.png');
+    background-image: url('/media/facebook.png');
     background-color: #fff;
 
 }
