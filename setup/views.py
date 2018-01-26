@@ -246,9 +246,9 @@ class SetupVoteUp(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
         try:
-            vote = SetupVote.objects.get(setup=setup, user=request.user)
-            vote = 1
-            vote.save()
+            setup_vote = SetupVote.objects.get(setup=setup, user=request.user)
+            setup_vote.vote = 1
+            setup_vote.save()
         except SetupVote.DoesNotExist:
             SetupVote.objects.create(setup=setup, user=request.user, vote=1)
         return JsonResponse({'vote': 'up'})
@@ -259,9 +259,9 @@ class SetupVoteDown(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
         try:
-            vote = SetupVote.objects.get(setup=setup, user=request.user)
-            vote = 0
-            vote.save()
+            setup_vote = SetupVote.objects.get(setup=setup, user=request.user)
+            setup_vote.vote = 0
+            setup_vote.save()
         except SetupVote.DoesNotExist:
             SetupVote.objects.create(setup=setup, user=request.user, vote=0)
         return JsonResponse({'vote': 'down'})
