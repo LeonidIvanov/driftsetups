@@ -172,7 +172,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'driftsetups', 'static'),
 ]
 
-MEDIA_ROOT = os.path.join("DEFAULT_FILE_STORAGE", os.path.dirname(BASE_DIR), 'media')
+MEDIA_ROOT = os.path.join("DEFAULT_FILE_STORAGE", os.path.join(os.path.dirname(BASE_DIR), 'media'))
 
 MEDIA_URL = '/media/'
 MEDIAFILES_DIRS = [
