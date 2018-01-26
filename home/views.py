@@ -20,7 +20,7 @@ class HomeView(TemplateView):
                 )
             ), key=lambda instance: instance.views, reverse=True
         )[:4]
-        context['top_setups_by_views'] = Setup.objects.order_by('-views')[:5]
+        context['top_setups_by_views'] = Setup.objects.order_by('-views')[:4]
         setups_by_votes = sorted(
             Setup.objects.all(),
             key=lambda s: s.get_votes_total(),
@@ -30,8 +30,8 @@ class HomeView(TemplateView):
             setups_by_votes,
             key=lambda s: s.get_votes_percentage(),
             reverse=True
-        )[:5]
+        )[:4]
         context['top_weekly_setups'] = Setup.objects.filter(
             timestamp__gte=timezone.now() - timezone.timedelta(days=7)
-        ).order_by('-views')[:5]
+        ).order_by('-views')[:4]
         return context
