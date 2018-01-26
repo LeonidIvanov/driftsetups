@@ -66,7 +66,7 @@ class CarBrand(models.Model):
 class CarModel(models.Model):
     name = models.CharField(max_length=100)
     brand = models.ForeignKey(CarBrand)
-    stock_engines = models.ManyToManyField(Engine)
+    stock_engines = models.ManyToManyField(Engine, blank=True)
     setups = GenericRelation(Setup, related_query_name='car_model_setup')
     views = models.PositiveIntegerField(default=0)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
@@ -105,7 +105,7 @@ class CarModel(models.Model):
 class CarSubModel(models.Model):
     name = models.CharField(max_length=100)
     car_model = models.ForeignKey(CarModel)
-    stock_engines = models.ManyToManyField(Engine)
+    stock_engines = models.ManyToManyField(Engine, blank=True)
     setups = GenericRelation(Setup, related_query_name='sub_model_setup')
     views = models.PositiveIntegerField(default=0)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
