@@ -7,6 +7,7 @@ from django.http import Http404
 from django.shortcuts import redirect
 from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
 
 from .models import Setup, SetupImage, SetupVote
 from .forms import SetupCreateForm, SetupImageCreateForm
@@ -250,7 +251,7 @@ class SetupVoteUp(LoginRequiredMixin, View):
             vote.save()
         except SetupVote.DoesNotExist:
             SetupVote.objects.create(setup=setup, user=request.user, vote=1)
-        return super(SetupVoteUp, self).get(request, *args, **kwargs)
+        return JsonResponse({'vote': 'up'})
 
 
 class SetupVoteDown(LoginRequiredMixin, View):
@@ -263,4 +264,4 @@ class SetupVoteDown(LoginRequiredMixin, View):
             vote.save()
         except SetupVote.DoesNotExist:
             SetupVote.objects.create(setup=setup, user=request.user, vote=0)
-        return super(SetupVoteDown, self).get(request, *args, **kwargs)
+        return JsonResponse({'vote': 'down'})
