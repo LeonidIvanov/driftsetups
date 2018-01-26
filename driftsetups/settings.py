@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'driftsetups.urls'
@@ -166,8 +166,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = os.environ.get("STATIC_ROOT", os.path.join(os.path.dirname(BASE_DIR), 'staticfiles'))
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
+# STATIC_ROOT = os.environ.get("STATIC_ROOT", os.path.join(os.path.dirname(BASE_DIR), 'staticfiles'))
+# MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'driftsetups/static'),
@@ -176,9 +176,6 @@ STATICFILES_DIRS = [
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-
-AWS_S3_SECURE_URLS = True      # use http instead of https
-AWS_QUERYSTRING_AUTH = False
 AWS_STORAGE_BUCKET_NAME = "driftsetups"
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
@@ -192,7 +189,7 @@ STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_STATIC_LOCATION)
 
 AWS_MEDIA_LOCATION = 'media'
 DEFAULT_FILE_STORAGE = 'driftsetups.storage_backends.MediaStorage'
-MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_MEDIA_LOCATION)
+# MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_MEDIA_LOCATION)
 
 # EMAIL
 EMAIL_USE_TLS = True
