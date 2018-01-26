@@ -126,7 +126,7 @@ class CarSubModel(models.Model):
         self.save()
 
     def split_tags(self):
-        car_name = '{0} {1} {2}'.format(self.car_model.brand, self.car_model, self.name)
+        car_name = '{0} {1}'.format(self.car_model, self.name)
         return car_name.split(' ')
 
     def get_main_image(self):
@@ -136,4 +136,4 @@ class CarSubModel(models.Model):
         return reverse('car_sub_model_detail', args=[str(self.car_model.brand.slug), str(self.car_model.slug), str(self.slug)])
 
     def __str__(self):
-        return '{0} {1} {2}'.format(self.car_model.brand, self.car_model, self.name)
+        return '{0} {1}'.format(self.car_model.brand, self.car_model, self.name)
