@@ -452,6 +452,9 @@ button {
     width: calc(100% - 126px);
     margin-left: 126px;
 }
+.setup-description-section h2 {
+    margin-top: 0;
+}
 .morecontent span, .setup-description-section p + p {
 	display: none;
 }
