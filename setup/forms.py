@@ -46,12 +46,12 @@ class SetupCreateForm(forms.ModelForm):
 class SetupImageCreateForm(forms.ModelForm):
     class Meta:
         model = SetupImage
-        fields = ['image', 'is_main', 'setup']
+        fields = ['image']
         labels = {'image': ''}
         widgets = {
-            'image': forms.HiddenInput(attrs={'multiple': True}),
-            'is_main': forms.HiddenInput(),
+            'image': forms.ClearableFileInput(attrs={'multiple': True, 'hidden': True})
         }
+
 
 
 SetupImageCreateFormSet = forms.inlineformset_factory(
@@ -67,15 +67,14 @@ SetupImageCreateFormSet = forms.inlineformset_factory(
 class SetupEngineFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Mast Motorsports Mozez Canted Valve cylinder heads',
                 }
-            )
+            ),
         }
 
 
@@ -92,10 +91,9 @@ SetupEngineFieldCreateFormSet = forms.inlineformset_factory(
 class SetupDrivetrainFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Samsonas 5-speed sequential transmission',
@@ -117,10 +115,9 @@ SetupDrivetrainFieldCreateFormSet = forms.inlineformset_factory(
 class SetupSuspensionFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Front & Rear Wisefab knuckles & arms',
@@ -142,10 +139,9 @@ SetupSuspensionFieldCreateFormSet = forms.inlineformset_factory(
 class SetupBrakesFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Wilwood 4-piston calipers & Wilwood drilled rotors (rear)',
@@ -167,10 +163,9 @@ SetupBrakesFieldCreateFormSet = forms.inlineformset_factory(
 class SetupWheelsFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Work Wheels L1 3P 18×9-inch (front) 18×10-inch (rear)',
@@ -192,10 +187,9 @@ SetupWheelsFieldCreateFormSet = forms.inlineformset_factory(
 class SetupExteriorFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'OMP seats',
@@ -217,10 +211,9 @@ SetupExteriorFieldCreateFormSet = forms.inlineformset_factory(
 class SetupInteriorFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField
-        fields = ['field', 'setup', 'category']
+        fields = ['field']
         labels = {'field': ''}
         widgets = {
-            'category': forms.HiddenInput(),
             'field': forms.TextInput(
                 attrs={
                     'placeholder': 'Complete carbon-Kevlar HGK E92 Eurofighter bodykit',

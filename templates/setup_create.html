@@ -29,7 +29,7 @@
                             <option value="{{ model.id }}">{{ model.name }}</option>
                             {% endfor %}
                         </select>
-                        <select name="car_sub_model" class="car-sub-model-select" required="" id="id_car_sub_model">
+                        <select name="car_sub_model" class="car-sub-model-select" id="id_car_sub_model">
                             <option value="" selected="">Body</option>
                             {% for sub_model in car_sub_models %}
                             <option value="{{ sub_model.id }}">{{ sub_model.name }}</option>
@@ -144,7 +144,7 @@
                     <div class="setup-create-form-add-image-container-text">Drop or click</div>
                     <div class="setup-create-form-add-image-container-text">to upload photos</div>
                 </div>
-                <input type="file" id="images-form" hidden multiple />
+                {{ images_form }}
                 <div class="images-previews"></div>
             </div>
             <button class="setup-create-form-bottom-button" type="submit">Save Setup</button>

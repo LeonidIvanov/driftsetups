@@ -38,14 +38,14 @@ function deleteForm(prefix, btn) {
 
 function openImageUploadInput() {
     $('.setup-create-form-add-image-container').click( function () {
-        $('#images-form').click()
+        $('#id_image').click()
     })
 }
 
 $(document).ready(function (){
     openImageUploadInput();
 
-    $('#images-form').change( function(){
+    $('#id_image').change( function(){
         imageInputTumbnail(this);
     });
 });

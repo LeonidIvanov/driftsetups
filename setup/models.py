@@ -3,7 +3,7 @@ from autoslug import AutoSlugField
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
-from django.utils import timezone
+from django.shortcuts import reverse
 
 from accounts.models import User
 
@@ -72,6 +72,9 @@ class Setup(models.Model):
     def increase_views(self):
         self.views += 1
         self.save()
+
+    def get_absolute_url(self):
+        return reverse('setup_detail', args=[self.slug])
 
     def __str__(self):
         return self.name

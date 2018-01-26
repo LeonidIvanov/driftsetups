@@ -95,7 +95,7 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         context['car_models'] = CarModel.objects.all()
         context['car_sub_models'] = CarSubModel.objects.all()
         if self.request.POST:
-            context['images_input'] = SetupImageCreateForm(
+            context['images_form'] = SetupImageCreateForm(
                 self.request.POST,
                 self.request.FILES,
             )
@@ -128,7 +128,7 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
                 prefix='interior_fields'
             )
         else:
-            context['images_input'] = SetupImageCreateForm()
+            context['images_form'] = SetupImageCreateForm()
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
                 prefix='engine_fields'
             )
@@ -154,7 +154,17 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         context = self.get_context_data()
-        images_form = context['images_input']
+
+        if self.request.POST.get('car_sub_model'):
+            car_sub_model_id = int(self.request.POST.get('car_sub_model'))
+            form.instance.car = CarSubModel.objects.get(id=car_sub_model_id)
+        else:
+            car_model_id = int(self.request.POST.get('car_model'))
+            form.instance.car = CarModel.objects.get(id=car_model_id)
+        form.instance.creator = self.request.user
+        self.object = form.save()
+
+        images_form = context['images_form']
         engine_fields_formset = context['engine_fields_formset']
         drivetrain_fields_formset = context['drivetrain_fields_formset']
         suspension_fields_formset = context['suspension_fields_formset']
@@ -162,59 +172,58 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         wheels_fields_formset = context['wheels_fields_formset']
         exterior_fields_formset = context['exterior_fields_formset']
         interior_fields_formset = context['interior_fields_formset']
-        car_brand_id = int(self.request.POST.get('car_brand'))
-        car_model_id = int(self.request.POST.get('car_model'))
-        car_sub_model_id = int(self.request.POST.get('car_sub_model'))
-        if car_sub_model_id:
-            form.instance.car = CarModel.objects.get(id=car_sub_model_id)
-        else:
-            form.instance.car = CarModel.objects.get(id=car_model_id)
-        form.instance.creator = self.request.user
-        self.object = form.save()
-
         if self.request.FILES:
             if images_form.is_valid():
                 SetupImage.objects.create(
-                    file=self.request.FILES.getlist('image')[0],
+                    image=self.request.FILES.getlist('image')[0],
                     setup=self.object,
                     is_main=True
                 )
                 for file in self.request.FILES.getlist('image')[1:]:
-                    SetupImage.objects.create(image=file, setup=self.object)
-                return redirect(self.get_success_url())
-            else:
-                return self.render_to_response(self.get_context_data(form=form))
-        else:
-            with transaction.atomic():
-                if engine_fields_formset.is_valid() and drivetrain_fields_formset.is_valid()\
-                        and suspension_fields_formset.is_valid() and brakes_fields_formset.is_valid() \
-                        and wheels_fields_formset.is_valid() and exterior_fields_formset.is_valid()\
-                        and interior_fields_formset.is_valid():
-                    engine_fields_formset.instance = self.object
-                    drivetrain_fields_formset.instance = self.object
-                    suspension_fields_formset.instance = self.object
-                    brakes_fields_formset.instance = self.object
-                    wheels_fields_formset.instance = self.object
-                    exterior_fields_formset.instance = self.object
-                    interior_fields_formset.instance = self.object
+                    SetupImage.objects.create(
+                        image=file,
+                        setup=self.object,
+                        is_main=False
+                    )
 
-                    engine_fields_formset.instance.category = 0
-                    drivetrain_fields_formset.instance.category = 1
-                    suspension_fields_formset.instance.category = 2
-                    brakes_fields_formset.instance.category = 3
-                    wheels_fields_formset.instance.category = 4
-                    exterior_fields_formset.instance.category = 5
-                    interior_fields_formset.instance.category = 6
+        with transaction.atomic():
+            if engine_fields_formset.is_valid():
+                engine_fields_formset.instance = self.object
+                for form in engine_fields_formset:
+                    form.instance.category = 0
+                engine_fields_formset.save()
+            if drivetrain_fields_formset.is_valid():
+                drivetrain_fields_formset.instance = self.object
+                for form in drivetrain_fields_formset:
+                    form.instance.category = 1
+                drivetrain_fields_formset.save()
+            if suspension_fields_formset.is_valid():
+                suspension_fields_formset.instance = self.object
+                for form in suspension_fields_formset:
+                    form.instance.category = 2
+                suspension_fields_formset.save()
+            if brakes_fields_formset.is_valid():
+                brakes_fields_formset.instance = self.object
+                for form in brakes_fields_formset:
+                    form.instance.category = 3
+                brakes_fields_formset.save()
+            if wheels_fields_formset.is_valid():
+                wheels_fields_formset.instance = self.object
+                for form in wheels_fields_formset:
+                    form.instance.category = 4
+                wheels_fields_formset.save()
+            if exterior_fields_formset.is_valid():
+                exterior_fields_formset.instance = self.object
+                for form in exterior_fields_formset:
+                    form.instance.category = 5
+                exterior_fields_formset.save()
+            if interior_fields_formset.is_valid():
+                interior_fields_formset.instance = self.object
+                for form in interior_fields_formset:
+                    form.instance.category = 6
+                interior_fields_formset.save()
 
-                    engine_fields_formset.save()
-                    drivetrain_fields_formset.save()
-                    suspension_fields_formset.save()
-                    brakes_fields_formset.save()
-                    wheels_fields_formset.save()
-                    exterior_fields_formset.save()
-                    interior_fields_formset.save()
-                else:
-                    return self.render_to_response(self.get_context_data(form=form))
+        return redirect(self.get_success_url())
 
     def form_invalid(self, form):
         return self.render_to_response(self.get_context_data(form=form))
