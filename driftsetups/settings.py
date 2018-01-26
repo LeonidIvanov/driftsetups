@@ -173,7 +173,11 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
-MEDIA_URL = '/'
+
+MEDIA_URL = 'https://driftsetups.s3-us-west-1.amazonaws.com/media/'
+MEDIAFILES_LOCATION = 'media'
+
+MEDIA_URL = os.environ.get('MEDIA_URL', MEDIA_URL)
 
 SECURE_SSL_REDIRECT = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -185,3 +189,11 @@ AWS_S3_HOST = "s3-us-west-1.amazonaws.com"
 
 STATICFILES_STORAGE = "driftsetups.s3utils.StaticS3BotoStorage"
 DEFAULT_FILE_STORAGE = "driftsetups.s3utils.MediaS3BotoStorage"
+
+
+# EMAIL
+EMAIL_USE_TLS = True
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = ""
+EMAIL_HOST_PASSWORD = ""
+EMAIL_PORT = 587
