@@ -244,8 +244,8 @@ class SetupVoteUp(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
-        vote = SetupVote.objects.get(setup=setup, user=request.user)
-        if vote:
+        if SetupVote.objects.get(setup=setup, user=request.user):
+            vote = SetupVote.objects.get(setup=setup, user=request.user)
             vote = 1
             vote.save()
         else:
@@ -257,8 +257,8 @@ class SetupVoteDown(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
-        vote = SetupVote.objects.get(setup=setup, user=request.user)
-        if vote:
+        if SetupVote.objects.get(setup=setup, user=request.user):
+            vote = SetupVote.objects.get(setup=setup, user=request.user)
             vote = 0
             vote.save()
         else:

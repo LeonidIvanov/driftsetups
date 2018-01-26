@@ -42,7 +42,6 @@ function showMore(){
 }
 
 
-
 $(document).ready(function(){
     showMore();
 
