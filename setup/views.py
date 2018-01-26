@@ -172,19 +172,6 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         wheels_fields_formset = context['wheels_fields_formset']
         exterior_fields_formset = context['exterior_fields_formset']
         interior_fields_formset = context['interior_fields_formset']
-        if self.request.FILES:
-            if images_form.is_valid():
-                SetupImage.objects.create(
-                    image=self.request.FILES.getlist('image')[0],
-                    setup=self.object,
-                    is_main=True
-                )
-                for file in self.request.FILES.getlist('image')[1:]:
-                    SetupImage.objects.create(
-                        image=file,
-                        setup=self.object,
-                        is_main=False
-                    )
 
         with transaction.atomic():
             if engine_fields_formset.is_valid():
@@ -222,6 +209,20 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
                 for form in interior_fields_formset:
                     form.instance.category = 6
                 interior_fields_formset.save()
+
+        if self.request.FILES:
+            if images_form.is_valid():
+                SetupImage.objects.create(
+                    image=self.request.FILES.getlist('image')[0],
+                    setup=self.object,
+                    is_main=True
+                )
+                for file in self.request.FILES.getlist('image')[1:]:
+                    SetupImage.objects.create(
+                        image=file,
+                        setup=self.object,
+                        is_main=False
+                    )
 
         return redirect(self.get_success_url())
 
