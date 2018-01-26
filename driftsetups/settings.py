@@ -175,6 +175,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = os.path.join("DEFAULT_FILE_STORAGE", os.path.dirname(BASE_DIR), 'media')
 
 MEDIA_URL = 'https://driftsetups.s3-us-west-1.amazonaws.com/media/'
+MEDIAFILES_LOCATION = 'media'
 
 MEDIA_URL = os.environ.get('MEDIA_URL', MEDIA_URL)
 
