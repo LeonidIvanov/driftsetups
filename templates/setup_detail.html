@@ -59,13 +59,14 @@
     </div>
 </div>
 <div class="container">
-    <div class="setup-header-info">
+    <div itemscope itemtype="http://schema.org/Article" itemref="_articleSection4 _articleBody5" class="setup-header-info">
             <div class="setup-header-info-left">
                 <div class="profile-avatar-div">
                     <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
                 </div>
-                <h1 class="setup-h1">{{ setup }}</h1>
-                <div class="setup-car-model-by">{{ setup.car}} by {{ setup.creator }} updated {{ setup.timestamp|date:"F Y" }}</div>
+                <h1 id="_name1" itemprop="name" class="setup-h1">{{ setup }}</h1>
+                <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
+<span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
                 {% if setup.creator.city %}
                     <div class="setup-car-city">{{ setup.creator.city }}</div>
                 {% endif %}
@@ -116,16 +117,16 @@
             <div class="setup-details-section">
                 {% if setup.description %}
                 <div class="setup-description-section">
-                    <h2>Car Story</h2>
-                    <div class="setup-description more">{{ setup.description|linebreaks }}</div>
+                    <h2 id="_articleSection4" itemprop="articleSection">Car Story</h2>
+                    <div id="_articleBody5" itemprop="articleBody" class="setup-description more">{{ setup.description|linebreaks }}</div>
                 </div>
                 {% endif %}
 
-                <div class="setup-engine-section">
-                    <h2 class="engine-model">Engine: {{ setup.engine }}</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-engine-section">
+                    <h2 itemprop="articleSection" class="engine-model">Engine: {{ setup.engine }}</h2>
                 {% if setup.get_engine_fields %}
                     <div class="engine">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for engine_field in setup.get_engine_fields %}
                             <li>{{ engine_field }}</li>
                         {% endfor %}
@@ -134,10 +135,10 @@
                 {% endif %}
                 </div>
                 {% if setup.get_drivetrain_fields %}
-                <div class="setup-drivetrain-section">
-                    <h2>Drivetrain</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-drivetrain-section">
+                    <h2 itemprop="articleSection">Drivetrain</h2>
                     <div class="drivetrain">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for drivetrain_field in setup.get_drivetrain_fields %}
                             <li>{{ drivetrain_field }}</li>
                         {% endfor %}
@@ -146,10 +147,10 @@
                 </div>
                 {% endif %}
                 {% if setup.get_suspension_fields %}
-                <div class="setup-suspension-section">
-                    <h2>Suspension</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-suspension-section">
+                    <h2 itemprop="articleSection">Suspension</h2>
                     <div class="suspension">
-                        <ul>
+                        <ul itemprop="articleBody" >
                         {% for suspension_field in setup.get_suspension_fields %}
                             <li>{{ suspension_field }}</li>
                         {% endfor %}
@@ -158,10 +159,10 @@
                 </div>
                 {% endif %}
                 {% if setup.get_brakes_fields %}
-                <div class="setup-brakes-section">
-                    <h2>Brakes</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-brakes-section">
+                    <h2 itemprop="articleSection">Brakes</h2>
                     <div class="brakes">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for brakes_field in setup.get_brakes_fields %}
                             <li>{{ brakes_field }}</li>
                         {% endfor %}
@@ -170,10 +171,10 @@
                 </div>
                 {% endif %}
                 {% if setup.get_wheels_fields %}
-                <div class="setup-wheels-section">
-                    <h2>Wheels</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-wheels-section">
+                    <h2 itemprop="articleSection">Wheels</h2>
                     <div class="wheels">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for wheels_field in setup.get_wheels_fields %}
                             <li>{{ wheels_field }}</li>
                         {% endfor %}
@@ -182,10 +183,10 @@
                 </div>
                 {% endif %}
                 {% if setup.get_exterior_fields %}
-                <div class="setup-exterior-section">
-                    <h2>Exterior</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-exterior-section">
+                    <h2 itemprop="articleSection">Exterior</h2>
                     <div class="exterior">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for exterior_field in setup.get_exterior_fields %}
                             <li>{{ exterior_field }}</li>
                         {% endfor %}
@@ -194,10 +195,10 @@
                 </div>
                 {% endif %}
                 {% if setup.get_interior_fields %}
-                <div class="setup-interior-section">
-                    <h2>Interior</h2>
+                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-interior-section">
+                    <h2 itemprop="articleSection">Interior</h2>
                     <div class="interior">
-                        <ul>
+                        <ul itemprop="articleBody">
                         {% for interior_field in setup.get_interior_fields %}
                             <li>{{ interior_field }}</li>
                         {% endfor %}
