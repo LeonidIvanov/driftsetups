@@ -27,6 +27,5 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^', include('home.urls')),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-    url(r'^sitemap\.xml/$', SitemapXmlView.as_view()),
 ]
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
