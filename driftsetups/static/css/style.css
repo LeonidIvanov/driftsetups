@@ -117,6 +117,10 @@ button {
 .search-container button:hover {
     transform: scale(1.5);
 }
+.in_dev {
+    color: #cecece;
+    transition: none;
+}
 .no-setups {
     margin: 40px 0px;
 }

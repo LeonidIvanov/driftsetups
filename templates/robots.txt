@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /accounts/login/
 
 Host: driftsetups.com
 Sitemap: https://driftsetups.com/sitemap.xml/
