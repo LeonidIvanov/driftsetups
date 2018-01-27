@@ -1,0 +1,4 @@
+User-agent: *
+
+Host: driftsetups.com
+Sitemap: https://driftsetups.com/sitemap.xml/
