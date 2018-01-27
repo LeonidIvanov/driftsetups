@@ -1,8 +1,6 @@
 from autoslug import AutoSlugField
 from itertools import chain
-import datetime
-
-now = datetime.datetime.now()
+from django.utils import timezone
 
 from django.db import models
 from django.contrib.contenttypes.fields import GenericRelation
@@ -38,7 +36,7 @@ class CarImage(models.Model):
 class CarBrand(models.Model):
     name = models.CharField(max_length=50)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
-    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True, default=timezone.now())
 
     class Meta:
         ordering = ['name']
@@ -78,7 +76,7 @@ class CarModel(models.Model):
     views = models.PositiveIntegerField(default=0)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
     images = GenericRelation(CarImage, related_query_name='car_model_images')
-    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True, default=timezone.now())
 
     class Meta:
         ordering = ['name']
@@ -122,7 +120,7 @@ class CarSubModel(models.Model):
     views = models.PositiveIntegerField(default=0)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
     images = GenericRelation(CarImage, related_query_name='sub_model_images')
-    updated_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True, default=timezone.now())
 
     class Meta:
         ordering = ['name']
