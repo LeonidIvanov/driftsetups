@@ -25,7 +25,16 @@ class SetupListView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(SetupListView, self).get_context_data(**kwargs)
         if self.request.path == '/s/' or re.compile('/s/page/\d+/').match(self.request.path):
-            setups = Setup.objects.all()
+            setups_by_votes = sorted(
+                Setup.objects.all(),
+                key=lambda s: s.get_votes_total(),
+                reverse=True
+            )
+            setups = sorted(
+                setups_by_votes,
+                key=lambda s: s.get_votes_percentage(),
+                reverse=True
+            )
             context['base_url'] = redirect('setup_list').url
         else:
             if kwargs.get('sub_model_slug'):
