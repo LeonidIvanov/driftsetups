@@ -21,213 +21,215 @@
     <meta property="og:image" content="{{ setup.get_main_image }}" />
 {% endblock %}
 {% block body %}
-<div class="setup-header-section">
-    <img class="setup-main-image" src="{{ setup.get_main_image }}">
-    <div class="setup-characteristics-section">
-            <div class="round">
-                {% if setup.power %}
-                <div class="power">{{ setup.power }}hp</div>
-                {% else %}
-                <div class="power">----hp</div>
-                {% endif %}
-                <div class="char-title">Power</div>
-            </div>
-            <div class="round">
-                {% if setup.torque %}
-                <div class="torque">{{ setup.torque }}Nm</div>
-                {% else %}
-                <div class="torque">----Nm</div>
-                {% endif %}
-                <div class="char-title">Torque</div>
-            </div>
-            <div class="round">
-                {% if setup.rev_limit %}
-                <div class="rev-limit">{{ setup.rev_limit }}rpm</div>
-                {% else %}
-                <div class="rev-limit">----rpm</div>
-                {% endif %}
-                <div class="char-title">Rev Limit</div>
-            </div>
-            <div class="round">
-               {% if setup.weight %}
-                <div class="weight">{{ setup.weight }}kg</div>
-                {% else %}
-                <div class="weight">----kg</div>
-                {% endif %}
-                <div class="char-title">Weight</div>
-            </div>
-    </div>
-</div>
-<div class="container">
-    <div itemscope itemtype="http://schema.org/Article" itemref="_articleSection4 _articleBody5" class="setup-header-info">
-            <div class="setup-header-info-left">
-                <div class="profile-avatar-div">
-                    <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
+<div itemscope itemtype="http://schema.org/Article" itemref="_articleSection4 _articleBody5">
+    <div class="setup-header-section">
+        <img itemprop="image" class="setup-main-image" src="{{ setup.get_main_image }}">
+        <div class="setup-characteristics-section">
+                <div class="round">
+                    {% if setup.power %}
+                    <div class="power">{{ setup.power }}hp</div>
+                    {% else %}
+                    <div class="power">----hp</div>
+                    {% endif %}
+                    <div class="char-title">Power</div>
                 </div>
-                <h1 id="_name1" itemprop="name" class="setup-h1">{{ setup }}</h1>
-                <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
-<span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
-                {% if setup.creator.city %}
-                    <div class="setup-car-city">{{ setup.creator.city }}</div>
-                {% endif %}
-            </div>
-            <div class="setup-header-info-right">
-                <div class="setup-header-info-right-container">
-                    <div class="setup-header-info-right-top">
-                        <div class="setup-info-block">
-                            <div class="setup-info-total">{{ setup.views }}</div>
-                            <div class="setup-info-heading">Views</div>
-                        </div>
-                        <div class="setup-info-block">
-                            <div class="setup-info-total"><div class="disqus-comment-count" data-disqus-identifier="{{ setup.slug }}"></div></div>
-                            <div class="setup-info-heading">Comments</div>
-                        </div>
-                        <div class="setup-info-block">
-                            <div class="setup-info-total">{{ setup.get_votes_total }}</div>
-                            <div class="setup-info-heading">Votes</div>
-                        </div>
+                <div class="round">
+                    {% if setup.torque %}
+                    <div class="torque">{{ setup.torque }}Nm</div>
+                    {% else %}
+                    <div class="torque">----Nm</div>
+                    {% endif %}
+                    <div class="char-title">Torque</div>
+                </div>
+                <div class="round">
+                    {% if setup.rev_limit %}
+                    <div class="rev-limit">{{ setup.rev_limit }}rpm</div>
+                    {% else %}
+                    <div class="rev-limit">----rpm</div>
+                    {% endif %}
+                    <div class="char-title">Rev Limit</div>
+                </div>
+                <div class="round">
+                   {% if setup.weight %}
+                    <div class="weight">{{ setup.weight }}kg</div>
+                    {% else %}
+                    <div class="weight">----kg</div>
+                    {% endif %}
+                    <div class="char-title">Weight</div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="setup-header-info">
+                <div class="setup-header-info-left">
+                    <div class="profile-avatar-div">
+                        <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
                     </div>
-                    <div class="setup-header-info-right-bottom">
-                        <div class="votes-bar-container">
-                            {% if user.is_authenticated %}
-                                <div id="vote-down" class="vote-down" data-vote-down="{% url 'setup_vote_down' setup.slug %}"></div>
-                                <div id="vote-up" class="vote-up" data-vote-up="{% url 'setup_vote_up' setup.slug %}"></div>
-                            {% else %}
-                                <div id="vote-login-up" class="vote-down"></div>
-                                <div id="vote-login-down" class="vote-up"></div>
-                            {% endif %}
-                            <div class="votes-bar">
-                                <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
+                    <h1 id="_name1" itemprop="name" class="setup-h1">{{ setup }}</h1>
+                    <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
+                    {% if setup.creator.city %}
+                        <div class="setup-car-city">{{ setup.creator.city }}</div>
+                    {% endif %}
+                </div>
+                <div class="setup-header-info-right">
+                    <div class="setup-header-info-right-container">
+                        <div class="setup-header-info-right-top">
+                            <div class="setup-info-block">
+                                <div class="setup-info-total">{{ setup.views }}</div>
+                                <div class="setup-info-heading">Views</div>
+                            </div>
+                            <div class="setup-info-block">
+                                <div class="setup-info-total"><div class="disqus-comment-count" data-disqus-identifier="{{ setup.slug }}"></div></div>
+                                <div class="setup-info-heading">Comments</div>
+                            </div>
+                            <div class="setup-info-block">
+                                <div class="setup-info-total">{{ setup.get_votes_total }}</div>
+                                <div class="setup-info-heading">Votes</div>
+                            </div>
+                        </div>
+                        <div class="setup-header-info-right-bottom">
+                            <div class="votes-bar-container">
+                                {% if user.is_authenticated %}
+                                    <div id="vote-down" class="vote-down" data-vote-down="{% url 'setup_vote_down' setup.slug %}"></div>
+                                    <div id="vote-up" class="vote-up" data-vote-up="{% url 'setup_vote_up' setup.slug %}"></div>
+                                {% else %}
+                                    <div id="vote-login-up" class="vote-down"></div>
+                                    <div id="vote-login-down" class="vote-up"></div>
+                                {% endif %}
+                                <div class="votes-bar">
+                                    <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-    </div>
-
-    <div class="two-col">
-        <div id="social-repost" class="two-col-right">
-            <div class="social-repost">
-                <div class="facebook"></div>
-                <div class="twitter"></div>
-                <div class="vkontakte"></div>
-            </div>
         </div>
-        <div class="two-col-left">
-            <div class="setup-details-section">
-                {% if setup.description %}
-                <div class="setup-description-section">
-                    <h2 id="_articleSection4" itemprop="articleSection">Car Story</h2>
-                    <div id="_articleBody5" itemprop="articleBody" class="setup-description more">{{ setup.description|linebreaks }}</div>
-                </div>
-                {% endif %}
 
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-engine-section">
-                    <h2 itemprop="articleSection" class="engine-model">Engine: {{ setup.engine }}</h2>
-                {% if setup.get_engine_fields %}
-                    <div class="engine">
-                        <ul itemprop="articleBody">
-                        {% for engine_field in setup.get_engine_fields %}
-                            <li>{{ engine_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                {% endif %}
+        <div class="two-col">
+            <div id="social-repost" class="two-col-right">
+                <div class="social-repost">
+                    <div class="facebook"></div>
+                    <div class="twitter"></div>
+                    <div class="vkontakte"></div>
                 </div>
-                {% if setup.get_drivetrain_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-drivetrain-section">
-                    <h2 itemprop="articleSection">Drivetrain</h2>
-                    <div class="drivetrain">
-                        <ul itemprop="articleBody">
-                        {% for drivetrain_field in setup.get_drivetrain_fields %}
-                            <li>{{ drivetrain_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-                {% if setup.get_suspension_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-suspension-section">
-                    <h2 itemprop="articleSection">Suspension</h2>
-                    <div class="suspension">
-                        <ul itemprop="articleBody" >
-                        {% for suspension_field in setup.get_suspension_fields %}
-                            <li>{{ suspension_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-                {% if setup.get_brakes_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-brakes-section">
-                    <h2 itemprop="articleSection">Brakes</h2>
-                    <div class="brakes">
-                        <ul itemprop="articleBody">
-                        {% for brakes_field in setup.get_brakes_fields %}
-                            <li>{{ brakes_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-                {% if setup.get_wheels_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-wheels-section">
-                    <h2 itemprop="articleSection">Wheels</h2>
-                    <div class="wheels">
-                        <ul itemprop="articleBody">
-                        {% for wheels_field in setup.get_wheels_fields %}
-                            <li>{{ wheels_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-                {% if setup.get_exterior_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-exterior-section">
-                    <h2 itemprop="articleSection">Exterior</h2>
-                    <div class="exterior">
-                        <ul itemprop="articleBody">
-                        {% for exterior_field in setup.get_exterior_fields %}
-                            <li>{{ exterior_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
-                {% if setup.get_interior_fields %}
-                <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-interior-section">
-                    <h2 itemprop="articleSection">Interior</h2>
-                    <div class="interior">
-                        <ul itemprop="articleBody">
-                        {% for interior_field in setup.get_interior_fields %}
-                            <li>{{ interior_field }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-                {% endif %}
             </div>
-            <div class="setup-comments">
-                <div id="disqus_thread"></div>
-                    <script>
+            <div class="two-col-left">
+                <div class="setup-details-section">
+                    {% if setup.description %}
+                    <div class="setup-description-section">
+                        <h2 id="_articleSection4" itemprop="articleSection">Car Story</h2>
+                        <div id="_articleBody5" itemprop="articleBody" class="setup-description more">{{ setup.description|linebreaks }}</div>
+                    </div>
+                    {% endif %}
 
-                    /**
-                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-engine-section">
+                        <h2 itemprop="articleSection" class="engine-model">Engine: {{ setup.engine }}</h2>
+                    {% if setup.get_engine_fields %}
+                        <div class="engine">
+                            <ul itemprop="articleBody">
+                            {% for engine_field in setup.get_engine_fields %}
+                                <li>{{ engine_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+                    </div>
+                    {% if setup.get_drivetrain_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-drivetrain-section">
+                        <h2 itemprop="articleSection">Drivetrain</h2>
+                        <div class="drivetrain">
+                            <ul itemprop="articleBody">
+                            {% for drivetrain_field in setup.get_drivetrain_fields %}
+                                <li>{{ drivetrain_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if setup.get_suspension_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-suspension-section">
+                        <h2 itemprop="articleSection">Suspension</h2>
+                        <div class="suspension">
+                            <ul itemprop="articleBody" >
+                            {% for suspension_field in setup.get_suspension_fields %}
+                                <li>{{ suspension_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if setup.get_brakes_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-brakes-section">
+                        <h2 itemprop="articleSection">Brakes</h2>
+                        <div class="brakes">
+                            <ul itemprop="articleBody">
+                            {% for brakes_field in setup.get_brakes_fields %}
+                                <li>{{ brakes_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if setup.get_wheels_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-wheels-section">
+                        <h2 itemprop="articleSection">Wheels</h2>
+                        <div class="wheels">
+                            <ul itemprop="articleBody">
+                            {% for wheels_field in setup.get_wheels_fields %}
+                                <li>{{ wheels_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if setup.get_exterior_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-exterior-section">
+                        <h2 itemprop="articleSection">Exterior</h2>
+                        <div class="exterior">
+                            <ul itemprop="articleBody">
+                            {% for exterior_field in setup.get_exterior_fields %}
+                                <li>{{ exterior_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if setup.get_interior_fields %}
+                    <div itemscope itemtype="http://schema.org/Article" itemref="_name1 _author2 _datePublished3" class="setup-interior-section">
+                        <h2 itemprop="articleSection">Interior</h2>
+                        <div class="interior">
+                            <ul itemprop="articleBody">
+                            {% for interior_field in setup.get_interior_fields %}
+                                <li>{{ interior_field }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="setup-comments">
+                    <div id="disqus_thread"></div>
+                        <script>
 
-                    var disqus_config = function () {
-                    this.page.url = 'https://driftsetups.com/{% url "setup_detail" setup.slug %}';
-                    this.page.identifier = '{{ setup.slug }}';
-                    };
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
-                    (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = 'https://driftsetups-com.disqus.com/embed.js';
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                    })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        var disqus_config = function () {
+                        this.page.url = 'https://driftsetups.com/{% url "setup_detail" setup.slug %}';
+                        this.page.identifier = '{{ setup.slug }}';
+                        };
+
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://driftsetups-com.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
             </div>
         </div>
     </div>
