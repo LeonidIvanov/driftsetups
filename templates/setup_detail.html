@@ -7,7 +7,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ setup }} | DriftSetups"/>
     <meta property="og:description" content="{{ setup.description|slice:':300' }}..."/>
-    <meta property="og:url" content="{{ setup.get_absolute_url }}" />
+    <meta id="_mainEntityOfPage" itemprop="mainEntityOfPage" property="og:url" content="https://driftsetups.com{{ setup.get_absolute_url }}" />
     <meta property="og:site_name" content="DriftSetups" />
     {% for tag in setup.car.split_tags %}
     <meta property="article:tag" content="{{ tag }}" />
@@ -17,11 +17,11 @@
     <meta property="article:tag" content="Drifting" />
     <meta property="article:section" content="Car Setups" />
     <meta property="article:modified_time" content="{{ setup.timestamp }}" />
-    <meta property="og:updated_time" content="{{ setup.timestamp }}" />
+    <meta id="_dateModified" itemprop="dateModified" property="og:updated_time" content="{{ setup.timestamp }}" />
     <meta property="og:image" content="{{ setup.get_main_image }}" />
 {% endblock %}
 {% block body %}
-<div itemscope itemtype="http://schema.org/Article" itemref="_publisher">
+<div itemscope itemtype="http://schema.org/Article" itemref="_publisher _dateModified _mainEntityOfPage">
     <div class="setup-header-section">
         <img itemprop="image" class="setup-main-image" src="{{ setup.get_main_image }}">
         <div class="setup-characteristics-section">
