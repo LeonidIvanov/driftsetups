@@ -133,11 +133,11 @@
             </div>
         </div>
         <div class="top-weekly-setups">
-            <h2>Popular Setups This Week</h2>
+            <h2>Best Setups Of The Week</h2>
             <div class="setup-list-container">
-                {% if top_weekly_setups %}
+                {% if top_new_weekly_setups %}
                 <ul class="setup-list">
-                    {% for setup in top_weekly_setups %}
+                    {% for setup in top_new_weekly_setups %}
                         <li class="setup-list-item">
                             <div class="setup-list-item-image-container">
                                 <a href="{% url 'setup_detail' setup.slug %}">

@@ -31,7 +31,7 @@ class HomeView(TemplateView):
             key=lambda s: s.get_votes_percentage(),
             reverse=True
         )[:4]
-        context['top_weekly_setups'] = Setup.objects.filter(
+        context['top_new_weekly_setups'] = Setup.objects.filter(
             timestamp__gte=timezone.now() - timezone.timedelta(days=7)
         ).order_by('-views')[:4]
         return context
