@@ -31,7 +31,7 @@ function socialShare(){
 
     twBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      var win = window.open(twShareUrl, 'shareOnTwitter', getWindowOptions());
+      var win = window.open(twShareUrl, 'twitter', getWindowOptions());
       win.opener = null; // 2
     });
 
