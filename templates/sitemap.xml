@@ -4,7 +4,6 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  {% for brand in car_brands %}
   <url>
     <loc>https://driftsetups.com/</loc>
     <lastmod>2018-01-26T14:05:33+00:00</lastmod>
