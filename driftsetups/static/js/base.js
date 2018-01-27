@@ -16,8 +16,8 @@ function socialShare(){
     };
 
     var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href;
-    var twShareUrl = 'http://twitter.com/share';
-    var vkShareUrl = 'https://vk.com/share.php';
+    var twShareUrl = 'http://twitter.com/share?url=' + location.href;
+    var vkShareUrl = 'https://vk.com/share.php?url=' + location.href;
 
     var fbBtn = document.querySelector('.facebook');
     var twBtn = document.querySelector('.twitter');
