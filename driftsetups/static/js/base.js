@@ -21,7 +21,7 @@ function socialShare(){
 
 
     var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
-    var twShareUrl = 'https://twitter.com/intent/tweet?url=' + location.href + '&text=' + title;
+    var twShareUrl = 'https://twitter.com/intent/tweet?url=' + location.href + '&text=' + title + '&hashtags=DRIFTSETUPS';
     var vkShareUrl = 'https://vk.com/share.php?url=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
 
     var fbBtn = document.querySelector('.facebook');
