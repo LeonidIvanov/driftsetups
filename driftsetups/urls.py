@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
+from home.views import SitemapXmlView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,6 +27,6 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^', include('home.urls')),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
-    url(r'^sitemap\.xml/$', ),
+    url(r'^sitemap\.xml/$', SitemapXmlView.as_view()),
 ]
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
