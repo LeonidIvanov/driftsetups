@@ -13,7 +13,7 @@
   {% for brand in car_brands %}
   <url>
     <loc>https://driftsetups.com{{ brand.get_absolute_url }}</loc>
-    <lastmod>{{ brand.update_at|date:'c' }}</lastmod>
+    <lastmod>{{ brand.updated_at|date:'c' }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -21,7 +21,7 @@
   {% for model in car_models %}
   <url>
     <loc>https://driftsetups.com{{ model.get_absolute_url }}</loc>
-    <lastmod>{{ model.update_at|date:'c' }}</lastmod>
+    <lastmod>{{ model.updated_at|date:'c' }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -29,7 +29,7 @@
   {% for sub_model in car_sub_models %}
   <url>
     <loc>https://driftsetups.com{{ sub_model.get_absolute_url }}</loc>
-    <lastmod>{{ sub_model.update_at|date:'c' }}</lastmod>
+    <lastmod>{{ sub_model.updated_at|date:'c' }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
