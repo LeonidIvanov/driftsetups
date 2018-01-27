@@ -119,7 +119,7 @@ class CarSubModel(models.Model):
     views = models.PositiveIntegerField(default=0)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
     images = GenericRelation(CarImage, related_query_name='sub_model_images')
-    updated_at = models.DateTimeField(auto_now_add=True, default=timezone.now)
+    updated_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['name']
