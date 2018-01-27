@@ -1,7 +1,7 @@
-function facebookShare(){
+function socialShare(){
 
     var getWindowOptions = function() {
-        var width = 500;
+        var width = 575;
         var height = 450;
         var left = (window.innerWidth / 2) - (width / 2);
         var top = (window.innerHeight / 2) - (height / 2);
@@ -14,24 +14,39 @@ function facebookShare(){
         'top=' + top,
         ].join();
     };
+
+    var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href;
+    var twShareUrl = 'http://twitter.com/share';
+    var vkShareUrl = 'https://vk.com/share.php';
+
     var fbBtn = document.querySelector('.facebook');
-    var title = encodeURIComponent('Hey everyone, come & see how good I look!');
-    var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title;
-    fbBtn.href = shareUrl; // 1
+    var twBtn = document.querySelector('.twitter');
+    var vkBtn = document.querySelector('.vkontakte');
 
     fbBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      var win = window.open(shareUrl, 'ShareOnFb', getWindowOptions());
+      var win = window.open(fbShareUrl, 'shareOnFacebook', getWindowOptions());
       win.opener = null; // 2
     });
 
+    twBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var win = window.open(twShareUrl, 'shareOnTwitter', getWindowOptions());
+      win.opener = null; // 2
+    });
+
+    vkBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var win = window.open(vkShareUrl, 'shareOnVkontakte', getWindowOptions());
+      win.opener = null; // 2
+    });
 
 }
 
 
 $(document).ready(function(){
 
-    facebookShare();
+    socialShare();
 
     $('.popup-close').click(function() {
             $('.popup-background').css('display', 'none');
