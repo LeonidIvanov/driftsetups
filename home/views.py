@@ -3,7 +3,7 @@ from itertools import chain
 from django.views.generic import TemplateView
 from django.utils import timezone
 
-from car.models import CarModel, CarSubModel
+from car.models import CarBrand, CarModel, CarSubModel
 from setup.models import Setup, SetupImage
 
 
@@ -34,4 +34,17 @@ class HomeView(TemplateView):
         context['top_new_weekly_setups'] = Setup.objects.filter(
             timestamp__gte=timezone.now() - timezone.timedelta(days=7)
         ).order_by('-views')[:4]
+        return context
+
+
+class SitemapXmlView(TemplateView):
+    template_name = 'sitemap.xml'
+    content_type = 'text/xml'
+
+    def get_context_data(self, **kwargs):
+        context = super(SitemapXmlView, self).get_context_data(**kwargs)
+        context['car_brands'] = CarBrand.objects.all()
+        context['car_models'] = CarModel.objects.all()
+        context['car_sub_models'] = CarSubModel.objects.all()
+        context['setups'] = Setup.objects.all()
         return context
