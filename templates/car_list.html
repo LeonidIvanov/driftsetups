@@ -91,7 +91,10 @@
             {% endfor %}
         </ul>
         {% else %}
-        <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+            {% url 'car_brand_list' as car_brand_list_home_url %}
+            {% if request.path != car_brand_list_home_url %}
+                <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+            {% endif %}
         {% endif %}
     </div>
     </div>
