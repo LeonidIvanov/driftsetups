@@ -15,9 +15,14 @@ function socialShare(){
         ].join();
     };
 
-    var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href;
-    var twShareUrl = 'http://twitter.com/share?url=' + location.href;
-    var vkShareUrl = 'https://vk.com/share.php?url=' + location.href;
+    var title = $("meta[property='og:title']").attr('content');
+    var description = $("meta[property='og:description']").attr('content');
+    var img = $("meta[property='og:img']").attr('content');
+
+
+    var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
+    var twShareUrl = 'http://twitter.com/share?url=' + location.href + '&title=' + title;
+    var vkShareUrl = 'https://vk.com/share.php?url=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
 
     var fbBtn = document.querySelector('.facebook');
     var twBtn = document.querySelector('.twitter');
@@ -26,19 +31,19 @@ function socialShare(){
     fbBtn.addEventListener('click', function(e) {
       e.preventDefault();
       var win = window.open(fbShareUrl, 'shareOnFacebook', getWindowOptions());
-      win.opener = null; // 2
+      win.opener = null;
     });
 
     twBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      var win = window.open(twShareUrl, 'twitter', getWindowOptions());
-      win.opener = null; // 2
+      var win = window.open(twShareUrl, 'shareOnTwitter', getWindowOptions());
+      win.opener = null;
     });
 
     vkBtn.addEventListener('click', function(e) {
       e.preventDefault();
       var win = window.open(vkShareUrl, 'shareOnVkontakte', getWindowOptions());
-      win.opener = null; // 2
+      win.opener = null;
     });
 
 }
