@@ -47,4 +47,5 @@ class SitemapXmlView(TemplateView):
         context['car_models'] = CarModel.objects.all()
         context['car_sub_models'] = CarSubModel.objects.all()
         context['setups'] = Setup.objects.all()
+        print(context)
         return context
