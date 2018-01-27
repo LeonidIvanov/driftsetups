@@ -21,7 +21,7 @@ function socialShare(){
 
 
     var fbShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
-    var twShareUrl = 'http://twitter.com/share?url=' + location.href + '&title=' + title;
+    var twShareUrl = 'https://twitter.com/intent/tweet?url=' + location.href + '&text=' + title;
     var vkShareUrl = 'https://vk.com/share.php?url=' + location.href + '&title=' + title + '&description=' + description + '&img=' + img;
 
     var fbBtn = document.querySelector('.facebook');
@@ -45,7 +45,6 @@ function socialShare(){
       var win = window.open(vkShareUrl, 'shareOnVkontakte', getWindowOptions());
       win.opener = null;
     });
-
 }
 
 
