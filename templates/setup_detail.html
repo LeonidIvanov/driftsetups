@@ -65,7 +65,7 @@
                     <div class="profile-avatar-div">
                         <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
                     </div>
-                    <h1 id="_name1" itemprop="name" class="setup-h1">{{ setup }}</h1>
+                    <h1 itemprop="headline" class="setup-h1">{{ setup }}</h1>
                     <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
                     {% if setup.creator.city %}
