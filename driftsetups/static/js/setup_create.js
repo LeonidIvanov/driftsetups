@@ -42,8 +42,74 @@ function openImageUploadInput() {
     })
 }
 
+function getBrandModels() {
+    $('select[name="car_brand"]').change( function(){
+        var carBrandId = {'brand_id': $(this).find(':selected').val()};
+        var req_url = $(this).attr('data-url');
+
+        $('select[name="car_model"] option:not(:first)').remove();
+        $('select[name="car_sub_model"] option:not(:first)').remove();
+        $('select[name="car_sub_model"]').prop('disabled', true);
+
+        $.ajax({
+              url: req_url,
+			  type: "GET",
+			  data: carBrandId,
+			  dataType: "json",
+			  cache: true,
+			  success: function(data) {
+                  $('select[name="car_model"]').prop('disabled', false);
+                  if (data.length > 0) {
+                      for (var car_model in data){
+                          $('select[name="car_model"]').append('<option value="' + data[car_model].id + '">' + data[car_model].name + '</option>');
+                      }
+                  } else {
+                      $('select[name="car_model"]').append('<option value="">No models here =\\</option>');
+                  }
+			  },
+			  error: function(){
+				  console.log('ERROR');
+			  }
+            });
+    });
+}
+
+
+function getModelsSubModels() {
+    $('select[name="car_model"]').change( function(){
+        var carBrandId = {'car_model_id': $(this).find(':selected').val()};
+        var req_url = $(this).attr('data-url');
+
+        $('select[name="car_sub_model"] option:not(:first)').remove();
+
+        $.ajax({
+              url: req_url,
+			  type: "GET",
+			  data: carBrandId,
+			  dataType: "json",
+			  cache: true,
+			  success: function(data) {
+                  $('select[name="car_sub_model"]').prop('disabled', false);
+                  if (data.length > 0) {
+                      for (var car_sub_model in data) {
+                          $('select[name="car_sub_model"]').append('<option value="' + data[car_sub_model].id + '">' + data[car_sub_model].name + '</option>');
+                      }
+                  } else {
+                      $('select[name="car_sub_model"]').append('<option value="">No bodies here ==\\</option>');
+                  }
+			  },
+			  error: function(){
+				  console.log('ERROR');
+			  }
+            });
+    });
+}
+
+
 $(document).ready(function (){
     openImageUploadInput();
+    getBrandModels();
+    getModelsSubModels();
 
     $('#id_image').change( function(){
         imageInputTumbnail(this);

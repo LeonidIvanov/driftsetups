@@ -1,9 +1,6 @@
-from itertools import chain
-
 from django.views.generic import ListView, DetailView
 
 from .models import CarBrand, CarModel, CarSubModel
-from setup.models import Setup
 
 
 class CarBrandListView(ListView):

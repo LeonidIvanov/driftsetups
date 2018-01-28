@@ -108,7 +108,6 @@ class CarModel(models.Model):
 
     def __str__(self):
         return '{0} {1}'.format(self.brand, self.name)
-# CarModel.objects.filter(carsub_model__model__isnull=True) - models without sub_models
 
 
 class CarSubModel(models.Model):
