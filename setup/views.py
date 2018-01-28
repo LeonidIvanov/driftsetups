@@ -1,7 +1,7 @@
 from itertools import chain
 import re
 
-from django.views.generic import TemplateView, CreateView, DetailView, View
+from django.views.generic import TemplateView, CreateView, UpdateView, View
 from django.core.paginator import Paginator, EmptyPage
 from django.http import Http404
 from django.shortcuts import redirect
@@ -9,7 +9,7 @@ from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 
-from .models import Setup, SetupImage, SetupVote
+from .models import Setup, SetupImage, SetupVote, SetupField
 from .forms import SetupCreateForm, SetupImageCreateForm
 from .forms import SetupEngineFieldCreateFormSet, SetupDrivetrainFieldCreateFormSet
 from .forms import SetupSuspensionFieldCreateFormSet, SetupBrakesFieldCreateFormSet
@@ -102,8 +102,6 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
     def get_context_data(self, **kwargs):
         context = super(SetupCreateView, self).get_context_data(**kwargs)
         context['car_brands'] = CarBrand.objects.all()
-        context['car_models'] = CarModel.objects.all()
-        context['car_sub_models'] = CarSubModel.objects.all()
         if self.request.POST:
             context['images_form'] = SetupImageCreateForm(
                 self.request.POST,
@@ -219,6 +217,187 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
                 for form in interior_fields_formset:
                     form.instance.category = 6
                 interior_fields_formset.save()
+
+        if self.request.FILES:
+            if images_form.is_valid():
+                SetupImage.objects.create(
+                    image=self.request.FILES.getlist('image')[0],
+                    setup=self.object,
+                    is_main=True
+                )
+                for file in self.request.FILES.getlist('image')[1:]:
+                    SetupImage.objects.create(
+                        image=file,
+                        setup=self.object,
+                        is_main=False
+                    )
+
+        return redirect(self.get_success_url())
+
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data(form=form))
+
+
+class SetupUpdateView(UpdateView):
+    model = Setup
+    form_class = SetupCreateForm
+    template_name = 'setup_update.html'
+    slug_url_kwarg = 'setup_slug'
+
+    def get_context_data(self, **kwargs):
+        context = super(SetupUpdateView, self).get_context_data(**kwargs)
+        context['car_brands'] = CarBrand.objects.all()
+        if self.request.POST:
+            print('POST: ', self.object)
+            context['images_form'] = SetupImageCreateForm(
+                self.request.POST,
+                self.request.FILES,
+            )
+            context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
+                self.request.POST,
+                prefix='engine_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=0)
+            )
+            context['engine_fields_formset'].full_clean()
+            context['drivetrain_fields_formset'] = SetupDrivetrainFieldCreateFormSet(
+                self.request.POST,
+                prefix='drivetrain_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=1)
+            )
+            context['drivetrain_fields_formset'].full_clean()
+            context['suspension_fields_formset'] = SetupSuspensionFieldCreateFormSet(
+                self.request.POST,
+                prefix='suspension_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=2)
+            )
+            context['suspension_fields_formset'].full_clean()
+            context['brakes_fields_formset'] = SetupBrakesFieldCreateFormSet(
+                self.request.POST,
+                prefix='brakes_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=3)
+            )
+            context['brakes_fields_formset'].full_clean()
+            context['wheels_fields_formset'] = SetupWheelsFieldCreateFormSet(
+                self.request.POST,
+                prefix='wheels_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=4)
+            )
+            context['wheels_fields_formset'].full_clean()
+            context['exterior_fields_formset'] = SetupExteriorFieldCreateFormSet(
+                self.request.POST,
+                prefix='exterior_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=5)
+            )
+            context['exterior_fields_formset'].full_clean()
+            context['interior_fields_formset'] = SetupInteriorFieldCreateFormSet(
+                self.request.POST,
+                prefix='interior_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=6)
+            )
+            context['interior_fields_formset'].full_clean()
+        else:
+            print('GET: ', self.object)
+            context['images_form'] = SetupImageCreateForm()
+            context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
+                prefix='engine_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=0)
+            )
+            context['drivetrain_fields_formset'] = SetupDrivetrainFieldCreateFormSet(
+                prefix='drivetrain_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=1)
+            )
+            context['suspension_fields_formset'] = SetupSuspensionFieldCreateFormSet(
+                prefix='suspension_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=2)
+            )
+            context['brakes_fields_formset'] = SetupBrakesFieldCreateFormSet(
+                prefix='brakes_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=3)
+            )
+            context['wheels_fields_formset'] = SetupWheelsFieldCreateFormSet(
+                prefix='wheels_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=4)
+            )
+            context['exterior_fields_formset'] = SetupExteriorFieldCreateFormSet(
+                prefix='exterior_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=5)
+            )
+            context['interior_fields_formset'] = SetupInteriorFieldCreateFormSet(
+                prefix='interior_fields',
+                instance=self.object,
+                queryset=SetupField.objects.filter(category=6)
+            )
+        return context
+
+    def form_valid(self, form):
+        context = self.get_context_data()
+
+        if self.request.POST.get('car_sub_model'):
+            car_sub_model_id = int(self.request.POST.get('car_sub_model'))
+            form.instance.car = CarSubModel.objects.get(id=car_sub_model_id)
+        else:
+            car_model_id = int(self.request.POST.get('car_model'))
+            form.instance.car = CarModel.objects.get(id=car_model_id)
+        form.instance.creator = self.request.user
+        self.object = form.save()
+
+        images_form = context['images_form']
+        engine_fields_formset = context['engine_fields_formset']
+        drivetrain_fields_formset = context['drivetrain_fields_formset']
+        suspension_fields_formset = context['suspension_fields_formset']
+        brakes_fields_formset = context['brakes_fields_formset']
+        wheels_fields_formset = context['wheels_fields_formset']
+        exterior_fields_formset = context['exterior_fields_formset']
+        interior_fields_formset = context['interior_fields_formset']
+
+        if engine_fields_formset.is_valid():
+            engine_fields_formset.instance = self.object
+            for form in engine_fields_formset:
+                form.instance.category = 0
+            engine_fields_formset.save()
+        if drivetrain_fields_formset.is_valid():
+            drivetrain_fields_formset.instance = self.object
+            for form in drivetrain_fields_formset:
+                form.instance.category = 1
+            drivetrain_fields_formset.save()
+        if suspension_fields_formset.is_valid():
+            suspension_fields_formset.instance = self.object
+            for form in suspension_fields_formset:
+                form.instance.category = 2
+            suspension_fields_formset.save()
+        if brakes_fields_formset.is_valid():
+            brakes_fields_formset.instance = self.object
+            for form in brakes_fields_formset:
+                form.instance.category = 3
+            brakes_fields_formset.save()
+        if wheels_fields_formset.is_valid():
+            wheels_fields_formset.instance = self.object
+            for form in wheels_fields_formset:
+                form.instance.category = 4
+            wheels_fields_formset.save()
+        if exterior_fields_formset.is_valid():
+            exterior_fields_formset.instance = self.object
+            for form in exterior_fields_formset:
+                form.instance.category = 5
+            exterior_fields_formset.save()
+        if interior_fields_formset.is_valid():
+            interior_fields_formset.instance = self.object
+            for form in interior_fields_formset:
+                form.instance.category = 6
+            interior_fields_formset.save()
 
         if self.request.FILES:
             if images_form.is_valid():

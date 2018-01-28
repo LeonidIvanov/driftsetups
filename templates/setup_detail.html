@@ -65,7 +65,12 @@
                     <div class="profile-avatar-div">
                         <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
                     </div>
-                    <h1 itemprop="headline" class="setup-h1">{{ setup }}</h1>
+                    <div class="setup-h1-container">
+                        <h1 itemprop="headline" class="setup-h1">{{ setup }}</h1>
+                        {% if user.is_authenticated and user == setup.creator %}
+                            <div class="setup-edit-button"><a href="{% url 'setup_update' setup.slug %}">EDIT SETUP</a></div>
+                        {% endif %}
+                    </div>
                     <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
                     {% if setup.creator.city %}

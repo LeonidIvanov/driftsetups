@@ -32,6 +32,10 @@ urlpatterns = [
         views.SetupDetailView.as_view(),
         name='setup_detail'
         ),
+    url(r'^(?P<setup_slug>[\w\d-]+)/update/$',
+        views.SetupUpdateView.as_view(),
+        name='setup_update'
+        ),
     url(r'^(?P<setup_slug>[\w\d-]+)/vote_up/$',
         views.SetupVoteUp.as_view(),
         name='setup_vote_up'

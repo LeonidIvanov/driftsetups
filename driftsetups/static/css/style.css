@@ -333,13 +333,20 @@ button {
 .setup-header-info-left .profile-avatar{
     height: 100px;
 }
-.setup-h1 {
+.setup-h1-container {
     width: calc(100% - 126px);
-    margin-left: 20px;
-    margin-top: 0px;
-    margin-bottom: 0px;
     display: block;
     float: left;
+}
+.setup-h1 {
+    margin: 0 20px;
+    float:left;
+}
+.setup-edit-button {
+    padding-top:23px;
+    float: left;
+    cursor: pointer;
+    border-bottom: 1px solid #d34a42;
 }
 .setup-car-model-by {
     margin-left: 20px;
