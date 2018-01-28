@@ -3,7 +3,7 @@
 {% block title %}Create your Drift Setup!{% endblock %}
 {% block body %}
 <div class="post-header-container">
-    <h1>Create your Drift Setup!</h1>
+    <h1>{{ setup }}</h1>
     <div class="setup-create-container">
         <form class="setup-create-form" enctype="multipart/form-data" method="post" action="{% url 'setup_update' setup.slug %}">
             {% csrf_token %}
