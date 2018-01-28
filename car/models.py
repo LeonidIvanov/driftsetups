@@ -87,6 +87,12 @@ class CarModel(models.Model):
     def get_main_image(self):
         return self.images.get(is_main=True)
 
+    def get_car_brand(self):
+        return self.brand
+
+    def get_car_model(self):
+        return self.name
+
     def get_sub_models(self):
         return CarSubModel.objects.filter(car_model=self)
 
@@ -123,8 +129,11 @@ class CarSubModel(models.Model):
     class Meta:
         ordering = ['name']
 
-    def car_brand(self):
+    def get_car_brand(self):
         return self.car_model.brand
+
+    def get_car_model(self):
+        return self.car_model.name
 
     def increase_views(self):
         self.views += 1
