@@ -252,7 +252,7 @@ button {
     border-top: 1px solid #cecece;
 }
 .bottom-top-cars ul{
-    column-count: 8;
+    column-count: 7;
     column-gap: 0;
     -webkit-column-count: 8;
     -webkit-column-gap: 0;
