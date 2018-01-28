@@ -24,7 +24,7 @@
                             {% endfor %}
                         </select>
                         <select name="car_model" disabled class="car-model-select" required="" id="id_car_model" data-url="{% url 'api_car_sub_models_by_model' %}">
-                            <option value="{{ setup.car.get_car_model.id }}" disabled selected="">{{ setup.car.get_car_model.name }}</option>
+                            <option value="{{ setup.car.get_car_model.id }}" disabled selected="">{{ setup.car.get_car_model }}</option>
                         </select>
                         <select name="car_sub_model" disabled class="car-sub-model-select" id="id_car_sub_model">
                             {% if setup.car.car_model %}
