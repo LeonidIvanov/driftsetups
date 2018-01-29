@@ -21,7 +21,7 @@ class CarSubModelAdmin(admin.ModelAdmin):
     model = CarBrand
     fields = ('name', 'car_model', 'stock_engines',)
     ordering = ('name',)
-    list_display = ('name', 'car_model', 'car_brand',)
+    list_display = ('name', 'car_model', 'get_car_brand',)
     filter_vertical = ('stock_engines',)
     search_fields = ('name',)
 

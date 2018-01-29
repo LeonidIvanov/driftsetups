@@ -53,17 +53,6 @@ class SetupImageCreateForm(forms.ModelForm):
         }
 
 
-
-SetupImageCreateFormSet = forms.inlineformset_factory(
-    Setup,
-    SetupImage,
-    form=SetupImageCreateForm,
-    extra=3,
-    can_delete=False,
-    can_order=False
-)
-
-
 class SetupEngineFieldCreateForm(forms.ModelForm):
     class Meta:
         model = SetupField

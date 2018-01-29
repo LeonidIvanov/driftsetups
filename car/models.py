@@ -91,7 +91,7 @@ class CarModel(models.Model):
         return self.brand
 
     def get_car_model(self):
-        return self.name
+        return self
 
     def get_sub_models(self):
         return CarSubModel.objects.filter(car_model=self)
@@ -133,7 +133,7 @@ class CarSubModel(models.Model):
         return self.car_model.brand
 
     def get_car_model(self):
-        return self.car_model.name
+        return self.car_model
 
     def increase_views(self):
         self.views += 1
