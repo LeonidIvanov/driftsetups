@@ -248,10 +248,10 @@ class SetupUpdateView(UpdateView):
         context = super(SetupUpdateView, self).get_context_data(**kwargs)
         context['car_brands'] = CarBrand.objects.all()
         if self.request.POST:
-            print('POST: ', self.object)
             context['images_form'] = SetupImageCreateForm(
                 self.request.POST,
                 self.request.FILES,
+                instance=self.object,
             )
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
                 self.request.POST,
@@ -303,8 +303,9 @@ class SetupUpdateView(UpdateView):
             )
             context['interior_fields_formset'].full_clean()
         else:
-            print('GET: ', self.object)
-            context['images_form'] = SetupImageCreateForm()
+            context['images_form'] = SetupImageCreateForm(
+                instance=self.object,
+            )
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
                 prefix='engine_fields',
                 instance=self.object,
