@@ -221,11 +221,9 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
 
             if images_formset.is_valid():
                 images_formset.instance = self.object
-                print(images_formset)
-                print('---------------------------------')
-                print(images_formset.cleaned_data)
-                for form in images_formset:
-                    form.instance.order = form.cleaned_data['ORDER']
+                for form in images_formset.ordered_forms:
+                    if form.cleaned_data != {} and form.cleaned_data['ORDER']:
+                        form.instance.order = form.cleaned_data['ORDER']
                 images_formset.save()
 
         return redirect(self.get_success_url())
@@ -407,10 +405,7 @@ class SetupUpdateView(LoginRequiredMixin, UpdateView):
 
         if images_formset.is_valid():
             images_formset.instance = self.object
-            print(images_formset.cleaned_data)
             for form in images_formset.ordered_forms:
-                print('---------------------------')
-                print(form.cleaned_data)
                 if form.cleaned_data != {} and form.cleaned_data['ORDER']:
                     form.instance.order = form.cleaned_data['ORDER']
             images_formset.save()

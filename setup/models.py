@@ -34,7 +34,7 @@ class Setup(models.Model):
         try:
             return SetupImage.objects.filter(setup=self)[1:]
         except IndexError:
-            return None
+            pass
 
     def get_all_images(self):
         return SetupImage.objects.filter(setup=self)
