@@ -145,7 +145,7 @@
                             <div class="image_fields-form-row">
                                 {{ form }}
                             </div>
-                            <img src="{{ setup.get_all_images.form.instance.id.image.url }}"/>
+                            <img src="https://driftsetups.s3.amazonaws.com/media/{{ form.instance.image }}"/>
                             <div id="delete-id_{{ form.prefix }}" class="delete-image">×</div>
                             <div class="order-image-arrows">
                                 <i class="order-image fa fa-arrow-up" aria-hidden="true"></i>
