@@ -27,7 +27,7 @@
 <div itemscope itemtype="http://schema.org/Article" itemref="_publisher _dateModified _mainEntityOfPage">
     <div class="setup-header-section">
         {% for image in setup.get_all_images %}
-            <img itemprop="image" class="setup-main-image mySlides" src="{{ image }}">
+            <img itemprop="image" class="setup-main-image mySlides" src="{{ image }}" alt="{{ setup }} #{{ image.id }}">
         {% endfor %}
         <div class="setup-characteristics-section">
                 <div class="round">
