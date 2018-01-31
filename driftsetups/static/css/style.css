@@ -650,6 +650,12 @@ button {
 .setup-create-form-ptrw-field {
     margin: 10px 0;
 }
+.setup-create-car-request-text {
+    display:inline-block;
+    margin:5px 0;
+    font-size:14px;
+    width:100%
+}
 .setup-create-form-car-selects {
     width: 100%;
     overflow: hidden;
@@ -776,7 +782,7 @@ div[class*='_fields-form-row'] input:last-of-type{
 }
 .setup-create-form-add-image-container {
     border: 1px dashed #d34a42;
-    margin: 35px auto 0 auto;
+    margin: 60px auto 0 auto;
     overflow: hidden;
     width: calc(100% - 20px);
     display: block;
