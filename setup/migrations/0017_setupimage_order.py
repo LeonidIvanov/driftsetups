@@ -17,12 +17,5 @@ class Migration(migrations.Migration):
             name='order',
             field=models.IntegerField(default=0),
         ),
-        migrations.AlterModelOptions(
-            name='setupimage',
-            options={'ordering': ['order']},
-        ),
-        migrations.RemoveField(
-            model_name='setupimage',
-            name='is_main',
-        ),
+
     ]
