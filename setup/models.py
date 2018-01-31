@@ -30,9 +30,14 @@ class Setup(models.Model):
         except IndexError:
             return None
 
-
     def get_additional_images(self):
-        return SetupImage.objects.filter(setup=self, is_main=False)
+        try:
+            return SetupImage.objects.filter(setup=self)[1:]
+        except IndexError:
+            return None
+
+    def get_all_images(self):
+        return SetupImage.objects.filter(setup=self)
 
     def get_engine_fields(self):
         return SetupField.objects.filter(setup=self, category=0)
