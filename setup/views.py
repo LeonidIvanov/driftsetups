@@ -241,7 +241,7 @@ class SetupUpdateView(LoginRequiredMixin, UpdateView):
     slug_url_kwarg = 'setup_slug'
 
     def get(self, request, *args, **kwargs):
-        setup = Setup.objects.get(slug=self.slug_url_kwarg)
+        setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
         if request.user == setup.creator:
             return super(SetupUpdateView, self).get(request, *args, **kwargs)
         else:
