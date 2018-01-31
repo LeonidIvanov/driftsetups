@@ -21,9 +21,14 @@
     <meta property="og:image" content="{{ setup.get_main_image }}" />
 {% endblock %}
 {% block body %}
+
+        <a class="prev-setup-main-image" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next-setup-main-image" onclick="plusSlides(1)">&#10095;</a>
 <div itemscope itemtype="http://schema.org/Article" itemref="_publisher _dateModified _mainEntityOfPage">
     <div class="setup-header-section">
-        <img itemprop="image" class="setup-main-image" src="{{ setup.get_main_image }}">
+        {% for image in setup.get_all_images %}
+            <img itemprop="image" class="setup-main-image mySlides" src="{{ image }}">
+        {% endfor %}
         <div class="setup-characteristics-section">
                 <div class="round">
                     {% if setup.power %}
