@@ -105,8 +105,8 @@
                                     <div id="vote-down" class="vote-down" data-vote-down="{% url 'setup_vote_down' setup.slug %}"></div>
                                     <div id="vote-up" class="vote-up" data-vote-up="{% url 'setup_vote_up' setup.slug %}"></div>
                                 {% else %}
-                                    <div id="vote-login-up" class="vote-down"></div>
-                                    <div id="vote-login-down" class="vote-up"></div>
+                                    <a href="{% url 'login' %}"><div id="vote-login-up" class="vote-down"></div></a>
+                                    <a href="{% url 'login' %}"><div id="vote-login-down" class="vote-up"></div></a>
                                 {% endif %}
                                 <div class="votes-bar">
                                     <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
