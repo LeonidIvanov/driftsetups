@@ -398,7 +398,7 @@ button {
     overflow: hidden;
 }
 .setup-header-info-left {
-    width: 65%;
+    width: 75%;
     float:left;
 }
 .setup-header-info-left .profile-avatar-div{
@@ -434,7 +434,7 @@ button {
 }
 
 .setup-header-info-right {
-    width:35%;
+    width:25%;
     float:right;
 }
 .setup-header-info-right-container {
