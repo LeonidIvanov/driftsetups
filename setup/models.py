@@ -25,7 +25,11 @@ class Setup(models.Model):
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
 
     def get_main_image(self):
-        return SetupImage.objects.get(setup=self, is_main=True)
+        try:
+            return SetupImage.objects.filter(setup=self)[0]
+        except IndexError:
+            return None
+
 
     def get_additional_images(self):
         return SetupImage.objects.filter(setup=self, is_main=False)
@@ -82,8 +86,11 @@ class Setup(models.Model):
 
 class SetupImage(models.Model):
     image = models.ImageField(upload_to='setups/', blank=True, default=None, null=True)
-    is_main = models.BooleanField()
+    order = models.IntegerField(default=0)
     setup = models.ForeignKey(Setup)
+
+    class Meta:
+        ordering = ['order']
 
     def __str__(self):
         return self.image.url

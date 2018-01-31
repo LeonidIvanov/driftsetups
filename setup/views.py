@@ -9,8 +9,8 @@ from django.db import transaction
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 
-from .models import Setup, SetupImage, SetupVote, SetupField
-from .forms import SetupCreateForm, SetupImageCreateForm
+from .models import Setup, SetupVote, SetupField
+from .forms import SetupCreateForm, SetupImageCreateFormSet
 from .forms import SetupEngineFieldCreateFormSet, SetupDrivetrainFieldCreateFormSet
 from .forms import SetupSuspensionFieldCreateFormSet, SetupBrakesFieldCreateFormSet
 from .forms import SetupWheelsFieldCreateFormSet, SetupExteriorFieldCreateFormSet
@@ -103,9 +103,10 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         context = super(SetupCreateView, self).get_context_data(**kwargs)
         context['car_brands'] = CarBrand.objects.all()
         if self.request.POST:
-            context['images_form'] = SetupImageCreateForm(
+            context['images_formset'] = SetupImageCreateFormSet(
                 self.request.POST,
                 self.request.FILES,
+                prefix='image_fields'
             )
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
                 self.request.POST,
@@ -136,7 +137,7 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
                 prefix='interior_fields'
             )
         else:
-            context['images_form'] = SetupImageCreateForm()
+            context['images_formset'] = SetupImageCreateFormSet(prefix='image_fields')
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
                 prefix='engine_fields'
             )
@@ -172,7 +173,7 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         form.instance.creator = self.request.user
         self.object = form.save()
 
-        images_form = context['images_form']
+        images_formset = context['images_formset']
         engine_fields_formset = context['engine_fields_formset']
         drivetrain_fields_formset = context['drivetrain_fields_formset']
         suspension_fields_formset = context['suspension_fields_formset']
@@ -218,19 +219,14 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
                     form.instance.category = 6
                 interior_fields_formset.save()
 
-        if self.request.FILES:
-            if images_form.is_valid():
-                SetupImage.objects.create(
-                    image=self.request.FILES.getlist('image')[0],
-                    setup=self.object,
-                    is_main=True
-                )
-                for file in self.request.FILES.getlist('image')[1:]:
-                    SetupImage.objects.create(
-                        image=file,
-                        setup=self.object,
-                        is_main=False
-                    )
+            if images_formset.is_valid():
+                images_formset.instance = self.object
+                print(images_formset)
+                print('---------------------------------')
+                print(images_formset.cleaned_data)
+                for form in images_formset:
+                    form.instance.order = form.cleaned_data['ORDER']
+                images_formset.save()
 
         return redirect(self.get_success_url())
 
@@ -248,9 +244,10 @@ class SetupUpdateView(UpdateView):
         context = super(SetupUpdateView, self).get_context_data(**kwargs)
         context['car_brands'] = CarBrand.objects.all()
         if self.request.POST:
-            context['images_form'] = SetupImageCreateForm(
+            context['images_formset'] = SetupImageCreateFormSet(
                 self.request.POST,
                 self.request.FILES,
+                prefix='image_fields',
                 instance=self.object,
             )
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
@@ -303,7 +300,8 @@ class SetupUpdateView(UpdateView):
             )
             context['interior_fields_formset'].full_clean()
         else:
-            context['images_form'] = SetupImageCreateForm(
+            context['images_formset'] = SetupImageCreateFormSet(
+                prefix='image_fields',
                 instance=self.object,
             )
             context['engine_fields_formset'] = SetupEngineFieldCreateFormSet(
@@ -355,7 +353,7 @@ class SetupUpdateView(UpdateView):
         form.instance.creator = self.request.user
         self.object = form.save()
 
-        images_form = context['images_form']
+        images_formset = context['images_formset']
         engine_fields_formset = context['engine_fields_formset']
         drivetrain_fields_formset = context['drivetrain_fields_formset']
         suspension_fields_formset = context['suspension_fields_formset']
@@ -400,19 +398,15 @@ class SetupUpdateView(UpdateView):
                 form.instance.category = 6
             interior_fields_formset.save()
 
-        if self.request.FILES:
-            if images_form.is_valid():
-                SetupImage.objects.create(
-                    image=self.request.FILES.getlist('image')[0],
-                    setup=self.object,
-                    is_main=True
-                )
-                for file in self.request.FILES.getlist('image')[1:]:
-                    SetupImage.objects.create(
-                        image=file,
-                        setup=self.object,
-                        is_main=False
-                    )
+        if images_formset.is_valid():
+            images_formset.instance = self.object
+            print(images_formset.cleaned_data)
+            for form in images_formset.ordered_forms:
+                print('---------------------------')
+                print(form.cleaned_data)
+                if form.cleaned_data != {} and form.cleaned_data['ORDER']:
+                    form.instance.order = form.cleaned_data['ORDER']
+            images_formset.save()
 
         return redirect(self.get_success_url())
 

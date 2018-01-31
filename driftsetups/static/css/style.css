@@ -635,7 +635,7 @@ div[class*='_fields-form-row'] input:last-of-type{
     margin-bottom: 0;
 }
 .delete-form,
-.image-box .delete-image {
+.image-box .delete-image{
     float: right;
     font-size: 29px;
     text-align: center;
@@ -643,6 +643,11 @@ div[class*='_fields-form-row'] input:last-of-type{
     color: #c0c0c0;
     cursor: pointer;
 }
+.image-box .delete-image{
+    width: 40px;
+    padding: 4px 0;
+}
+
 .delete-form:hover,
 .image-box .delete-image:hover {
     color: #000;
@@ -691,12 +696,12 @@ div[class*='_fields-form-row'] input:last-of-type{
     font-size: 20px !important;
 }
 .setup-create-form-add-image-container {
-    border: 1px solid #d34a42;
+    border: 1px dashed #d34a42;
     margin: 35px auto 0 auto;
     overflow: hidden;
     width: calc(100% - 20px);
     display: block;
-    padding: 108px 0;
+    padding: 8px 0;
     background-color: #d34a4240;
     border-radius: 2px;
     text-align: center;
@@ -711,19 +716,54 @@ div[class*='_fields-form-row'] input:last-of-type{
 }
 .setup-create-form-add-image-container-text {
 }
+input[name*='image_fields-'],
+label[for*='id_image_fields-'] {
+    display: none;
+}
 .images-previews {
     width: calc(100% - 20px);
     overflow: hidden;
-    margin: 43px 10px 0 10px;
+    margin: 10px 10px 0 10px;
+    display:none;
 }
 .image-box {
     width:100%;
     margin-bottom: 20px;
     overflow: hidden;
 }
+.image-box:nth-of-type(2) {
+    width: calc(100% - 4px);
+    border: 1px solid #d34a42;
+}
+.image-box:nth-of-type(2) .fa-arrow-up{
+    display: none;
+}
+.image-box:nth-of-type(2) .fa-arrow-down{
+    margin-top: 18px;
+}
+.image-box:last-of-type .fa-arrow-down{
+    display: none;
+}
 .image-box img {
     width: calc(100% - 40px);
     float:left;
+}
+.order-image-arrows {
+    margin-top: 25%;
+}
+.image-box i {
+    display: block;
+    float: right;
+    width: 40px;
+    text-align: center;
+    color: #c0c0c0;
+    cursor: pointer;
+}
+.image-box i:hover {
+    color: #000;
+}
+.image-box i:first-of-type {
+    margin-bottom: 20px;
 }
 
 /*End Setup Create*/

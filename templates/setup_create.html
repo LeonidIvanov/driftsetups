@@ -133,13 +133,18 @@
             </div>
             <div class="setup-create-form-half">
                 <button class="setup-create-form-top-button" type="submit">Save Setup</button>
-                <div class="setup-create-form-add-image-container js-upload-photos">
-                    <div class="setup-create-form-add-image-container-text">+</div>
-                    <div class="setup-create-form-add-image-container-text">Drop or click</div>
-                    <div class="setup-create-form-add-image-container-text">to upload photos</div>
+                <div class="images-previews">
+                    <div class="setup-create-form-field-label">Main Photo</div>
                 </div>
-                {{ images_form }}
-                <div class="images-previews"></div>
+                {{ images_formset.management_form }}
+                {% for form in images_formset %}
+                    <div class="image_fields-form-row">
+                        {{ form }}
+                    </div>
+                {% endfor %}
+                <div id="add-image_fields" class="setup-create-form-add-image-container">
+                    <div class="setup-create-form-add-image-container-text">+ Add photo</div>
+                </div>
             </div>
             <button class="setup-create-form-bottom-button" type="submit">Save Setup</button>
         </form>

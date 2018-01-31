@@ -48,9 +48,20 @@ class SetupImageCreateForm(forms.ModelForm):
         model = SetupImage
         fields = ['image']
         labels = {'image': ''}
+        help_texts = {'images': ''}
         widgets = {
-            'image': forms.ClearableFileInput(attrs={'multiple': True, 'hidden': True})
+            'image': forms.FileInput(attrs={'hidden': True})
         }
+
+
+SetupImageCreateFormSet = forms.inlineformset_factory(
+    Setup,
+    SetupImage,
+    form=SetupImageCreateForm,
+    extra=0,
+    can_delete=True,
+    can_order=True
+)
 
 
 class SetupEngineFieldCreateForm(forms.ModelForm):

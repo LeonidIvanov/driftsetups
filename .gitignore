@@ -99,3 +99,4 @@ ENV/
 
 # Heroku
 media/
+/driftsetups/local_urls.py

@@ -12,7 +12,7 @@ function cloneMore(selector, prefix) {
     newElement.find(':input').each(function() {
         var name = $(this).attr('name').replace('-' + (total-1) + '-', '-' + total + '-');
         var id = 'id_' + name;
-        $(this).attr({'name': name, 'id': id}).val('').removeAttr('checked');
+        $(this).attr({'name': name, 'id': id}).removeAttr('checked');
     });
     total++;
     $('#id_' + prefix + '-TOTAL_FORMS').val(total);
@@ -20,11 +20,52 @@ function cloneMore(selector, prefix) {
     return false;
 };
 
+function createImageForm() {
+    var totalInput = $('#id_image_fields-TOTAL_FORMS');
+    var prefixTotal = 'image_fields-' + totalInput.attr('value');
+    var orderValue = parseInt(totalInput.attr('value')) + 1;
+
+    $('.images-previews').append('<div class="image-box" id="setup-image" hidden></div>');
+
+    var newImageBox = $('.image-box:last-of-type');
+
+    newImageBox.append('<div class="image_fields-form-row"></div>');
+    var inputsDiv = newImageBox.children('.image_fields-form-row');
+    inputsDiv.append('<input type="file" name="' + prefixTotal + '-image" id="id_' + prefixTotal + '-image" hidden>');
+    inputsDiv.append('<input type="number" name="' + prefixTotal + '-ORDER" id="id_' + prefixTotal + '-ORDER">');
+    inputsDiv.append('<input type="checkbox" name="' + prefixTotal + '-DELETE" id="id_' + prefixTotal + '-DELETE">');
+    inputsDiv.append('<input type="hidden" name="' + prefixTotal + '-id" id="id_' + prefixTotal + '-id">');
+    inputsDiv.append('<input type="hidden" name="' + prefixTotal + '-setup" id="id_' + prefixTotal + '-setup">');
+
+    newImageBox.append('<img src=""/>');
+    newImageBox.append('<div class="delete-image" id="delete-' + prefixTotal + '"></div>');
+
+    newImageBox.append('<div class="order-image-arrows"></div>');
+    newImageBox.children('.order-image-arrows').append('<i class="order-image fa fa-arrow-up" aria-hidden="true"></i>');
+    newImageBox.children('.order-image-arrows').append('<i class="order-image fa fa-arrow-down" aria-hidden="true"></i>');
+
+    newImageBox.find('input[type="file"]').click().one();
+
+    newImageBox.find('input[type="file"]').change( function(){
+        newImageBox.find('input[type="number"]').attr('value', orderValue);
+        imageInputTumbnail(this);
+        $('.images-previews').show();
+        $('html, body').animate({
+            scrollTop: $("#add-image_fields").offset().top
+        }, 750);
+        newImageBox.show();
+        return false;
+    });
+
+    totalInput.attr('value', orderValue);
+}
+
+
 function deleteForm(prefix, btn) {
     var total = parseInt($('#id_' + prefix + '-TOTAL_FORMS').val());
     var formSelector = '.' + prefix + '-form-row';
     if (total > 1){
-        btn.closest(formSelector).remove();
+        btn.closest(formSelector).hide();
         var forms = $(formSelector);
         $('#id_' + prefix + '-TOTAL_FORMS').val(forms.length);
         for (var i=0, formCount=forms.length; i<formCount; i++) {
@@ -34,12 +75,6 @@ function deleteForm(prefix, btn) {
         }
     }
     return false;
-}
-
-function openImageUploadInput() {
-    $('.setup-create-form-add-image-container').click( function () {
-        $('#id_image').click()
-    })
 }
 
 function getBrandModels() {
@@ -106,18 +141,8 @@ function getModelsSubModels() {
 }
 
 
-$(document).ready(function (){
-    openImageUploadInput();
-    getBrandModels();
-    getModelsSubModels();
-
-    $('#id_image').change( function(){
-        imageInputTumbnail(this);
-    });
-});
-
-
 function imageInputTumbnail(input) {
+    var input_id = $(input).attr('id').replace('-image', '');
     if (input.files) {
         var files = input.files;
         for (var i = 0, f; f = files[i]; i++) {
@@ -131,14 +156,9 @@ function imageInputTumbnail(input) {
             // Closure to capture the file information.
             reader.onload = (function (theFile) {
                 return function (e) {
-                    var images_box = $('.images-previews');
-                    images_box.append('<div class="image-box" id="setup-image"></div>');
-                    $('.image-box').last().append('<img src="' + e.target.result + '"\>');
-                    $('.image-box').last().append('<div class="delete-image">&times;</div>');
-                    $('.delete-image').click(function () {
-                        var this_image_box = $(this).parent();
-                        this_image_box.remove();
-                    });
+                    $(input).parent().parent('.image-box').show();
+                    $(input).parent().parent('.image-box').last().children('img').attr('src', e.target.result);
+                    $(input).parent().parent('.image-box').last().children('.delete-image').attr('id', 'delete-' + input_id);
                 }
             })(f);
 
@@ -148,12 +168,50 @@ function imageInputTumbnail(input) {
 }
 
 
+$(document).ready(function (){
+    $('#id_image_fields-0-ORDER').attr('value', 1);
+    getBrandModels();
+    getModelsSubModels();
+});
+
+$(document).on('click', '.order-image', function() {
+        var imageBox = $(this).closest('.image-box');
+        var currentOrderInput = $(imageBox).find('input[type="number"]');
+        var currentOrderInputValue = parseInt(currentOrderInput.attr('value'));
+        console.log(currentOrderInputValue);
+
+        if ($(this).hasClass('fa-arrow-up')){
+            $(imageBox).prev().find('input[type="number"]').attr('value', currentOrderInputValue);
+            $(imageBox).insertBefore($(imageBox).prev('.image-box'));
+            currentOrderInput.attr('value', currentOrderInputValue - 1);
+        } else {
+            $(imageBox).next().find('input[type="number"]').attr('value', currentOrderInputValue);
+            $(imageBox).insertAfter($(imageBox).next('.image-box'));
+            currentOrderInput.attr('value', currentOrderInputValue + 1);
+        }
+    });
+
 $(document).on('click', '.setup-create-form-add-field', function(e){
     e.preventDefault();
     var prefix = $(this).attr('id').replace('add-', '');
     var formSelector = '.' + prefix + '-form-row:last';
     cloneMore(formSelector, prefix);
     return false;
+});
+
+$(document).on('click', '.delete-image', function(e){
+    e.preventDefault();
+    var formId = $(this).attr('id').replace('delete-', '');
+    var delete_input = $('input[id=' + formId + '-DELETE]');
+    $(delete_input).attr('checked', true);
+    var this_image_box = $(this).parent();
+    this_image_box.hide();
+    return false;
+});
+
+$(document).on('click', '.setup-create-form-add-image-container', function(e){
+    e.preventDefault();
+    createImageForm();
 });
 
 $(document).on('click', '.delete-form', function(e){
