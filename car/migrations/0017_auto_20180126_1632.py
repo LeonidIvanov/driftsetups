@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+import django.utils.timezone
 
 
 class Migration(migrations.Migration):
@@ -21,5 +22,23 @@ class Migration(migrations.Migration):
             model_name='carsubmodel',
             name='stock_engines',
             field=models.ManyToManyField(blank=True, to='car.Engine'),
+        ),
+        migrations.AddField(
+            model_name='carbrand',
+            name='updated_at',
+            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='carmodel',
+            name='updated_at',
+            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            preserve_default=False,
+        ),
+        migrations.AddField(
+            model_name='carsubmodel',
+            name='updated_at',
+            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            preserve_default=False,
         ),
     ]
