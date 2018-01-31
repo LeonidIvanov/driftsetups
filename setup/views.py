@@ -182,49 +182,48 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         exterior_fields_formset = context['exterior_fields_formset']
         interior_fields_formset = context['interior_fields_formset']
 
-        with transaction.atomic():
-            if engine_fields_formset.is_valid():
-                engine_fields_formset.instance = self.object
-                for form in engine_fields_formset:
-                    form.instance.category = 0
-                engine_fields_formset.save()
-            if drivetrain_fields_formset.is_valid():
-                drivetrain_fields_formset.instance = self.object
-                for form in drivetrain_fields_formset:
-                    form.instance.category = 1
-                drivetrain_fields_formset.save()
-            if suspension_fields_formset.is_valid():
-                suspension_fields_formset.instance = self.object
-                for form in suspension_fields_formset:
-                    form.instance.category = 2
-                suspension_fields_formset.save()
-            if brakes_fields_formset.is_valid():
-                brakes_fields_formset.instance = self.object
-                for form in brakes_fields_formset:
-                    form.instance.category = 3
-                brakes_fields_formset.save()
-            if wheels_fields_formset.is_valid():
-                wheels_fields_formset.instance = self.object
-                for form in wheels_fields_formset:
-                    form.instance.category = 4
-                wheels_fields_formset.save()
-            if exterior_fields_formset.is_valid():
-                exterior_fields_formset.instance = self.object
-                for form in exterior_fields_formset:
-                    form.instance.category = 5
-                exterior_fields_formset.save()
-            if interior_fields_formset.is_valid():
-                interior_fields_formset.instance = self.object
-                for form in interior_fields_formset:
-                    form.instance.category = 6
-                interior_fields_formset.save()
+        if engine_fields_formset.is_valid():
+            engine_fields_formset.instance = self.object
+            for form in engine_fields_formset:
+                form.instance.category = 0
+            engine_fields_formset.save()
+        if drivetrain_fields_formset.is_valid():
+            drivetrain_fields_formset.instance = self.object
+            for form in drivetrain_fields_formset:
+                form.instance.category = 1
+            drivetrain_fields_formset.save()
+        if suspension_fields_formset.is_valid():
+            suspension_fields_formset.instance = self.object
+            for form in suspension_fields_formset:
+                form.instance.category = 2
+            suspension_fields_formset.save()
+        if brakes_fields_formset.is_valid():
+            brakes_fields_formset.instance = self.object
+            for form in brakes_fields_formset:
+                form.instance.category = 3
+            brakes_fields_formset.save()
+        if wheels_fields_formset.is_valid():
+            wheels_fields_formset.instance = self.object
+            for form in wheels_fields_formset:
+                form.instance.category = 4
+            wheels_fields_formset.save()
+        if exterior_fields_formset.is_valid():
+            exterior_fields_formset.instance = self.object
+            for form in exterior_fields_formset:
+                form.instance.category = 5
+            exterior_fields_formset.save()
+        if interior_fields_formset.is_valid():
+            interior_fields_formset.instance = self.object
+            for form in interior_fields_formset:
+                form.instance.category = 6
+            interior_fields_formset.save()
 
-            if images_formset.is_valid():
-                images_formset.instance = self.object
-                for form in images_formset.ordered_forms:
-                    if form.cleaned_data != {} and form.cleaned_data['ORDER']:
-                        form.instance.order = form.cleaned_data['ORDER']
-                images_formset.save()
+        if images_formset.is_valid():
+            images_formset.instance = self.object
+            for form in images_formset.ordered_forms:
+                if form.cleaned_data != {} and form.cleaned_data['ORDER']:
+                    form.instance.order = form.cleaned_data['ORDER']
+            images_formset.save()
 
         return redirect(self.get_success_url())
 
