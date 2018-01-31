@@ -12,7 +12,7 @@ function cloneMore(selector, prefix) {
     newElement.find(':input').each(function() {
         var name = $(this).attr('name').replace('-' + (total-1) + '-', '-' + total + '-');
         var id = 'id_' + name;
-        $(this).attr({'name': name, 'id': id}).attr('value', false).removeAttr('checked');
+        $(this).attr({'name': name, 'id': id}).val('').removeAttr('checked');
     });
     total++;
     $('#id_' + prefix + '-TOTAL_FORMS').val(total);
