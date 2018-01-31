@@ -234,11 +234,18 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
         return self.render_to_response(self.get_context_data(form=form))
 
 
-class SetupUpdateView(UpdateView):
+class SetupUpdateView(LoginRequiredMixin, UpdateView):
     model = Setup
     form_class = SetupCreateForm
     template_name = 'setup_update.html'
     slug_url_kwarg = 'setup_slug'
+
+    def get(self, request, *args, **kwargs):
+        setup = Setup.objects.get(slug=self.slug_url_kwarg)
+        if request.user == setup.creator:
+            return super(SetupUpdateView, self).get(request, *args, **kwargs)
+        else:
+            raise Http404
 
     def get_context_data(self, **kwargs):
         context = super(SetupUpdateView, self).get_context_data(**kwargs)
