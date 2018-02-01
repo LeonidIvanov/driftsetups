@@ -96,6 +96,7 @@
 </footer>
     <!-- Popups -->
     <div class="popup-background"></div>
+    <div class="loader"></div>
     {% url 'login' as login_url %}
     {% if not user.is_authenticated and request.path != login_url %}
         <div class="popup-login-content">
@@ -121,6 +122,7 @@
                 <div class="center">or</div>
                 <div class="sign-up-with-email center">Email</div>
             </div>
+
             <div class="sign-up-with-email-form">
                 <div class="center">Sign up with <a href='{% url "social:begin" "facebook" %}'>Facebook</a>, <a href='{% url "social:begin" "google-oauth2" %}'>Google+</a></div>
                 <div class="center">or</div>

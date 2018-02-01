@@ -220,3 +220,8 @@ $(document).on('click', '.delete-form', function(e){
     deleteForm(prefix, $(this));
     return false;
 });
+
+$(document).on('submit', 'button[type="submit"', function() {
+    $('.popup-background').show();
+    $('.loader').show();
+});
