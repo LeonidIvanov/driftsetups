@@ -525,10 +525,14 @@ button {
     width:79%;
     float:left;
 }
-.social-repost {
+.social-repost, .profile-social-repost {
     overflow: hidden;
 }
-.social-repost div {
+.profile-social-repost {
+   margin-right: 40px;
+}
+.social-repost div,
+.profile-social-repost div {
     margin:10px auto;
     -webkit-background-size: 32px;
     background-size: 32px;
@@ -539,6 +543,10 @@ button {
     -moz-border-radius:50%;
     border-radius:50%;
     cursor:pointer;
+}
+.profile-social-repost div{
+    float: right;
+    margin:10px 5px;
 }
 .facebook {
     background-image: url('/media/facebook.png');

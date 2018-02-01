@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     {{ profile.get_full_name }}
 {% endblock %}
@@ -17,6 +18,13 @@
                     {% if profile.city %}
                         <div class="setup-car-city">{{ profile.city }}</div>
                     {% endif %}
+                </div>
+            </div>
+            <div class="setup-header-info-right">
+                <div class="profile-social-repost">
+                    <div class="facebook"></div>
+                    <div class="twitter"></div>
+                    <div class="vkontakte"></div>
                 </div>
             </div>
         </div>
@@ -92,4 +100,7 @@
         {% endif %}
     </div>
 </div>
+{% endblock %}
+{% block scripts %}
+    <script src="{% static 'js/setup_detail.js' %}"></script>
 {% endblock %}
