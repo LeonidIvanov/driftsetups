@@ -424,6 +424,7 @@ button {
     margin: 0 20px;
     cursor: pointer;
     border-bottom: 1px solid #d34a42;
+    display: inline-block;
 }
 .setup-car-model-by {
     margin-left: 20px;
