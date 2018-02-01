@@ -1283,6 +1283,7 @@ label[for*='id_image_fields-'] {
     .setup-info-total {
         margin-right: 20px;
         text-align: right !important;
+        font-size: 25px;
     }
     .top_setups_by_views,
     .top-weekly-setups,
