@@ -1223,7 +1223,7 @@ label[for*='id_image_fields-'] {
         text-align: center;
     }
     .search-container {
-        width: calc(60% - 14px);
+        width: calc(60% - 20px);
     }
     #searchform input{
         width: calc(90% - 20px);
