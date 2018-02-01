@@ -1215,12 +1215,13 @@ label[for*='id_image_fields-'] {
     .nav-left {
         width: calc(100% - 20px);
     }
-    .nav-left li {
+    .nav-right li {
         padding: 22px 18px;
     }
     .setup-create {
         width: calc(40% - 40px);
         text-align: center;
+        padding: 22px 20px;
     }
     .search-container {
         width: calc(60% - 20px);
