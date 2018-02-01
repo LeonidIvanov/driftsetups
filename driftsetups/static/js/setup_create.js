@@ -38,7 +38,7 @@ function createImageForm() {
     inputsDiv.append('<input type="hidden" name="' + prefixTotal + '-setup" id="id_' + prefixTotal + '-setup">');
 
     newImageBox.append('<img src=""/>');
-    newImageBox.append('<div class="delete-image" id="delete-' + prefixTotal + '"></div>');
+    newImageBox.append('<div class="delete-image" id="delete-' + prefixTotal + '">&times;</div>');
 
     newImageBox.append('<div class="order-image-arrows"></div>');
     newImageBox.children('.order-image-arrows').append('<i class="order-image fa fa-arrow-up" aria-hidden="true"></i>');
@@ -221,7 +221,7 @@ $(document).on('click', '.delete-form', function(e){
     return false;
 });
 
-$(document).on('submit', 'button[type="submit"', function() {
+$(document).on('submit', 'button[type="submit"]', function() {
     $('.popup-background').show();
     $('.loader').show();
 });
