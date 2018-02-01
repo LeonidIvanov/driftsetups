@@ -50,3 +50,7 @@ class SitemapXmlView(TemplateView):
         context['setups'] = Setup.objects.all()
         context['profiles'] = User.objects.all()
         return context
+
+
+class PrivacyView(TemplateView):
+    template_name = 'privacy_policy.html'
