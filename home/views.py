@@ -54,3 +54,7 @@ class SitemapXmlView(TemplateView):
 
 class PrivacyView(TemplateView):
     template_name = 'privacy_policy.html'
+
+
+class TOSView(TemplateView):
+    template_name = 'terms_of_use.html'
