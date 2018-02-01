@@ -415,7 +415,6 @@ button {
 .setup-h1-container {
     width: calc(100% - 126px);
     display: block;
-    float: left;
 }
 .setup-h1 {
     margin: 0 20px;
@@ -423,7 +422,6 @@ button {
 }
 .setup-edit-button {
     margin: 0 20px;
-    float: left;
     cursor: pointer;
     border-bottom: 1px solid #d34a42;
 }
