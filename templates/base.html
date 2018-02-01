@@ -99,10 +99,10 @@
 
 <footer>
     {% block footer %}{% endblock %}
-        <div class="bottom-top-cars">
-            <h3>Drift Setups Car List</h3>
-            {% top_drift_cars %}
-        </div>
+    <div class="bottom-top-cars">
+        <h3>Drift Setups Car List</h3>
+        {% top_drift_cars %}
+    </div>
     <div class="copyright">© <span id="_publisher" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
         <span itemprop="name">DriftSetups.com</span>
         <span hidden itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
@@ -110,6 +110,10 @@
                 <meta itemprop="width" content="600">
                 <meta itemprop="height" content="60">
         </span>
+    </div>
+    <div>
+        <a href="{% url 'privacy' %}">Privacy Policy</a>
+        <a href="{% url 'tos' %}">Terms of Service</a>
     </div>
 </footer>
     <!-- Popups -->
