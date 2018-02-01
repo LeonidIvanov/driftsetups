@@ -83,6 +83,11 @@ $(document).ready(function(){
     $('.sign-up-with-email').click(function() {
         $('.popup-sign-up-choice').hide();
         $('.sign-up-with-email-form').show();
-    })
+    });
+
+    // $('header').delay(2000).animate({top: '0px'});
+    // $('.patreon-close').click(function() {
+    //     $('header').animate({top: '-50px'});
+    // });
 
 });

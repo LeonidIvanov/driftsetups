@@ -31,6 +31,7 @@ li {
     list-style: none;
 }
 header {
+    /*top: -50px;*/
     z-index: 1;
     position: fixed;
     width:100%;
@@ -132,9 +133,7 @@ button {
 .no-setups a:hover {
     transform: scale(1.1);
 }
-.markup-container {
-    overflow: hidden;
-}
+
 .setup-create {
     background-color: rgba(211, 74, 66, 0.8);
 }
@@ -211,7 +210,7 @@ button {
 }
 .top-weekly-setups .setup-list-item-image-container,
 .top_setups_by_views .setup-list-item-image-container{
-    width: 150px !important;
+    width: 150px;
 }
 .top-weekly-setups .setup-list-item-image-container a,
 .top_setups_by_views .setup-list-item-image-container a{
@@ -1109,4 +1108,218 @@ label[for*='id_image_fields-'] {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.animate-top {
+    position:relative;
+    animation:animatetop 0.4s
+}
+@keyframes animatetop {
+    from{
+        top:-300px;opacity:0
+    } to{
+        top:0;opacity:1
+    }
+}
+
+.patreon {
+    position: relative;
+    height: 50px;
+    background-color: rgb(186, 100, 96);
+}
+.patreon-container {
+    margin: auto;
+    width: 1085px;
+    text-align: right;
+    color: #fff;
+    font-size: 17px;
+    padding: 0 20px;
+}
+.patreon-text {
+    width: calc(100% - 40px);
+    padding: 12.5px 0;
+    float: left;
+}
+.patreon-close {
+    float: right;
+    font-size: 34px;
+    width: 20px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.patreon span{
+    float:left;
+}
+.patreon a {
+    padding: 7px 14px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    margin: 0 20px;
+    border-radius: 2px;
+    font-family: Oswald;
+}
+
+@media (max-width: 767px) {
+    header {
+        position: initial;
+    }
+    .setup-header-section {
+        height: auto;
+        position: initial;
+    }
+    .setup-main-image {
+        width: 100%;
+        position: initial;
+        bottom: auto;
+    }
+    .container, footer, .post-header-container {
+        width: calc(100% - 40px);
+        margin:auto;
+        background-color: #fff;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .patreon-container {
+        margin: auto;
+        width: calc(100% - 40px);
+        text-align: right;
+        color: #fff;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+    .setup-characteristics-section {
+        width: 100%;
+        left: auto;
+        bottom: auto;
+        margin: auto;
+        overflow: hidden;
+        position: initial;
+        color: #fff;
+        background-color: rgba(0,0,0,0.75);
+        z-index: 4;
+    }
+    nav {
+        width: 100%;
+        margin:auto;
+        color: #fff;
+        font-family: Oswald;
+        text-transform: uppercase;
+    }
+    .sticky {
+        position: fixed;
+        top: 200px;
+        float: right;
+        width: calc(100% * 0.21);
+        right: 50%;
+    }
+    .nav-left {
+        width: 100%;
+    }
+    .setup-create {
+        width: calc(40% - 40px);
+        text-align: center;
+    }
+    .search-container {
+        width: calc(60% - 20px);
+    }
+    .setup-header-info-left {
+        width: 30%;
+    }
+    .setup-header-info-right {
+        width: 70%;
+    }
+    .profile-avatar-right {
+        width: 330%;
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .setup-h1-container {
+        width: 100%;
+    }
+    .social-repost {
+        display: none;
+    }
+    .two-col-left {
+        width: 100%;
+    }
+    .two-col-left div{
+        width: 100%;
+        margin-left: 0;
+    }
+    .setup-list-item-image-container {
+        width: 100%;
+        float: none;
+    }
+    .setup-list-item-image-container a img {
+        width: 100%;
+        float: none;
+    }
+    .setup-list-item-heading-container {
+        width: auto;
+        float: none;
+        margin: 0;
+    }
+    .setup-list-item-votes-container {
+        width: 100%;
+        float: right;
+    }
+    .votes-bar {
+        width: 100%;
+    }
+    .setup-info-total {
+        margin-right: 20px;
+        text-align: right !important;
+    }
+    .top_setups_by_views,
+    .top-weekly-setups,
+    .setup-list-item-image-container,
+    .setup-list-item-heading-container {
+        width: 100% !important;
+    }
+    .setup-list-item-image-container a,
+    .setup-list-item-image-container a {
+        height: auto !important;
+    }
+    .setup-list-item-image-container a img,
+    .setup-list-item-image-container a img {
+        width: 100%;
+    }
+    .setup-create-form-half {
+        width:100%;
+        float: none;
+    }
+    .setup-create-form-field select,
+    .setup-create-form-field input{
+        width: calc(100% - 20px) !important;
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+    .setup-create-form-car-selects select:last-of-type{
+        margin-left: 0;
+    }
+    .setup-create-form .description-textarea {
+        padding: 11px 5px;
+    }
+    .setup-create-form-top-button {
+        display: none;
+    }
+    .setup-create-form-add-image-container {
+        margin: 0;
+    }
+    .engine_fields-form-row,
+    .drivetrain_fields-form-row,
+    .suspension_fields-form-row,
+    .brakes_fields-form-row,
+    .wheels_fields-form-row,
+    .exterior_fields-form-row,
+    .interior_fields-form-row{
+        width: calc(100% - 40px) !important;
+         margin: 10px 0;
+        padding: 5px 0;
+    }
+    .setup-create-form h2{
+        overflow: hidden;
+    float: none;
+    width: 100%;
+    }
 }
