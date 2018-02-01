@@ -1226,7 +1226,7 @@ label[for*='id_image_fields-'] {
         width: calc(60% - 14px);
     }
     #searchform input{
-        calc(90% - 20px)
+        width: calc(90% - 20px);
     }
     .setup-header-info-left {
         width: 30%;
