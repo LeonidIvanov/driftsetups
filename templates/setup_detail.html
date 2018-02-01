@@ -67,10 +67,11 @@
     </div>
     <div class="container">
         <div class="setup-header-info">
-                <div class="setup-header-info-left">
-                    <div class="profile-avatar-div">
-                        <img class="profile-avatar" src="{{ setup.creator.get_avatar }}">
-                    </div>
+            <div class="setup-header-info-left">
+                <div class="profile-avatar-div">
+                    <a href="{{ setup.creator.get_absolute_url }}"><img class="profile-avatar" src="{{ setup.creator.get_avatar }}"></a>
+                </div>
+                <div class="profile-avatar-right">
                     <div class="setup-h1-container">
                         {% if user.is_authenticated and user == setup.creator %}
                             <div class="setup-edit-button"><a href="{% url 'setup_update' setup.slug %}">EDIT SETUP</a></div>
@@ -78,43 +79,45 @@
                         <h1 itemprop="headline" class="setup-h1">{{ setup }}</h1>
                     </div>
                     <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span></div>
+                        <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span>
+                    </div>
                     {% if setup.creator.city %}
                         <div class="setup-car-city">{{ setup.creator.city }}</div>
                     {% endif %}
                 </div>
-                <div class="setup-header-info-right">
-                    <div class="setup-header-info-right-container">
-                        <div class="setup-header-info-right-top">
-                            <div class="setup-info-block">
-                                <div class="setup-info-total">{{ setup.views }}</div>
-                                <div class="setup-info-heading">Views</div>
-                            </div>
-                            <div class="setup-info-block">
-                                <div class="setup-info-total"><div class="disqus-comment-count" data-disqus-identifier="{{ setup.slug }}"></div></div>
-                                <div class="setup-info-heading">Comments</div>
-                            </div>
-                            <div class="setup-info-block">
-                                <div class="setup-info-total">{{ setup.get_votes_total }}</div>
-                                <div class="setup-info-heading">Votes</div>
-                            </div>
+            </div>
+            <div class="setup-header-info-right">
+                <div class="setup-header-info-right-container">
+                    <div class="setup-header-info-right-top">
+                        <div class="setup-info-block">
+                            <div class="setup-info-total">{{ setup.views }}</div>
+                            <div class="setup-info-heading">Views</div>
                         </div>
-                        <div class="setup-header-info-right-bottom">
-                            <div class="votes-bar-container">
-                                {% if user.is_authenticated %}
-                                    <div id="vote-down" class="vote-down" data-vote-down="{% url 'setup_vote_down' setup.slug %}"></div>
-                                    <div id="vote-up" class="vote-up" data-vote-up="{% url 'setup_vote_up' setup.slug %}"></div>
-                                {% else %}
-                                    <a href="{% url 'login' %}"><div id="vote-login-up" class="vote-down"></div></a>
-                                    <a href="{% url 'login' %}"><div id="vote-login-down" class="vote-up"></div></a>
-                                {% endif %}
-                                <div class="votes-bar">
-                                    <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
-                                </div>
+                        <div class="setup-info-block">
+                            <div class="setup-info-total"><div class="disqus-comment-count" data-disqus-identifier="{{ setup.slug }}"></div></div>
+                            <div class="setup-info-heading">Comments</div>
+                        </div>
+                        <div class="setup-info-block">
+                            <div class="setup-info-total">{{ setup.get_votes_total }}</div>
+                            <div class="setup-info-heading">Votes</div>
+                        </div>
+                    </div>
+                    <div class="setup-header-info-right-bottom">
+                        <div class="votes-bar-container">
+                            {% if user.is_authenticated %}
+                                <div id="vote-down" class="vote-down" data-vote-down="{% url 'setup_vote_down' setup.slug %}"></div>
+                                <div id="vote-up" class="vote-up" data-vote-up="{% url 'setup_vote_up' setup.slug %}"></div>
+                            {% else %}
+                                <a href="{% url 'login' %}"><div id="vote-login-up" class="vote-down"></div></a>
+                                <a href="{% url 'login' %}"><div id="vote-login-down" class="vote-up"></div></a>
+                            {% endif %}
+                            <div class="votes-bar">
+                                <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
 
         <div class="two-col">

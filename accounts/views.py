@@ -1,8 +1,10 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 from django.urls import reverse
 from django.contrib.auth import authenticate, login
 
+from .models import User
 from .forms import SignUpForm
+from setup.models import Setup
 
 
 class SignUpView(CreateView):
@@ -19,3 +21,14 @@ class SignUpView(CreateView):
         user = authenticate(email=email, password=password)
         login(self.request, user)
         return valid
+
+
+class UserDetailView(DetailView):
+    template_name = 'user_detail.html'
+    model = User
+    context_object_name = 'profile'
+
+    def get_context_data(self, **kwargs):
+        context = super(UserDetailView, self).get_context_data(**kwargs)
+        context['setups'] = Setup.objects.filter(creator=context['profile'])
+        return context

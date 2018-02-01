@@ -64,7 +64,7 @@
                 {% if user.is_authenticated %}
                 <li class="dropdown">
                     <div class="dropbtn">
-                        <img class="small-avatar" src="{{ user.get_avatar }}" height="50px" width="50px" alt="{{ user.first_name }}">
+                        <a href="{{ user.get_absolute_url }}"><img class="small-avatar" src="{{ user.get_avatar }}" height="50px" width="50px" alt="{{ user.first_name }}"></a>
                     </div>
                     <div class="dropdown-content">
                         <a href="{% url 'logout' %}">Logout</a>

@@ -5,6 +5,7 @@ from django.utils import timezone
 
 from car.models import CarBrand, CarModel, CarSubModel
 from setup.models import Setup, SetupImage
+from accounts.models import User
 
 
 class HomeView(TemplateView):
@@ -47,5 +48,5 @@ class SitemapXmlView(TemplateView):
         context['car_models'] = CarModel.objects.all()
         context['car_sub_models'] = CarSubModel.objects.all()
         context['setups'] = Setup.objects.all()
-        print(context)
+        context['profiles'] = User.objects.all()
         return context

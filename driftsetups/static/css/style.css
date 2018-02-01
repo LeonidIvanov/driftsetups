@@ -398,7 +398,7 @@ button {
     overflow: hidden;
 }
 .setup-header-info-left {
-    width: 75%;
+    width: 70%;
     float:left;
 }
 .setup-header-info-left .profile-avatar-div{
@@ -412,28 +412,40 @@ button {
 .setup-header-info-left .profile-avatar{
     height: 100px;
 }
+.profile-avatar-right {
+    width: calc(100% - 126px);
+    float: left;
+    margin-left: 20px;
+}
 .setup-h1-container {
     width: calc(100% - 126px);
     display: block;
 }
 .setup-h1 {
-    margin: 0 20px;
+    margin: 0;
     float:left;
 }
 .setup-edit-button {
-    margin: 0 20px;
+    margin: 0;
     cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.setup-edit-button a {
     border-bottom: 1px solid #d34a42;
-    display: inline-block;
 }
 .setup-car-model-by {
-    margin-left: 20px;
+    margin-left: 0;
     margin-top:5px;
     float:left
 }
-
+.setup-car-city {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
 .setup-header-info-right {
-    width:25%;
+    width:30%;
     float:right;
 }
 .setup-header-info-right-container {

@@ -42,4 +42,12 @@
     <priority>1.00</priority>
   </url>
   {% endfor %}
+  {% for profile in profiles %}
+  <url>
+    <loc>https://driftsetups.com{{ profile.get_absolute_url }}</loc>
+    <lastmod>{{ profile.date_joined|date:'c' }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  {% endfor %}
 </urlset>
