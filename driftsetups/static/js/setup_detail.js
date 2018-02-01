@@ -45,24 +45,30 @@ function showMore(){
 $(document).ready(function(){
     showMore();
 
+    var totalVotes = $('#setup-info-votes-total');
+    var voted_up = 0;
+    var voted_down = 0;
     $('#vote-up').click(function(e) {
-        console.log('Try up');
+        var totalVotesValue = parseInt($(totalVotes).text());
         var url = $(this).data('vote-up');
-        $.get(url, function() {
-        })
+        $.get(url, function () {
+        });
+        if (voted_up == 0 && voted_down == 0) {
+            $(totalVotes).text(totalVotesValue + 1);
+            voted_up = 1;
+        }
     });
 
     $('#vote-down').click(function(e) {
-        console.log('Try down');
+        var totalVotesValue = parseInt($(totalVotes).text());
         var url = $(this).data('vote-down');
         $.get(url, function() {
-        })
+        });
+        if (voted_down == 0 && voted_up == 0) {
+            $(totalVotes).text(totalVotesValue + 1);
+            voted_down = 1;
+        }
     });
-
-    $('#vote-login-up, #vote-login-down').click(function(e) {
-        console.log('Login');
-    });
-
 });
 
 var slideIndex = 1;

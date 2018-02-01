@@ -442,6 +442,7 @@ class SetupVoteDown(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         setup = Setup.objects.get(slug=kwargs.get('setup_slug'))
+        print('Vote-down')
         try:
             setup_vote = SetupVote.objects.get(setup=setup, user=request.user)
             setup_vote.vote = 0
