@@ -1213,14 +1213,20 @@ label[for*='id_image_fields-'] {
         right: 50%;
     }
     .nav-left {
-        width: 100%;
+        width: calc(100% - 20px);
+    }
+    .nav-left li {
+        padding: 22px 18px;
     }
     .setup-create {
         width: calc(40% - 40px);
         text-align: center;
     }
     .search-container {
-        width: calc(60% - 20px);
+        width: calc(60% - 14px);
+    }
+    #searchform input{
+        calc(90% - 20px)
     }
     .setup-header-info-left {
         width: 30%;
