@@ -66,7 +66,7 @@ button {
 }
 .nav-right li {
     float:left;
-    padding: 22px 20px !important;
+    padding: 22px 20px;
     transition: transform .2s;
 }
 .nav-right li:hover {
@@ -1225,7 +1225,7 @@ label[for*='id_image_fields-'] {
     .setup-create {
         width: calc(40% - 40px);
         text-align: center;
-        padding: 22px 20px;
+        padding: 22px 20px !important;
     }
     .search-container {
         width: calc(60% - 20px);
