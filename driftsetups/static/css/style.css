@@ -308,7 +308,6 @@ button {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 65px;
 }
 
 /* Caption of Modal Image */
@@ -571,7 +570,7 @@ button {
     border-bottom: 1px solid #d34a42;
 }
 .setup-details-section li{
-    list-style: decimal-leading-zero;
+    list-style-image: url('https://s3-us-west-1.amazonaws.com/driftsetups/media/setup-list.png');
 }
 .setup-comments {
     margin: 20px 0px 20px 126px;
