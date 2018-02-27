@@ -225,3 +225,11 @@ $(document).on('submit', 'button[type="submit"]', function() {
     $('.popup-background').show();
     $('.loader').show();
 });
+
+var slider = document.getElementById("rangeSlider");
+var output = document.getElementById("rangeSliderOutput");
+output.innerHTML = slider.value + '/' + (100 - slider.value);
+
+slider.oninput = function() {
+  output.innerHTML = this.value + '/' + (100 - this.value);
+};

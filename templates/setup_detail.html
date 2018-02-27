@@ -63,6 +63,22 @@
                     {% endif %}
                     <div class="char-title">Weight</div>
                 </div>
+                <div class="round">
+                   {% if setup_weight_distribution %}
+                    <div class="weight">{{ setup_weight_distribution }}</div>
+                    {% else %}
+                    <div class="weight">-- %</div>
+                    {% endif %}
+                    <div class="char-title">Weight Distr.</div>
+                </div>
+                <div class="round">
+                   {% if setup.boost %}
+                    <div class="weight">{{ setup.boost }}Bar</div>
+                    {% else %}
+                    <div class="weight">-- Bar</div>
+                    {% endif %}
+                    <div class="char-title">Boost</div>
+                </div>
         </div>
     </div>
     <div class="container">
@@ -78,7 +94,7 @@
                         {% endif %}
                         <h1 itemprop="headline" class="setup-h1">{{ setup }}</h1>
                     </div>
-                    <div class="setup-car-model-by">{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <div class="setup-car-model-by">{% if setup.car_year %}{{ setup.car_year }} {% endif %}{{ setup.car}} by <span id="_author2" itemprop="author" itemscope itemtype="http://schema.org/Person">
                         <span itemprop="name">{{ setup.creator }}</span></span> updated <span id="_datePublished3" itemprop="datePublished" content="{{ setup.timestamp|date:'c' }}">{{ setup.timestamp|date:"F Y" }}</span>
                     </div>
                     {% if setup.creator.city %}

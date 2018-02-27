@@ -30,6 +30,8 @@
                         <select name="car_sub_model" disabled class="car-sub-model-select" id="id_car_sub_model">
                             <option value="" disabled selected="">Body</option>
                         </select>
+                        {{ form.car_year }}
+                        {{ form.car_year.errors }}
                     </div>
                 </div>
                 <div class="setup-create-form-field">
@@ -62,6 +64,20 @@
                             {{ form.weight.errors }}
                         </div>
                     </div>
+                    <div class="setup-create-form-ptrw-left">
+                        <div class="setup-create-form-ptrw-field">
+                            <div class="setup-create-form-field-label">Boost, Bar</div>
+                            {{ form.boost }}
+                            {{ form.boost.errors }}
+                        </div>
+                    </div>
+                </div>
+                <div class="setup-create-form-field">
+                    <div class="setup-create-form-field-label">Weight Distribution (Front/Rear): <span id="rangeSliderOutput">50/50</span></div>
+                    <div class="range-slide-container">
+                        {{ form.weight_distribution }}
+                    </div>
+                    {{ form.weight_distribution.errors }}
                 </div>
                 <div class="setup-create-form-field">
                     <div class="setup-create-form-field-label">Your Car Build Story</div>

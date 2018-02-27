@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django import forms
 
 from .models import Setup, SetupImage, SetupField
@@ -5,8 +7,15 @@ from .models import Setup, SetupImage, SetupField
 
 class SetupCreateForm(forms.ModelForm):
     class Meta:
+        CAR_YEARS = ((year, str(year)) for year in range(datetime.now().year - 110, datetime.now().year)[::-1])
+
         model = Setup
-        fields = ['name', 'engine', 'power', 'torque', 'rev_limit', 'weight', 'description']
+        fields = [
+            'name', 'car_year', 'engine',
+            'power', 'torque', 'rev_limit',
+            'weight', 'boost', 'weight_distribution',
+            'description'
+        ]
         widgets = {
             'name': forms.TextInput(
                 attrs={
@@ -14,6 +23,7 @@ class SetupCreateForm(forms.ModelForm):
                     'placeholder': 'The HGK E92 Eurofighter'
                 }
             ),
+            'car_year': forms.Select(choices=CAR_YEARS, attrs={'class': 'car-years-select'}),
             'engine': forms.Select(attrs={'class': 'engine-select'}),
             'power': forms.NumberInput(
                 attrs={
@@ -37,6 +47,21 @@ class SetupCreateForm(forms.ModelForm):
                 attrs={
                     'class': 'weight-input ptrw-input',
                     'placeholder': 0,
+                }
+            ),
+            'boost': forms.NumberInput(
+                attrs={
+                    'class': 'boost-input ptrw-input',
+                    'placeholder': 0,
+                }
+            ),
+            'weight_distribution': forms.NumberInput(
+                attrs={
+                    'type': 'range',
+                    'class': 'range-slider',
+                    'id': 'rangeSlider',
+                    'min': 0,
+                    'max': 100,
                 }
             ),
             'description': forms.Textarea(attrs={'class': 'description-textarea'})

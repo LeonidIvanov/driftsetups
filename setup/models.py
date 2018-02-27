@@ -1,9 +1,11 @@
 from autoslug import AutoSlugField
+from datetime import datetime
 
 from django.db import models
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.shortcuts import reverse
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 from accounts.models import User
 
@@ -15,11 +17,14 @@ class Setup(models.Model):
     torque = models.IntegerField(default=None, blank=True, null=True)
     rev_limit = models.IntegerField(default=None, blank=True, null=True)
     weight = models.IntegerField(default=None, blank=True, null=True)
+    weight_distribution = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)], default=None, blank=True, null=True)
+    boost = models.FloatField(default=None, blank=True, null=True)
     description = models.TextField(default=None, blank=True, null=True)
     creator = models.ForeignKey(User)
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     car = GenericForeignKey('content_type', 'object_id')
+    car_year = models.IntegerField(default=None, null=True, blank=True, verbose_name='Car Year')
     views = models.PositiveIntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)

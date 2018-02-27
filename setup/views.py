@@ -422,6 +422,11 @@ class SetupDetailView(TemplateView):
         context = super(SetupDetailView, self).get_context_data(**kwargs)
         context['setup'] = Setup.objects.get(slug=kwargs.get('setup_slug'))
         context['setup'].increase_views()
+        if context['setup'].weight_distribution:
+            context['setup_weight_distribution'] = '{0}/{1}'.format(
+                context['setup'].weight_distribution,
+                100 - context['setup'].weight_distribution,
+            )
         return context
 
 
