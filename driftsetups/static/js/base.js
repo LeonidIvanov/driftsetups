@@ -85,6 +85,14 @@ $(document).ready(function(){
         $('.sign-up-with-email-form').show();
     });
 
+    $(document).on('click', '.menu-icon', function(e){
+        $('.nav-right').show();
+        $('.nav-right .menu-close').show();
+        $('.menu-close').click(function() {
+            $('.nav-right').hide();
+        $('.nav-right .menu-close').hide();
+        })
+    });
     // $('header').delay(2000).animate({top: '0px'});
     // $('.patreon-close').click(function() {
     //     $('header').animate({top: '-50px'});

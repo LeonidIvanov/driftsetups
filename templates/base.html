@@ -70,21 +70,26 @@
         <!--</div>-->
         <nav>
             <div class="nav-left">
-                <a href="/">
-                    <div class="logo">DriftSetups</div>
-                </a>
-            </div>
-            <div class="nav-right">
+                <li>
+                    <a href="/">
+                        <div class="logo">DriftSetups</div>
+                    </a>
+                </li>
+                <li class="menu-icon">☰</li>
                 <li class="search-container">
                     <form id="searchform" action="{% url 'search_list' %}" method="get" accept-charset="utf-8">
                         <input type="text" placeholder="Search..." name="q">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </li>
+            </div>
+            <div class="nav-right">
+                <div class="menu-close">×</div>
                 <li class="setup-create"><a href="{% url 'setup_create' %}">Create Setup</a></li>
                 <li><a href="{% url 'setup_list' %}">Top Setups</a></li>
                 <li><a href="{% url 'car_brand_list' %}">Cars</a></li>
                 <li class="in_dev">Engines</li>
+                <li><a href="https://www.liqpay.ua/en/checkout/card/driftsetups"><span class="heart">♥</span> Support us</a></li>
                 {% if user.is_authenticated %}
                 <li class="dropdown">
                     <div class="dropbtn">

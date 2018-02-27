@@ -50,27 +50,44 @@ button {
 }
 .nav-left{
     float:left;
-    padding: 12.5px 0px;
     margin-left: 20px;
+    line-height: 70px;
+}
+.nav-left li {
+    float:left;
 }
 .logo {
     font-family: Oswald;
     font-size: 30px;
     font-style: italic;
     font-weight: bold;
+    margin-right:20px;
+}
+.menu-icon {
+    display: none;
 }
 .nav-right{
     float:right;
     padding: 0px;
-    font-size: 18px;
+    font-size: 15px;
 }
 .nav-right li {
-    float:left;
-    padding: 22px 20px;
+    float: left;
+    padding: 0 20px;
     transition: transform .2s;
+    line-height: 70px;
 }
 .nav-right li:hover {
     transform: translate(5px) scale(1.2);
+}
+.menu-close {
+    display: none;
+    float: right;
+    font-size: 50px;
+    padding: 20px;
+}
+.heart {
+    color: rgba(211, 74, 66, 1);
 }
 .coming {
     color: #8e8e8e;
@@ -85,6 +102,10 @@ button {
     padding-top:0px !important;
     padding-bottom: 0px !important;
     padding-left:0px !important;
+    padding-right:20px;
+}
+.search-container form {
+    line-height: 69.5px;
 }
 .search-container button {
     float: right;
@@ -570,7 +591,7 @@ button {
     border-bottom: 1px solid #d34a42;
 }
 .setup-details-section li{
-    list-style-image: url('https://s3-us-west-1.amazonaws.com/driftsetups/media/setup-list.png');
+    list-style-image: url('/media/setup-list.png');
 }
 .setup-comments {
     margin: 20px 0px 20px 126px;
@@ -815,8 +836,6 @@ div[class*='_fields-form-row'] input:last-of-type{
     -1px -2px 0 #d34a42, 2px 1px 0 #d34a42, -2px 1px 0 #d34a42, 2px -1px 0 #d34a42, -2px -1px 0 #d34a42;
     font-size: 20px;
     cursor: pointer;
-}
-.setup-create-form-add-image-container-text {
 }
 input[name*='image_fields-'],
 label[for*='id_image_fields-'] {
@@ -1162,6 +1181,28 @@ label[for*='id_image_fields-'] {
     header {
         position: initial;
     }
+    .nav-left {
+        margin-left: 0;
+    }
+    .logo {
+        margin-left: 20px;
+    }
+    .menu-icon {
+        display: block;
+        float: right !important;
+        font-size: 20px;
+    }
+    .nav-right {
+        display: none;
+        position: fixed;
+        background: #000;
+        height: 100%;
+    }
+    .nav-right li {
+        width: 100%;
+        text-align: center;
+        padding: 0 !important;
+    }
     .setup-header-section {
         height: auto;
         position: initial;
@@ -1227,7 +1268,7 @@ label[for*='id_image_fields-'] {
         padding: 22px 21px !important;
     }
     .search-container {
-        width: calc(60% - 20px);
+        width: 100%;
     }
     #searchform input{
         width: calc(90% - 20px);
