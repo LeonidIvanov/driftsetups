@@ -524,12 +524,12 @@ button {
 .votes-bar, .detail-votes-bar {
     width: 164px;
     height: 20px;
-    background-color: #cecece;
+    background-color: #d34a42;
     border-radius: 2px;
     margin: 4px 5px;
 }
 .votes-bar-total {
-    background-color: #d34a42;
+    background-color: #67b735;
     height: 20px;
 }
 .two-col {
