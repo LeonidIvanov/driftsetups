@@ -84,7 +84,7 @@ button {
     display: none;
     float: right;
     font-size: 50px;
-    padding: 20px;
+    padding: 0 20px;
 }
 .heart {
     color: rgba(211, 74, 66, 1);
