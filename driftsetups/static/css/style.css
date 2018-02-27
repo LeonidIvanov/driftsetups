@@ -1203,6 +1203,9 @@ label[for*='id_image_fields-'] {
         text-align: center;
         padding: 0 !important;
     }
+    .nav-right .small-avatar {
+        margin: auto !important;
+    }
     .setup-header-section {
         height: auto;
         position: initial;
