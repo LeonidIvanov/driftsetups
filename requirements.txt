@@ -9,6 +9,7 @@ dj-database-url==0.4.2
 dj-static==0.0.6
 Django==1.11.7
 django-autoslug==1.9.3
+django-modeltranslation==0.12.2
 django-storages==1.6.5
 django-toolbelt==0.0.1
 djangorestframework==3.7.7
