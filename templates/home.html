@@ -22,7 +22,7 @@
                         </a>
                         <div>
                             <a href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
-                            by {{ setup.creator }} updated {{ setup.timestamp|date:"F Y" }}
+                            {% trans 'by' %} {{ setup.creator }} {% trans 'updated' %} {{ setup.timestamp|date:"F Y" }}
                         </div>
                         <div class="setup-characteristics-section">
                             <div class="round">
