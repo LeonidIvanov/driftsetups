@@ -90,7 +90,7 @@
                 <li><a href="{% url 'setup_list' %}">{% trans 'Top Setups' %}</a></li>
                 <li><a href="{% url 'car_brand_list' %}">{% trans 'Cars' %}</a></li>
                 <li class="in_dev">{% trans 'Engines' %}</li>
-                <li><a href="https://www.liqpay.ua/en/checkout/card/driftsetups" onclick="ga('send', 'event', 'Support_Us', 'Click')"><span class="heart">♥</span> {% trans 'Support us' %}</a></li>
+                <li><a href="{% trans 'https://www.liqpay.ua/en/checkout/card/driftsetups' %}" onclick="ga('send', 'event', 'Support_Us', 'Click')"><span class="heart">♥</span> {% trans 'Support us' %}</a></li>
                 {% if user.is_authenticated %}
                 <li class="dropdown">
                     <div class="dropbtn">

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-04 20:42+0200\n"
+"POT-Creation-Date: 2018-03-04 21:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,6 +148,10 @@ msgid "Engines"
 msgstr "Двигатели"
 
 #: templates/base.html:93
+msgid "https://www.liqpay.ua/en/checkout/card/driftsetups"
+msgstr "https://www.liqpay.ua/ru/checkout/card/driftsetups"
+
+#: templates/base.html:93
 msgid "Support us"
 msgstr "Поддержите нас"
 
@@ -283,12 +287,12 @@ msgstr "просмотров"
 #: templates/car_list.html:97 templates/home.html:73 templates/home.html:132
 #: templates/home.html:191 templates/setup_list.html:82
 msgid "No setups? You own such car? Be first!"
-msgstr "Нет сэтапов? У тебя есть такая тачка?"
+msgstr "Нет сетапов? У тебя есть такая тачка?"
 
 #: templates/car_list.html:97 templates/home.html:73 templates/home.html:132
 #: templates/home.html:191 templates/setup_list.html:82
 msgid "Create one!!!"
-msgstr "Поделись своим сэтапом первым!"
+msgstr "Поделись своим сетапом первым!"
 
 #: templates/home.html:3
 msgid "Best Drift Setups from around the globe"
@@ -296,11 +300,13 @@ msgstr "Лучшие Дрифт Сетапы со всего мира"
 
 #: templates/home.html:4
 msgid "Share your driftcar building experience and help others to build one!"
-msgstr "Поделись своим опытом постройки тачки для дрифта! Советуй и проси совета у сообщества DriftSetups."
+msgstr ""
+"Поделись своим опытом постройки тачки для дрифта! Советуй и проси совета у "
+"сообщества DriftSetups."
 
 #: templates/home.html:7
 msgid "Share your driftcar building experience with world drift community!"
-msgstr "Создай сэтап своей тачки, поделись своим опытом постройки со всем миром!"
+msgstr "Создай сетап своей тачки, поделись своим опытом постройки со всем миром!"
 
 #: templates/home.html:8
 msgid "TOP 4 Drift Car Setups"
