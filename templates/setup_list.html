@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block title %}
     {% if car %}
-        {{ car }} Drift Setups
+        {{ car }} {% trans 'Drift Setups' %}
     {% else %}
-        TOP 32 Best Drift Car Setups
+        {% trans 'TOP 32 Best Drift Car Setups' %}
     {% endif %}
 {% endblock %}
 {% block body %}
 <div class="post-header-container">
     {% if car %}
-    <h1>{{ car }} Drift Setups</h1>
+    <h1>{{ car }} {% trans 'Drift Setups' %}</h1>
     {% else %}
-    <h1>Top 32 Best Drift Car Setups</h1>
+    <h1>{% trans 'Top 32 Best Drift Car Setups' %}</h1>
     {% endif %}
     <div class="setup-list-container">
         {% if setups %}
@@ -30,7 +31,7 @@
                         </a>
                         <div>
                             <a href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
-                            by {{ setup.creator }} updated {{ setup.timestamp|date:"F Y" }}
+                            {% trans 'by' %} {{ setup.creator }} {% trans 'updated' %} {{ setup.timestamp|date:"F Y" }}
                         </div>
                         <div class="setup-characteristics-section">
                             <div class="round">
@@ -39,7 +40,7 @@
                                 {% else %}
                                 <div class="power">----hp</div>
                                 {% endif %}
-                                <div class="char-title">Power</div>
+                                <div class="char-title">{% trans 'Power' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.torque %}
@@ -47,7 +48,7 @@
                                 {% else %}
                                 <div class="torque">----Nm</div>
                                 {% endif %}
-                                <div class="char-title">Torque</div>
+                                <div class="char-title">{% trans 'Torque' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.rev_limit %}
@@ -55,7 +56,7 @@
                                 {% else %}
                                 <div class="rev-limit">----rpm</div>
                                 {% endif %}
-                                <div class="char-title">Rev Limit</div>
+                                <div class="char-title">{% trans 'Rev Limit' %}</div>
                             </div>
                             <div class="round">
                                {% if setup.weight %}
@@ -63,22 +64,22 @@
                                 {% else %}
                                 <div class="weight">----kg</div>
                                 {% endif %}
-                                <div class="char-title">Weight</div>
+                                <div class="char-title">{% trans 'Weight' %}</div>
                             </div>
                         </div>
                     </div>
                     <div class="setup-list-item-votes-container">
-                        <div class="setup-info-total"><span>votes:</span> {{ setup.get_votes_total }}</div>
+                        <div class="setup-info-total"><span>{% trans 'votes' %}:</span> {{ setup.get_votes_total }}</div>
                         <div class="votes-bar">
                             <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
                         </div>
-                        <div class="setup-info-total"><span>views:</span> {{ setup.views }}</div>
+                        <div class="setup-info-total"><span>{% trans 'views' %}:</span> {{ setup.views }}</div>
                     </div>
                 </li>
             {% endfor %}
         </ul>
         {% else %}
-        <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+        <h2 class="no-setups">{% trans 'No setups? You own such car? Be first!' %} <a href="{% url 'setup_create' %}">{% trans 'Create one!!!' %}</a></h2>
         {% endif %}
     </div>
     <div>

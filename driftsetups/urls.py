@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 from django.views.generic import TemplateView
 from home.views import SitemapXmlView
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     url(r'^admin/', admin.site.urls),
     url(r'^c/', include('car.urls')),
     url(r'^s/', include('setup.urls')),
@@ -29,6 +30,7 @@ urlpatterns = [
     url(r'^api/v1/', include('rest_api.urls')),
     url(r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     url(r'^sitemap\.xml/$', SitemapXmlView.as_view()),
-
-]
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+    prefix_default_language=False,
+)
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

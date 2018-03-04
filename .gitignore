@@ -101,3 +101,4 @@ ENV/
 media/
 /driftsetups/local_urls.py
 */migrations/
+!/locale/ru/LC_MESSAGES/django.mo

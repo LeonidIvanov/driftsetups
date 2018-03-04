@@ -1,90 +1,91 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% load static %}
 {% block title %}Create your Drift Setup!{% endblock %}
 {% block body %}
 <div class="post-header-container">
-    <h1>Create your Drift Setup!</h1>
+    <h1>{% trans 'Create your Drift Setup!' %}</h1>
     <div class="setup-create-container">
         <form class="setup-create-form" enctype="multipart/form-data" method="post" action="{% url 'setup_create' %}">
             {% csrf_token %}
             <div class="setup-create-form-half">
                 {{ form.non_field_errors }}
                 <div class="setup-create-form-field">
-                    <div class="setup-create-form-field-label">Car Build Name</div>
+                    <div class="setup-create-form-field-label">{% trans 'Car Build Name' %}</div>
                     {{ form.name }}
                     {{ form.name.errors }}
                 </div>
                 <div class="setup-create-form-field">
-                    <div class="setup-create-form-field-label">Chassis</div>
-                    <div class="setup-create-car-request-text">If there's no chassis or engine you're looking for please <a target="_blank" href="https://www.facebook.com/messages/t/139539263386934" style="text-decoration: underline">let me know</a> and I'll add it!</div>
+                    <div class="setup-create-form-field-label">{% trans 'Chassis' %}</div>
+                    <div class="setup-create-car-request-text">{% trans "If there's no chassis or engine you're looking for please" %} <a target="_blank" href="https://www.facebook.com/messages/t/139539263386934" style="text-decoration: underline">{% trans 'let me know' %}</a> {% trans "and I'll add it!" %}</div>
                     <div class="setup-create-form-car-selects">
                         <select name="car_brand" class="car-brand-select" required="" id="id_car_brand" data-url="{% url 'api_car_models_by_brand' %}">
-                            <option value="" disabled selected="">Brand</option>
+                            <option value="" disabled selected="">{% trans 'Brand' %}</option>
                             {% for brand in car_brands %}
                             <option value="{{ brand.id }}">{{ brand.name }}</option>
                             {% endfor %}
                         </select>
                         <select name="car_model" disabled class="car-mode-select" required="" id="id_car_model" data-url="{% url 'api_car_sub_models_by_model' %}">
-                            <option value="" disabled selected="">Model</option>
+                            <option value="" disabled selected="">{% trans 'Model' %}</option>
                         </select>
                         <select name="car_sub_model" disabled class="car-sub-model-select" id="id_car_sub_model">
-                            <option value="" disabled selected="">Body</option>
+                            <option value="" disabled selected="">{% trans 'Body' %}</option>
                         </select>
                         {{ form.car_year }}
                         {{ form.car_year.errors }}
                     </div>
                 </div>
                 <div class="setup-create-form-field">
-                    <div class="setup-create-form-field-label">Engine</div>
+                    <div class="setup-create-form-field-label">{% trans 'Engine' %}</div>
                     {{ form.engine }}
                     {{ form.engine.errors }}
                 </div>
                 <div class="setup-create-form-ptrw">
                     <div class="setup-create-form-ptrw-left">
                         <div class="setup-create-form-ptrw-field">
-                            <div class="setup-create-form-field-label">Power, hp</div>
+                            <div class="setup-create-form-field-label">{% trans 'Power' %}, hp</div>
                             {{ form.power }}
                             {{ form.power.errors }}
                         </div>
                         <div class="setup-create-form-ptrw-field">
-                            <div class="setup-create-form-field-label">Torque, Nm</div>
+                            <div class="setup-create-form-field-label">{% trans 'Torque' %}, Nm</div>
                             {{ form.torque }}
                             {{ form.torque.errors }}
                         </div>
                     </div>
                     <div class="setup-create-form-ptrw-right">
                         <div class="setup-create-form-ptrw-field">
-                            <div class="setup-create-form-field-label">Rev Limir, rpm</div>
+                            <div class="setup-create-form-field-label">{% trans 'Rev Limit'%}, rpm</div>
                             {{ form.rev_limit }}
                             {{ form.rev_limit.errors }}
                         </div>
                         <div class="setup-create-form-ptrw-field">
-                            <div class="setup-create-form-field-label">Weight, kg</div>
+                            <div class="setup-create-form-field-label">{% trans 'Weight' %}, kg</div>
                             {{ form.weight }}
                             {{ form.weight.errors }}
                         </div>
                     </div>
                     <div class="setup-create-form-ptrw-left">
                         <div class="setup-create-form-ptrw-field">
-                            <div class="setup-create-form-field-label">Boost, Bar</div>
+                            <div class="setup-create-form-field-label">{% trans 'Boost' %}, Bar</div>
                             {{ form.boost }}
                             {{ form.boost.errors }}
                         </div>
                     </div>
                 </div>
                 <div class="setup-create-form-field">
-                    <div class="setup-create-form-field-label">Weight Distribution (Front/Rear): <span id="rangeSliderOutput">50/50</span></div>
+                    <div class="setup-create-form-field-label">{% trans 'Weight Distribution (Front/Rear)' %}: <span id="rangeSliderOutput">50/50</span></div>
                     <div class="range-slide-container">
                         {{ form.weight_distribution }}
                     </div>
                     {{ form.weight_distribution.errors }}
                 </div>
                 <div class="setup-create-form-field">
-                    <div class="setup-create-form-field-label">Your Car Build Story</div>
+                    <div class="setup-create-form-field-label">{% trans 'Your Car Build Story' %}</div>
                     {{ form.description }}
                     {{ form.description.errors }}
                 </div>
-                <h2>Engine</h2>
+                <h2>{% trans 'Engine' %}</h2>
                 {{ engine_fields_formset.management_form }}
                 {% for form in engine_fields_formset %}
                     <div class="engine_fields-form-row">
@@ -92,8 +93,8 @@
                         <div id="engine_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-engine_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Drivetrain</h2>
+                <div id="add-engine_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Drivetrain' %}</h2>
                 {{ drivetrain_fields_formset.management_form }}
                 {% for form in drivetrain_fields_formset %}
                     <div class="drivetrain_fields-form-row">
@@ -101,8 +102,8 @@
                         <div id="drivetrain_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-drivetrain_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Steering/Suspension</h2>
+                <div id="add-drivetrain_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Steering/Suspension' %}</h2>
                 {{ suspension_fields_formset.management_form }}
                 {% for form in suspension_fields_formset %}
                     <div class="suspension_fields-form-row">
@@ -110,8 +111,8 @@
                         <div id="suspension_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-suspension_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Brakes</h2>
+                <div id="add-suspension_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Brakes' %}</h2>
                 {{ brakes_fields_formset.management_form }}
                 {% for form in brakes_fields_formset %}
                     <div class="brakes_fields-form-row">
@@ -119,8 +120,8 @@
                         <div id="brakes_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-brakes_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Wheels</h2>
+                <div id="add-brakes_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Wheels' %}</h2>
                 {{ wheels_fields_formset.management_form }}
                 {% for form in wheels_fields_formset %}
                     <div class="wheels_fields-form-row">
@@ -128,8 +129,8 @@
                         <div id="wheels_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-wheels_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Exterior</h2>
+                <div id="add-wheels_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Exterior' %}</h2>
                 {{ exterior_fields_formset.management_form }}
                 {% for form in exterior_fields_formset %}
                     <div class="exterior_fields-form-row">
@@ -137,8 +138,8 @@
                         <div id="exterior_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-exterior_fields" class="setup-create-form-add-field">+ Add field</div>
-                <h2>Interior</h2>
+                <div id="add-exterior_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
+                <h2>{% trans 'Interior' %}</h2>
                 {{ interior_fields_formset.management_form }}
                 {% for form in interior_fields_formset %}
                     <div class="interior_fields-form-row">
@@ -146,12 +147,12 @@
                         <div id="interior_fields" class="delete-form">&times;</div>
                     </div>
                 {% endfor %}
-                <div id="add-interior_fields" class="setup-create-form-add-field">+ Add field</div>
+                <div id="add-interior_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
             </div>
             <div class="setup-create-form-half">
-                <button class="setup-create-form-top-button" type="submit">Save Setup</button>
+                <button class="setup-create-form-top-button" type="submit">{% trans 'Save Setup' %}</button>
                 <div class="images-previews">
-                    <div class="setup-create-form-field-label">Main Photo</div>
+                    <div class="setup-create-form-field-label">{% trans 'Main Photo' %}</div>
                 </div>
                 {{ images_formset.management_form }}
                 {% for form in images_formset %}
@@ -160,10 +161,10 @@
                     </div>
                 {% endfor %}
                 <div id="add-image_fields" class="setup-create-form-add-image-container">
-                    <div class="setup-create-form-add-image-container-text">+ Add photo</div>
+                    <div class="setup-create-form-add-image-container-text">{% trans '+ Add photo' %}</div>
                 </div>
             </div>
-            <button class="setup-create-form-bottom-button" type="submit">Save Setup</button>
+            <button class="setup-create-form-bottom-button" type="submit">{% trans 'Save Setup' %}</button>
         </form>
     </div>
 </div>

@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 {% load car_tags %}
 <!DOCTYPE html>
@@ -78,30 +79,30 @@
                 <li class="menu-icon">☰</li>
                 <li class="search-container">
                     <form id="searchform" action="{% url 'search_list' %}" method="get" accept-charset="utf-8">
-                        <input type="text" placeholder="Search..." name="q">
+                        <input type="text" placeholder="{% trans 'Search...' %}" name="q">
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </li>
             </div>
             <div class="nav-right">
                 <div class="menu-close">×</div>
-                <li class="setup-create"><a href="{% url 'setup_create' %}" onclick="ga('send', 'event', 'Setup_Create', 'Click')">Create Setup</a></li>
-                <li><a href="{% url 'setup_list' %}">Top Setups</a></li>
-                <li><a href="{% url 'car_brand_list' %}">Cars</a></li>
-                <li class="in_dev">Engines</li>
-                <li><a href="https://www.liqpay.ua/en/checkout/card/driftsetups" onclick="ga('send', 'event', 'Support_Us', 'Click')"><span class="heart">♥</span> Support us</a></li>
+                <li class="setup-create"><a href="{% url 'setup_create' %}" onclick="ga('send', 'event', 'Setup_Create', 'Click')">{% trans 'Create Setup' %}</a></li>
+                <li><a href="{% url 'setup_list' %}">{% trans 'Top Setups' %}</a></li>
+                <li><a href="{% url 'car_brand_list' %}">{% trans 'Cars' %}</a></li>
+                <li class="in_dev">{% trans 'Engines' %}</li>
+                <li><a href="https://www.liqpay.ua/en/checkout/card/driftsetups" onclick="ga('send', 'event', 'Support_Us', 'Click')"><span class="heart">♥</span> {% trans 'Support us' %}</a></li>
                 {% if user.is_authenticated %}
                 <li class="dropdown">
                     <div class="dropbtn">
                         <a href="{{ user.get_absolute_url }}"><img class="small-avatar" src="{{ user.get_avatar }}" height="50px" width="50px" alt="{{ user.first_name }}"></a>
                     </div>
                     <div class="dropdown-content">
-                        <a href="{% url 'logout' %}">Logout</a>
+                        <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
                     </div>
                 </li>
                 {% else %}
-                <li id="sign-up">Sign up</li>
-                <li id="login">Login</li>
+                <li id="sign-up">{% trans 'Sign up' %}</li>
+                <li id="login">{% trans 'Login' %}</li>
                 {% endif %}
             </div>
         </nav>
@@ -111,7 +112,7 @@
 <footer>
     {% block footer %}{% endblock %}
     <div class="bottom-top-cars">
-        <h3>Drift Setups Car List</h3>
+        <h3>{% trans 'Drift Setups Car List' %}</h3>
         {% top_drift_cars %}
     </div>
     <div class="copyright">© <span id="_publisher" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -123,8 +124,8 @@
         </span>
     </div>
     <div>
-        <a href="{% url 'privacy' %}">Privacy Policy</a>
-        <a href="{% url 'tos' %}">Terms of Service</a>
+        <a href="{% url 'privacy' %}">{% trans 'Privacy Policy' %}</a>
+        <a href="{% url 'tos' %}">{% trans 'Terms of Service' %}</a>
         <div class="facebook"></div>
         <div class="twitter"></div>
         <div class="vkontakte"></div>
@@ -137,15 +138,15 @@
     {% if not user.is_authenticated and request.path != login_url %}
         <div class="popup-login-content">
             <span class="popup-close">&times;</span>
-            <a href="{% url 'social:begin' 'google-oauth2' %}"><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">Log in with Google+</div></div></a>
-            <a href="{% url 'social:begin' 'facebook' %}"><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">Log in with Facebook</div></div></a>
-            <div class="center">or</div>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">{% trans 'Log in with Google+' %}</div></div></a>
+            <a href="{% url 'social:begin' 'facebook' %}"><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">{% trans 'Log in with Facebook' %}</div></div></a>
+            <div class="center">{% trans 'or' %}</div>
             <div class="login-form">
                 <form action="{% url 'login' %}" method="post">
                     {% csrf_token %}
-                    <input class="center" type="email" name="username" id="id_username" maxlength="254" required autofocus placeholder="Email address">
-                    <input class="center" type="password" name="password" id="id_password" required placeholder="Password">
-                    <button class="center" type="submit">Log in</button>
+                    <input class="center" type="email" name="username" id="id_username" maxlength="254" required autofocus placeholder="{% trans 'Email address' %}">
+                    <input class="center" type="password" name="password" id="id_password" required placeholder="{% trans 'Password' %}">
+                    <button class="center" type="submit">{% trans 'Log in' %}</button>
                 </form>
             </div>
         </div>
@@ -153,23 +154,23 @@
         <div class="popup-sign-up-content">
             <span class="popup-close">&times;</span>
             <div class="popup-sign-up-choice">
-                <a href='{% url "social:begin" "google-oauth2" %}'><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">Sign up with Google+</div></div></a>
-                <a href='{% url "social:begin" "facebook" %}'><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">Sign up with Facebook</div></div></a>
-                <div class="center">or</div>
+                <a href='{% url "social:begin" "google-oauth2" %}'><div class="google-signup center"><div class="google-signup-icon"></div><div class="google-signup-text">{% trans 'Sign up with Google+' %}</div></div></a>
+                <a href='{% url "social:begin" "facebook" %}'><div class="facebook-signup center"><div class="facebook-signup-icon"></div><div class="facebook-signup-text">{% trans 'Sign up with Facebook' %}</div></div></a>
+                <div class="center">{% trans 'or' %}</div>
                 <div class="sign-up-with-email center">Email</div>
             </div>
 
             <div class="sign-up-with-email-form">
-                <div class="center">Sign up with <a href='{% url "social:begin" "facebook" %}'>Facebook</a>, <a href='{% url "social:begin" "google-oauth2" %}'>Google+</a></div>
-                <div class="center">or</div>
+                <div class="center">{% trans 'Sign up with' %} <a href='{% url "social:begin" "facebook" %}'>Facebook</a>, <a href='{% url "social:begin" "google-oauth2" %}'>Google+</a></div>
+                <div class="center">{% trans 'or' %}</div>
                 <form action="{% url 'sign_up' %}" method="post">
                     {% csrf_token %}
-                    <input class="center" type="email" name="email" autofocus id="id_email" required placeholder="Email address">
-                    <input class="center" type="text" name="first_name" id="id_first_name" maxlength="30" placeholder="First name">
-                    <input class="center" type="text" name="last_name" id="id_last_name" maxlength="30" placeholder="Last name">
-                    <input class="center" type="password" name="password1" required="" id="id_password1" placeholder="Password">
-                    <input class="center" type="password" name="password2" required="" id="id_password2" placeholder="Repeat password">
-                    <button class="center" type="submit">Sign up</button>
+                    <input class="center" type="email" name="email" autofocus id="id_email" required placeholder="{% trans 'Email address' %}">
+                    <input class="center" type="text" name="first_name" id="id_first_name" maxlength="30" placeholder="{% trans 'First name' %}">
+                    <input class="center" type="text" name="last_name" id="id_last_name" maxlength="30" placeholder="{% trans 'Last name' %}">
+                    <input class="center" type="password" name="password1" required="" id="id_password1" placeholder="{% trans 'Password' %}">
+                    <input class="center" type="password" name="password2" required="" id="id_password2" placeholder="{% trans 'Repeat password' %}">
+                    <button class="center" type="submit">{% trans 'Sign up' %}</button>
                 </form>
             </div>
         </div>

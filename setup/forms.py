@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 
 from .models import Setup, SetupImage, SetupField
 
@@ -20,7 +21,7 @@ class SetupCreateForm(forms.ModelForm):
             'name': forms.TextInput(
                 attrs={
                     'class': 'name-input',
-                    'placeholder': 'The HGK E92 Eurofighter'
+                    'placeholder': _('The HGK E92 Eurofighter')
                 }
             ),
             'car_year': forms.Select(choices=CAR_YEARS, attrs={'class': 'car-years-select'}),
@@ -97,7 +98,7 @@ class SetupEngineFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Mast Motorsports Mozez Canted Valve cylinder heads',
+                    'placeholder': _('Mast Motorsports Mozez Canted Valve cylinder heads'),
                 }
             ),
         }
@@ -121,7 +122,7 @@ class SetupDrivetrainFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Samsonas 5-speed sequential transmission',
+                    'placeholder': _('Samsonas 5-speed sequential transmission'),
                 }
             )
         }
@@ -145,7 +146,7 @@ class SetupSuspensionFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Front & Rear Wisefab knuckles & arms',
+                    'placeholder': _('Front & Rear Wisefab knuckles & arms'),
                 }
             )
         }
@@ -169,7 +170,7 @@ class SetupBrakesFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Wilwood 4-piston calipers & Wilwood drilled rotors (rear)',
+                    'placeholder': _('Wilwood 4-piston calipers & Wilwood drilled rotors (rear)'),
                 }
             )
         }
@@ -193,7 +194,7 @@ class SetupWheelsFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Work Wheels L1 3P 18×9-inch (front) 18×10-inch (rear)',
+                    'placeholder': _('Work Wheels L1 3P 18×9-inch (front) 18×10-inch (rear)'),
                 }
             )
         }
@@ -217,7 +218,7 @@ class SetupExteriorFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'Complete carbon-Kevlar HGK E92 Eurofighter bodykit',
+                    'placeholder': _('Complete carbon-Kevlar HGK E92 Eurofighter bodykit'),
                 }
             )
         }
@@ -241,7 +242,7 @@ class SetupInteriorFieldCreateForm(forms.ModelForm):
         widgets = {
             'field': forms.TextInput(
                 attrs={
-                    'placeholder': 'OMP seats',
+                    'placeholder': _('OMP seats'),
                 }
             )
         }

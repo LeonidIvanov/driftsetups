@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Best Drift Setups from around the globe{% endblock %}
-{% block meta_description %}Share your drift car building experience and help the others to build one!{% endblock %}
+{% load i18n %}
+{% block title %}{% trans 'Best Drift Setups from around the globe' %}{% endblock %}
+{% block meta_description %}{% trans 'Share your driftcar building experience and help others to build one!' %}{% endblock %}
 {% block body %}
 <div class="post-header-container">
-    <h1>Share your drift car building experience with world drift community!</h1>
-    <h2>TOP 4 Drift Car Setups</h2>
+    <h1>{% trans 'Share your driftcar building experience with world drift community!' %}</h1>
+    <h2>{% trans 'TOP 4 Drift Car Setups' %}</h2>
     <div class="setup-list-container">
         {% if top_setups_by_votes_percentage %}
         <ul class="setup-list">
@@ -30,7 +31,7 @@
                                 {% else %}
                                 <div class="power">----hp</div>
                                 {% endif %}
-                                <div class="char-title">Power</div>
+                                <div class="char-title">{% trans 'Power' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.torque %}
@@ -38,7 +39,7 @@
                                 {% else %}
                                 <div class="torque">----Nm</div>
                                 {% endif %}
-                                <div class="char-title">Torque</div>
+                                <div class="char-title">{% trans 'Torque' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.rev_limit %}
@@ -46,7 +47,7 @@
                                 {% else %}
                                 <div class="rev-limit">----rpm</div>
                                 {% endif %}
-                                <div class="char-title">Rev Limit</div>
+                                <div class="char-title">{% trans 'Rev Limit' %}</div>
                             </div>
                             <div class="round">
                                {% if setup.weight %}
@@ -54,27 +55,27 @@
                                 {% else %}
                                 <div class="weight">----kg</div>
                                 {% endif %}
-                                <div class="char-title">Weight</div>
+                                <div class="char-title">{% trans 'Weight' %}</div>
                             </div>
                         </div>
                     </div>
                     <div class="setup-list-item-votes-container">
-                        <div class="setup-info-total"><span>votes:</span> {{ setup.get_votes_total }}</div>
+                        <div class="setup-info-total"><span>{% trans 'votes' %}:</span> {{ setup.get_votes_total }}</div>
                         <div class="votes-bar">
                             <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
                         </div>
-                        <div class="setup-info-total"><span>views:</span> {{ setup.views }}</div>
+                        <div class="setup-info-total"><span>{% trans 'views' %}:</span> {{ setup.views }}</div>
                     </div>
                 </li>
             {% endfor %}
         </ul>
         {% else %}
-        <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+        <h2 class="no-setups">{% trans 'No setups? You own such car? Be first!' %} <a href="{% url 'setup_create' %}">{% trans 'Create one!!!' %}</a></h2>
         {% endif %}
     </div>
     <div>
         <div class="top_setups_by_views">
-            <h2>Most Popular Setups</h2>
+            <h2>{% trans 'Most Popular Setups' %}</h2>
             <div class="setup-list-container">
                 {% if top_setups_by_views %}
                 <ul class="setup-list">
@@ -96,7 +97,7 @@
                                         {% else %}
                                         <div class="power">----hp</div>
                                         {% endif %}
-                                        <div class="char-title">Power</div>
+                                        <div class="char-title">{% trans 'Power' %}</div>
                                     </div>
                                     <div class="round">
                                         {% if setup.torque %}
@@ -104,7 +105,7 @@
                                         {% else %}
                                         <div class="torque">----Nm</div>
                                         {% endif %}
-                                        <div class="char-title">Torque</div>
+                                        <div class="char-title">{% trans 'Torque' %}</div>
                                     </div>
                                     <div class="round">
                                         {% if setup.rev_limit %}
@@ -112,7 +113,7 @@
                                         {% else %}
                                         <div class="rev-limit">----rpm</div>
                                         {% endif %}
-                                        <div class="char-title">Rev Limit</div>
+                                        <div class="char-title">{% trans 'Rev Limit' %}</div>
                                     </div>
                                     <div class="round">
                                        {% if setup.weight %}
@@ -120,7 +121,7 @@
                                         {% else %}
                                         <div class="weight">----kg</div>
                                         {% endif %}
-                                        <div class="char-title">Weight</div>
+                                        <div class="char-title">{% trans 'Weight' %}</div>
                                     </div>
                                 </div>
                             </div>
@@ -128,12 +129,12 @@
                     {% endfor %}
                 </ul>
                 {% else %}
-                <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+                <h2 class="no-setups">{% trans 'No setups? You own such car? Be first!' %} <a href="{% url 'setup_create' %}">{% trans 'Create one!!!' %}</a></h2>
                 {% endif %}
             </div>
         </div>
         <div class="top-weekly-setups">
-            <h2>Best Setups Of The Week</h2>
+            <h2>{% trans 'Best Setups Of The Week' %}</h2>
             <div class="setup-list-container">
                 {% if top_new_weekly_setups %}
                 <ul class="setup-list">
@@ -155,7 +156,7 @@
                                         {% else %}
                                         <div class="power">----hp</div>
                                         {% endif %}
-                                        <div class="char-title">Power</div>
+                                        <div class="char-title">{% trans 'Power' %}</div>
                                     </div>
                                     <div class="round">
                                         {% if setup.torque %}
@@ -163,7 +164,7 @@
                                         {% else %}
                                         <div class="torque">----Nm</div>
                                         {% endif %}
-                                        <div class="char-title">Torque</div>
+                                        <div class="char-title">{% trans 'Torque' %}</div>
                                     </div>
                                     <div class="round">
                                         {% if setup.rev_limit %}
@@ -171,7 +172,7 @@
                                         {% else %}
                                         <div class="rev-limit">----rpm</div>
                                         {% endif %}
-                                        <div class="char-title">Rev Limit</div>
+                                        <div class="char-title">{% trans 'Rev Limit' %}</div>
                                     </div>
                                     <div class="round">
                                        {% if setup.weight %}
@@ -179,7 +180,7 @@
                                         {% else %}
                                         <div class="weight">----kg</div>
                                         {% endif %}
-                                        <div class="char-title">Weight</div>
+                                        <div class="char-title">{% trans 'Weight' %}</div>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +188,7 @@
                     {% endfor %}
                 </ul>
                 {% else %}
-                <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+                <h2 class="no-setups">{% trans 'No setups? You own such car? Be first!' %} <a href="{% url 'setup_create' %}">{% trans 'Create one!!!' %}</a></h2>
                 {% endif %}
             </div>
         </div>

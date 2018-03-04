@@ -6,6 +6,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.shortcuts import reverse
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.utils.translation import ugettext_lazy as _
 
 from accounts.models import User
 
@@ -24,7 +25,7 @@ class Setup(models.Model):
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     car = GenericForeignKey('content_type', 'object_id')
-    car_year = models.IntegerField(default=None, null=True, blank=True, verbose_name='Car Year')
+    car_year = models.IntegerField(default=None, null=True, blank=True, verbose_name=_('Car Year'))
     views = models.PositiveIntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
     slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
@@ -108,13 +109,13 @@ class SetupImage(models.Model):
 
 class SetupField(models.Model):
     CATEGORIES = (
-        (0, 'Engine'),
-        (1, 'Drivetrain'),
-        (2, 'Steering/Suspension'),
-        (3, 'Brakes'),
-        (4, 'Wheels'),
-        (5, 'Exterior'),
-        (6, 'Interior'),
+        (0, _('Engine')),
+        (1, _('Drivetrain')),
+        (2, _('Steering/Suspension')),
+        (3, _('Brakes')),
+        (4, _('Wheels')),
+        (5, _('Exterior')),
+        (6, _('Interior')),
 
     )
     field = models.CharField(max_length=300)
@@ -127,8 +128,8 @@ class SetupField(models.Model):
 
 class SetupVote(models.Model):
     VOTES = (
-        (0, 'Vote Down'),
-        (1, 'Vote Up')
+        (0, _('Vote Down')),
+        (1, _('Vote Up')),
     )
     vote = models.BooleanField(default=0, choices=VOTES)
     setup = models.ForeignKey(Setup)

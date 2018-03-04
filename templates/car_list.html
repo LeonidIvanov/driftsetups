@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
+{% load i18n %}
 {% block title %}
     {% if car %}
-        {{ car }} Drift Chassis
+        {{ car }} {% trans 'Drift Chassis' %}
     {% else %}
-        Drift Cars Chassis By Brand
+        {% trans 'Drift Cars Chassis By Brand' %}
     {% endif %}
 {% endblock %}
 {% block body %}
 <div class="post-header-container">
     {% if car %}
-    <h1>{{ car }} Drift Chassis</h1>
+    <h1>{{ car }} {% trans 'Drift Chassis' %}</h1>
     {% else %}
-    <h1>Drift Car Chassis By Brand</h1>
+    <h1>{% trans 'Drift Car Chassis By Brand' %}</h1>
     {% endif %}
     <div class="car-list">
         <ul>
@@ -52,7 +53,7 @@
                                 {% else %}
                                 <div class="power">----hp</div>
                                 {% endif %}
-                                <div class="char-title">Power</div>
+                                <div class="char-title">{% trans 'Power' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.torque %}
@@ -60,7 +61,7 @@
                                 {% else %}
                                 <div class="torque">----Nm</div>
                                 {% endif %}
-                                <div class="char-title">Torque</div>
+                                <div class="char-title">{% trans 'Torque' %}</div>
                             </div>
                             <div class="round">
                                 {% if setup.rev_limit %}
@@ -68,7 +69,7 @@
                                 {% else %}
                                 <div class="rev-limit">----rpm</div>
                                 {% endif %}
-                                <div class="char-title">Rev Limit</div>
+                                <div class="char-title">{% trans 'Rev Limit' %}</div>
                             </div>
                             <div class="round">
                                {% if setup.weight %}
@@ -76,16 +77,16 @@
                                 {% else %}
                                 <div class="weight">----kg</div>
                                 {% endif %}
-                                <div class="char-title">Weight</div>
+                                <div class="char-title">{% trans 'Weight' %}</div>
                             </div>
                         </div>
                     </div>
                     <div class="setup-list-item-votes-container">
-                        <div class="setup-info-total"><span>votes:</span> {{ setup.get_votes_total }}</div>
+                        <div class="setup-info-total"><span>{% trans 'votes' %}:</span> {{ setup.get_votes_total }}</div>
                         <div class="votes-bar">
                             <div class="votes-bar-total" style="width:{{ setup.get_votes_percentage }}%"></div>
                         </div>
-                        <div class="setup-info-total"><span>views:</span> {{ setup.views }}</div>
+                        <div class="setup-info-total"><span>{% trans 'views' %}:</span> {{ setup.views }}</div>
                     </div>
                 </li>
             {% endfor %}
@@ -93,7 +94,7 @@
         {% else %}
             {% url 'car_brand_list' as car_brand_list_home_url %}
             {% if request.path != car_brand_list_home_url %}
-                <h2 class="no-setups">No setups? You own such car? Be first! <a href="{% url 'setup_create' %}">Create one!!!</a></h2>
+                <h2 class="no-setups">{% trans 'No setups? You own such car? Be first!' %} <a href="{% url 'setup_create' %}">{% trans 'Create one!!!' %}</a></h2>
             {% endif %}
         {% endif %}
     </div>
