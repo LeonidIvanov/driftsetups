@@ -432,7 +432,7 @@ msgstr "Развесовка"
 
 #: templates/setup_detail.html:94
 msgid "EDIT SETUP"
-msgstr "РЕДАКТИРОВАТЬ СЭТАП"
+msgstr "РЕДАКТИРОВАТЬ СЕТАП"
 
 #: templates/setup_detail.html:111
 msgid "Views"
