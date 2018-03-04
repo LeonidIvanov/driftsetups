@@ -133,11 +133,11 @@ msgstr "Поиск..."
 
 #: templates/base.html:89
 msgid "Create Setup"
-msgstr "Создать Сэтап"
+msgstr "Создать Сетап"
 
 #: templates/base.html:90
 msgid "Top Setups"
-msgstr "Топ Сэтапы"
+msgstr "Топ Сетапы"
 
 #: templates/base.html:91
 msgid "Cars"
@@ -165,7 +165,7 @@ msgstr "Войти"
 
 #: templates/base.html:115
 msgid "Drift Setups Car List"
-msgstr "Дрифт Сэтапы По Кузовам"
+msgstr "Дрифт Сетапы По Кузовам"
 
 #: templates/base.html:127
 msgid "Privacy Policy"
@@ -292,7 +292,7 @@ msgstr "Поделись своим сэтапом первым!"
 
 #: templates/home.html:3
 msgid "Best Drift Setups from around the globe"
-msgstr "Лучшие Дрифт Сэтапы со всего мира"
+msgstr "Лучшие Дрифт Сетапы со всего мира"
 
 #: templates/home.html:4
 msgid "Share your driftcar building experience and help others to build one!"
@@ -304,15 +304,15 @@ msgstr "Создай сэтап своей тачки, поделись свои
 
 #: templates/home.html:8
 msgid "TOP 4 Drift Car Setups"
-msgstr "ТОП 4 Дрифт Сэтапа"
+msgstr "ТОП 4 Дрифт Сетапа"
 
 #: templates/home.html:78
 msgid "Most Popular Setups"
-msgstr "Самые Популярные Сэтапы"
+msgstr "Самые Популярные Сетапы"
 
 #: templates/home.html:137
 msgid "Best Setups Of The Week"
-msgstr "Лучшие Сэтапы Недели"
+msgstr "Лучшие Сетапы Недели"
 
 #: templates/search_list.html:4 templates/search_list.html:12
 msgid "Searching for"
@@ -342,11 +342,11 @@ msgstr "Ничего не найдено. Попробуйте поискать 
 
 #: templates/setup_create.html:7 templates/setup_update.html:4
 msgid "Create your Drift Setup!"
-msgstr "Создайте Дрифт Сэтап своей тачки!"
+msgstr "Создайте Дрифт Сетап своей тачки!"
 
 #: templates/setup_create.html:14 templates/setup_update.html:14
 msgid "Car Build Name"
-msgstr "Название Сэтапа"
+msgstr "Название Сетапа"
 
 #: templates/setup_create.html:19 templates/setup_update.html:19
 msgid "Chassis"
@@ -402,7 +402,7 @@ msgstr "+ Добавить поле"
 #: templates/setup_create.html:153 templates/setup_create.html:167
 #: templates/setup_update.html:156 templates/setup_update.html:179
 msgid "Save Setup"
-msgstr "Сохранить Сэтап"
+msgstr "Сохранить Сетап"
 
 #: templates/setup_create.html:155 templates/setup_update.html:158
 msgid "Main Photo"
@@ -418,7 +418,7 @@ msgstr "ru_RU"
 
 #: templates/setup_detail.html:20
 msgid "Car Setups"
-msgstr "Дрифт Сэтапы"
+msgstr "Дрифт Сетапы"
 
 #: templates/setup_detail.html:73
 msgid "Weight Distr."
@@ -450,15 +450,15 @@ msgstr "Подвеска"
 
 #: templates/setup_list.html:5 templates/setup_list.html:13
 msgid "Drift Setups"
-msgstr "Дрифт Сэтапы"
+msgstr "Дрифт Сетапы"
 
 #: templates/setup_list.html:7
 msgid "TOP 32 Best Drift Car Setups"
-msgstr "ТОП 32 Лучших Дрифт Сэтапа"
+msgstr "ТОП 32 Лучших Дрифт Сетапа"
 
 #: templates/setup_list.html:15
 msgid "Top 32 Best Drift Car Setups"
-msgstr "ТОП 32 Лучших Дрифт Сэтапа"
+msgstr "ТОП 32 Лучших Дрифт Сетапа"
 
 #: templates/user_detail.html:99
 msgid "Do you have a drift car?"
