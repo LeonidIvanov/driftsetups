@@ -26,12 +26,3 @@ class AppendSlashRedirect(MiddlewareMixin):
             return HttpResponsePermanentRedirect(abs_url)
         # elif '.jpg' in abs_url or '.png' in abs_url or '.jpeg' in abs_url or '.bmp' in abs_url:
         #     pass
-
-
-class EnToRuRedirect(MiddlewareMixin):
-
-    def process_request(self, request):
-        print(request.LANGUAGE_CODE)
-        if request.LANGUAGE_CODE == 'ru':
-            abs_url = request.get_full_path()
-            return HttpResponsePermanentRedirect('https://driftsetups.com/ru{}'.format(abs_url))

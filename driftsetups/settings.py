@@ -62,7 +62,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'driftsetups.middleware.WWWToNonWWWWRedirect',
     'driftsetups.middleware.AppendSlashRedirect',
-    'driftsetups.middleware.EnToRuRedirect',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
