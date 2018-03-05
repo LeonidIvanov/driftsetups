@@ -76,10 +76,10 @@ button {
 }
 .nav-right li {
     float: left;
-    padding: 0 10px;
+    padding: 0 15px;
     transition: transform .2s;
     line-height: 70px;
-    font-size: 15px;
+    font-size: 13px;
 }
 .nav-right li:hover {
     transform: translate(5px) scale(1.2);
