@@ -52,6 +52,7 @@ button {
     float:left;
     margin-left: 20px;
     line-height: 70px;
+    width: calc(40% - 20px);
 }
 .nav-left li {
     float:left;
@@ -70,10 +71,11 @@ button {
     float:right;
     padding: 0px;
     font-size: 15px;
+    width: 60%;
 }
 .nav-right li {
     float: left;
-    padding: 0 20px;
+    padding: 0 15px;
     transition: transform .2s;
     line-height: 70px;
 }
@@ -1216,6 +1218,7 @@ label[for*='id_image_fields-'] {
     }
     .nav-left {
         margin-left: 0;
+        width: calc(100% - 20px);
     }
     .logo {
         margin-left: 20px;
@@ -1296,9 +1299,6 @@ label[for*='id_image_fields-'] {
         float: right;
         width: calc(100% * 0.21);
         right: 50%;
-    }
-    .nav-left {
-        width: calc(100% - 20px);
     }
     .nav-right li {
         padding: 22px 18px;
