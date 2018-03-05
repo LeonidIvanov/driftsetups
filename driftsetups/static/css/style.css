@@ -56,6 +56,7 @@ button {
 }
 .nav-left li {
     float:left;
+    height:70px;
 }
 .logo {
     font-family: Oswald;
@@ -128,6 +129,7 @@ button {
     padding-left: 20px;
     padding-top:0;
     padding-bottom:0;
+    width:calc(100% - 40px);
 }
 .search-container input::-webkit-input-placeholder {color:#fff;}
 .search-container input::-moz-placeholder {color:#fff;}

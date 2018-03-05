@@ -31,6 +31,7 @@ class AppendSlashRedirect(MiddlewareMixin):
 class EnToRuRedirect(MiddlewareMixin):
 
     def process_request(self, request):
+        print(request.LANGUAGE_CODE)
         if request.LANGUAGE_CODE == 'ru':
             abs_url = request.get_full_path()
             return HttpResponsePermanentRedirect('https://driftsetups.com/ru{}'.format(abs_url))
