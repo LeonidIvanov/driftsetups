@@ -24,7 +24,7 @@ class SetupListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SetupListView, self).get_context_data(**kwargs)
-        if self.request.path == '/s/' or re.compile('/s/page/\d+/').match(self.request.path):
+        if self.request.path in ['/s/', '/ru/s/'] or re.compile('/s/page/\d+/').match(self.request.path) or re.compile('/ru/s/page/\d+/').match(self.request.path):
             setups_by_votes = sorted(
                 Setup.objects.all(),
                 key=lambda s: s.get_votes_total(),
