@@ -267,7 +267,7 @@ button {
 .top_setups_by_views .round .rev-limit,
 .top_setups_by_views .round .weight{
     text-shadow: -1px 0px #d34a42, 2px -2px #d34a42, -2px 2px #d34a42, -3px 3px #d34a42, -4px 4px #d34a42,
-    -5px 5px #d34a42, -6px 6px #d34a42, -7px 7px #d34a42, -8px 8px #d34a42
+    -5px 5px #d34a42, -6px 6px #d34a42
 }
 
 .bottom-top-cars {
@@ -403,7 +403,7 @@ button {
     font-style: italic;
     font-weight: bold;
     text-shadow: -1px 0px #d34a42, 2px -2px #d34a42, -2px 2px #d34a42, -3px 3px #d34a42, -4px 4px #d34a42,
-    -5px 5px #d34a42, -6px 6px #d34a42, -7px 7px #d34a42, -8px 8px #d34a42;
+    -5px 5px #d34a42, -6px 6px #d34a42;
 }
 .round .char-title {
     border-top: 3px solid #ffffff2f;
@@ -638,12 +638,13 @@ button {
 }
 .setup-list-item-heading-container .round {
     margin-bottom: 2px;
+    width: calc(100% / 4) !important;
 }
 .setup-list-item-heading-container .round .power,
 .setup-list-item-heading-container .round .torque,
 .setup-list-item-heading-container .round .rev-limit,
 .setup-list-item-heading-container .round .weight {
-    font-size: 25px;
+    font-size: 20px;
 }
 .setup-list-item-heading-container .char-title {
     font-size: 15px;
