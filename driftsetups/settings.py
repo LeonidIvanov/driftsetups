@@ -60,6 +60,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'driftsetups.middleware.WWWToNonWWWWRedirect',
+    'driftsetups.middleware.AppendSlashRedirect',
+    'driftsetups.middleware.EnToRuRedirect',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
