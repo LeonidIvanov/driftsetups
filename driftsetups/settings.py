@@ -131,8 +131,8 @@ USER_FIELDS = ['email']
 
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
-# LOGIN_REDIRECT_URL = 'home'
-# LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '615942492333-1h3erpkpk2goaqlfpmtgu3elaf3tueuv.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '9q1vPqB88TVjrQLVeEckSRbk'
