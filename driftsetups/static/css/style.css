@@ -229,7 +229,9 @@ button {
 .post-header-container {
     padding-top: 70px;
 }
-
+.home-h1{
+    font-size: 1.9em;
+}
 .top-weekly-setups,
 .top_setups_by_views{
     width:50%;
