@@ -60,8 +60,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'driftsetups.middleware.WWWToNonWWWWRedirect',
-    'driftsetups.middleware.AppendSlashRedirect',
+    'driftsetups.middleware.WWWToNonWWWWRedirectMiddleware',
+    'driftsetups.middleware.AppendSlashRedirectMiddleware',
+    'driftsetups.middleware.EnToRuRedirectMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
