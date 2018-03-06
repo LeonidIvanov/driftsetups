@@ -164,12 +164,15 @@ class SetupCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         context = self.get_context_data()
 
-        if self.request.POST.get('car_sub_model'):
+        if self.request.POST.get('car_sub_model') and self.request.POST.get('car_sub_model') is not '':
             car_sub_model_id = int(self.request.POST.get('car_sub_model'))
             form.instance.car = CarSubModel.objects.get(id=car_sub_model_id)
-        else:
+        elif self.request.POST.get('car_model') and self.request.POST.get('car_model') is not '':
             car_model_id = int(self.request.POST.get('car_model'))
             form.instance.car = CarModel.objects.get(id=car_model_id)
+        else:
+            car_brand_id = int(self.request.POST.get('car_brand'))
+            form.instance.car = CarBrand.objects.get(id=car_brand_id)
         form.instance.creator = self.request.user
         self.object = form.save()
 
@@ -348,12 +351,15 @@ class SetupUpdateView(LoginRequiredMixin, UpdateView):
     def form_valid(self, form):
         context = self.get_context_data()
 
-        if self.request.POST.get('car_sub_model'):
+        if self.request.POST.get('car_sub_model') and self.request.POST.get('car_sub_model') is not '':
             car_sub_model_id = int(self.request.POST.get('car_sub_model'))
             form.instance.car = CarSubModel.objects.get(id=car_sub_model_id)
-        else:
+        elif self.request.POST.get('car_model') and self.request.POST.get('car_model') is not '':
             car_model_id = int(self.request.POST.get('car_model'))
             form.instance.car = CarModel.objects.get(id=car_model_id)
+        else:
+            car_brand_id = int(self.request.POST.get('car_brand'))
+            form.instance.car = CarBrand.objects.get(id=car_brand_id)
         form.instance.creator = self.request.user
         self.object = form.save()
 
