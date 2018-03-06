@@ -306,7 +306,7 @@ msgstr ""
 
 #: templates/home.html:7
 msgid "Share your driftcar building experience with world drift community!"
-msgstr "Создай сетап своей тачки, поделись своим опытом постройки со всем миром!"
+msgstr "Создай сетап своей тачки, поделись опытом постройки со всем миром!"
 
 #: templates/home.html:8
 msgid "TOP 4 Drift Car Setups"
