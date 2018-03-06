@@ -31,6 +31,7 @@ class AppendSlashRedirectMiddleware(MiddlewareMixin):
 class EnToRuRedirectMiddleware(MiddlewareMixin):
 
     def process_request(self, request):
-        if 'ru' in request.META.get('HTTP_ACCEPT_LANGUAGE') and '/ru/' not in request.build_absolute_uri():
-            abs_url = request.get_full_path()
-            return HttpResponsePermanentRedirect('https://driftsetups.com/ru{}'.format(abs_url))
+        if request.META.get('HTTP_ACCEPT_LANGUAGE'):
+            if 'ru' in request.META.get('HTTP_ACCEPT_LANGUAGE') and '/ru/' not in request.build_absolute_uri():
+                abs_url = request.get_full_path()
+                return HttpResponsePermanentRedirect('https://driftsetups.com/ru{}'.format(abs_url))
