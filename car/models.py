@@ -34,7 +34,7 @@ class CarImage(models.Model):
 
 class CarBrand(models.Model):
     name = models.CharField(max_length=50)
-    slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
+    slug = AutoSlugField(populate_from='name', unique=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -73,7 +73,7 @@ class CarModel(models.Model):
     stock_engines = models.ManyToManyField(Engine, blank=True)
     setups = GenericRelation(Setup, related_query_name='car_model_setup')
     views = models.PositiveIntegerField(default=0)
-    slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
+    slug = AutoSlugField(populate_from='name', unique=True)
     images = GenericRelation(CarImage, related_query_name='car_model_images')
     updated_at = models.DateTimeField(auto_now_add=True)
 
@@ -122,7 +122,7 @@ class CarSubModel(models.Model):
     stock_engines = models.ManyToManyField(Engine, blank=True)
     setups = GenericRelation(Setup, related_query_name='sub_model_setup')
     views = models.PositiveIntegerField(default=0)
-    slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
+    slug = AutoSlugField(populate_from='name', unique=True)
     images = GenericRelation(CarImage, related_query_name='sub_model_images')
     updated_at = models.DateTimeField(auto_now_add=True)
 

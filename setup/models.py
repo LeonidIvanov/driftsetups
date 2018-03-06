@@ -28,7 +28,7 @@ class Setup(models.Model):
     car_year = models.IntegerField(default=None, null=True, blank=True, verbose_name=_('Car Year'))
     views = models.PositiveIntegerField(default=0)
     timestamp = models.DateTimeField(auto_now_add=True)
-    slug = AutoSlugField(populate_from='name', null=True, default=None, unique=True)
+    slug = AutoSlugField(populate_from='name', unique=True)
 
     def get_main_image(self):
         try:
