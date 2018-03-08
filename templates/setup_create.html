@@ -150,7 +150,7 @@
                 <div id="add-interior_fields" class="setup-create-form-add-field">{% trans '+ Add field' %}</div>
             </div>
             <div class="setup-create-form-half">
-                <button class="setup-create-form-top-button" type="submit">{% trans 'Save Setup' %}</button>
+                <button class="setup-create-form-top-button" type="submit" onclick="ga('send', 'event', 'Setup_Create_Top_Button', 'Click')">{% trans 'Save Setup' %}</button>
                 <div class="images-previews">
                     <div class="setup-create-form-field-label">{% trans 'Main Photo' %}</div>
                 </div>
@@ -164,7 +164,7 @@
                     <div class="setup-create-form-add-image-container-text">{% trans '+ Add photo' %}</div>
                 </div>
             </div>
-            <button class="setup-create-form-bottom-button" type="submit">{% trans 'Save Setup' %}</button>
+            <button class="setup-create-form-bottom-button" type="submit" onclick="ga('send', 'event', 'Setup_Create_Bottom_Button', 'Click')">{% trans 'Save Setup' %}</button>
         </form>
     </div>
 </div>
