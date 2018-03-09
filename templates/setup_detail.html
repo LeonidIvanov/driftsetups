@@ -11,7 +11,7 @@
     {% if setup.get_main_image %}
         <meta property="og:image" content="{{ setup.get_main_image }}" />
     {% else %}
-        <meta property="og:image" content="/no-photos-thumbnail.png"/>
+        <meta property="og:image" content="https://driftsetups.s3.amazonaws.com/media/no-photos-thumbnail.png"/>
     {% endif %}
     <meta id="_mainEntityOfPage" itemprop="mainEntityOfPage" property="og:url" content="https://driftsetups.com{{ setup.get_absolute_url }}" />
     <meta property="og:site_name" content="DriftSetups" />
@@ -37,7 +37,7 @@
                 <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="{{ image }}" alt="{{ setup }} #{{ image.order }}">
             {% endfor %}
         {% else %}
-            <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="/no-photos-thumbnail.png" alt="No Photo">
+            <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="https://driftsetups.s3.amazonaws.com/media/no-photos-thumbnail.png" alt="No Photo">
         {% endif %}
         <div class="setup-characteristics-section">
                 <div class="round">
