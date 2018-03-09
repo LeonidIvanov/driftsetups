@@ -314,7 +314,7 @@ button {
 .setup-main-image {
     width: 100%;
     position: absolute;
-    top: -50%;
+    top: calc(calc(100% - 600px)/2);
 }
 .mySlides {
     display: none;
