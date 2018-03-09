@@ -1268,6 +1268,12 @@ label[for*='id_image_fields-'] {
         padding: 20px;
         overflow: hidden;
     }
+    .markup-container {
+        top: auto;
+    }
+    .prev-setup-main-image, .next-setup-main-image {
+        top: 100px;
+    }
     .patreon-container {
         margin: auto;
         width: calc(100% - 40px);
