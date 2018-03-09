@@ -1067,7 +1067,7 @@ label[for*='id_image_fields-'] {
 .prev-setup-main-image, .next-setup-main-image {
   cursor: pointer;
   position: absolute;
-  top: calc(50% - 25px);
+  top: 255px;
   width: auto;
   padding: 16px;
   margin-top: -22px;
