@@ -20,7 +20,11 @@
                 <li class="setup-list-item">
                     <div class="setup-list-item-image-container">
                         <a href="{% url 'setup_detail' setup.slug %}">
-                            <img width="300px" src="{{ setup.get_main_image }}" alt="{{ setup }}">
+                            {% if setup.get_main_image %}
+                                <img width="300px" src="{{ setup.get_main_image }}" alt="{{ setup }}">
+                            {% else %}
+                                <img width="300px" src="/no-photos-thumbnail.png" alt="{{ setup }}">
+                            {% endif %}
                         </a>
                     </div>
 

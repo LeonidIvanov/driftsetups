@@ -8,7 +8,11 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="{{ setup }} - DriftSetups"/>
     <meta property="og:description" content="{{ setup.description|slice:':300' }}..."/>
-    <meta property="og:image" content="{{ setup.get_main_image }}" />
+    {% if setup.get_main_image %}
+        <meta property="og:image" content="{{ setup.get_main_image }}" />
+    {% else %}
+        <meta property="og:image" content="/no-photos-thumbnail.png"/>
+    {% endif %}
     <meta id="_mainEntityOfPage" itemprop="mainEntityOfPage" property="og:url" content="https://driftsetups.com{{ setup.get_absolute_url }}" />
     <meta property="og:site_name" content="DriftSetups" />
     {% for tag in setup.car.split_tags %}
@@ -28,9 +32,13 @@
         <a class="next-setup-main-image" onclick="plusSlides(1)">&#10095;</a>
 <div itemscope itemtype="http://schema.org/Article" class="markup-container" itemref="_publisher _dateModified _mainEntityOfPage">
     <div class="setup-header-section">
-        {% for image in setup.get_all_images %}
-            <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="{{ image }}" alt="{{ setup }} #{{ image.order }}">
-        {% endfor %}
+        {% if setup.get_all_images %}
+            {% for image in setup.get_all_images %}
+                <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="{{ image }}" alt="{{ setup }} #{{ image.order }}">
+            {% endfor %}
+        {% else %}
+            <img itemprop="image" class="setup-main-image mySlides" id="sliderImage" src="/no-photos-thumbnail.png" alt="No Photo">
+        {% endif %}
         <div class="setup-characteristics-section">
                 <div class="round">
                     {% if setup.power %}
