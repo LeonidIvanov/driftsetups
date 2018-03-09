@@ -77,7 +77,7 @@ class Setup(models.Model):
         votes_up = self.get_up_votes_total()
         if votes_total != 0 and votes_up != 0:
             percentage = votes_up / votes_total * 100
-            return percentage
+            return int(percentage)
         else:
             return 0
 
