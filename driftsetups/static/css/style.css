@@ -226,6 +226,10 @@ button {
     padding: 20px;
     overflow: hidden;
 }
+.markup-container {
+    position: relative;
+    top: 70px;
+}
 .post-header-container {
     padding-top: 70px;
 }
@@ -310,7 +314,7 @@ button {
 .setup-main-image {
     width: 100%;
     position: absolute;
-    bottom: -25%;
+    top: -50%;
 }
 .mySlides {
     display: none;
