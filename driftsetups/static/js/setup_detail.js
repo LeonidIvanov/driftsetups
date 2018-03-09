@@ -71,7 +71,6 @@ $(document).ready(function(){
     });
 
     var setupMainImageHeight = $('.setup-main-image').height();
-    console.log(setupMainImageHeight);
     if (setupMainImageHeight > 600) {
         $('.setup-main-image').css('top', (-(setupMainImageHeight - 600)/2))
     };
