@@ -69,6 +69,12 @@ $(document).ready(function(){
             voted_down = 1;
         }
     });
+
+    var setupMainImageHeight = $('.setup-main-image').height();
+    console.log(setupMainImageHeight);
+    if (setupMainImageHeight > 600) {
+        $('.setup-main-image').css('top', (-(setupMainImageHeight - 600)/2))
+    };
 });
 
 var slideIndex = 1;
@@ -109,3 +115,4 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
     modal.style.display = "none";
 };
+
