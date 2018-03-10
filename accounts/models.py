@@ -49,7 +49,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         send_mail(subject, message, from_email, [self.email], **kwargs)
 
     def get_avatar(self):
-        return self.avatar.url
+        if self.avatar.url:
+            return self.avatar.url
+        else:
+            return 'https://driftsetups.s3.amazonaws.com/media/no-avatar.png'
 
     def get_absolute_url(self):
         return reverse('user', args=[str(self.id)])
