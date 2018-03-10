@@ -1262,6 +1262,18 @@ label[for*='id_image_fields-'] {
     .nav-right .small-avatar {
         margin: auto !important;
     }
+    .post-header-container {
+        padding: 0 20px 20px 20px !important;
+    }
+    .home-banner-container img{
+        width: calc(100% + 20px);
+    }
+    .home-h1 {
+        font-size: 24px;
+        font-weight: 300;
+        width: calc(100% - 20px);
+    }
+
     .setup-header-section {
         height: auto;
         position: initial;
