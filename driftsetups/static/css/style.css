@@ -149,6 +149,11 @@ button {
     color: #cecece;
     transform: none !important;
 }
+.home-banner-container {
+    position: relative;
+    margin-left: -20px;
+}
+
 .no-setups {
     margin: 40px 0px;
 }
@@ -234,7 +239,12 @@ button {
     padding-top: 70px;
 }
 .home-h1{
-    font-size: 1.9em;
+    position:  absolute;
+    font-size: 50px;
+    text-align: right;
+    padding:  20px;
+    width: calc(100% - 40px);
+    color: #fff;
 }
 .top-weekly-setups,
 .top_setups_by_views{
