@@ -683,6 +683,9 @@ button {
     color: #000;
     font-size: 18px;
 }
+.href-underline, .setup-description a {
+    border-bottom: 1px solid #d34a42;
+}
 /*End Setup List*/
 
 /*Car List*/

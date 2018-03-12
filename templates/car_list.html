@@ -47,8 +47,8 @@
                             <h2>{{ setup }}</h2>
                         </a>
                         <div>
-                            <a href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
-                            {% trans 'by' %} {{ setup.creator }} {% trans 'updated' %} {{ setup.timestamp|date:"F Y" }}
+                            <a class='href-underline' href="{{ setup.car.get_absolute_url }}">{{ setup.car}}</a>
+                            {% trans 'by' %} <a class='href-underline' href="{% url 'user' setup.creator.id %}">{{ setup.creator }}</a> {% trans 'updated' %} {{ setup.timestamp|date:"F Y" }}
                         </div>
                         <div class="setup-characteristics-section">
                             <div class="round">
