@@ -67,6 +67,7 @@ button {
 }
 .menu-icon {
     display: none;
+    cursor: pointer;
 }
 .nav-right{
     float:right;
@@ -1256,6 +1257,8 @@ label[for*='id_image_fields-'] {
         position: fixed;
         background: #000;
         height: 100%;
+        width: 100%;
+        z-index: 10;
     }
     .nav-right li {
         width: 100%;
