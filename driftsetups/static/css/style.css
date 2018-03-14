@@ -1463,4 +1463,11 @@ label[for*='id_image_fields-'] {
     float: none;
     width: 100%;
     }
+    .popup-login-content, .popup-sign-up-content {
+        left: 0;
+        right: 0;
+        width: calc(100% - 60px);
+        height: 100%;
+        z-index: 11;
+    }
 }
