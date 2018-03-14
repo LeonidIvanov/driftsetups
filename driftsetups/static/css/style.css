@@ -465,6 +465,8 @@ button {
 .setup-h1 {
     margin: 0;
     float:left;
+    overflow: hidden;
+    width: 100%;
 }
 .setup-edit-button {
     margin: 0;
