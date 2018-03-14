@@ -1470,4 +1470,15 @@ label[for*='id_image_fields-'] {
         height: 100%;
         z-index: 11;
     }
+    .dropbtn {
+        display: none !important;
+    }
+    .dropdown-content {
+        display: block !important;
+        width: 100%;
+        text-align: center;
+    }
+    .dropdown-content a {
+        text-align: center !important;
+    }
 }
