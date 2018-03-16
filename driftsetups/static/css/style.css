@@ -1472,8 +1472,8 @@ label[for*='id_image_fields-'] {
         z-index: 11;
     }
     .login-container {
-        width: 100%;
-        top: 35px;
+        width: 100% !important;
+        top: 35px !important;
     }
     .dropbtn {
         display: none !important;
