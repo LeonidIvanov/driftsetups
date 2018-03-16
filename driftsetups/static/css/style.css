@@ -1471,6 +1471,9 @@ label[for*='id_image_fields-'] {
         height: 100%;
         z-index: 11;
     }
+    .login-container {
+        width: 100%;
+    }
     .dropbtn {
         display: none !important;
     }
