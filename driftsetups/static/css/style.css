@@ -79,7 +79,7 @@ button {
     float: left;
     padding: 0 15px;
     transition: transform .2s;
-    line-height: 50px;
+    line-height: 70px;
     font-size: 13px;
 }
 .nav-right li:hover {
@@ -1266,6 +1266,7 @@ label[for*='id_image_fields-'] {
         width: 100%;
         text-align: center;
         padding: 0 !important;
+        line-height: 50px !important;
     }
     .nav-right .small-avatar {
         margin: auto !important;
