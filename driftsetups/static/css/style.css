@@ -1473,6 +1473,7 @@ label[for*='id_image_fields-'] {
     }
     .login-container {
         width: 100%;
+        top: 35px;
     }
     .dropbtn {
         display: none !important;
