@@ -312,17 +312,11 @@ msgstr "Лучшие Дрифт Сетапы со всего мира"
 
 #: templates/home.html:4
 msgid "Share your driftcar building experience and help others to build one!"
-msgstr ""
-"Поделись своим опытом постройки тачки для дрифта! Советуй и проси совета у "
-"сообщества DriftSetups."
+msgstr "Поделись своим опытом постройки тачки для дрифта! Советуй и проси совета у сообщества DriftSetups."
 
 #: templates/home.html:9
-#, fuzzy
-#| msgid "Share your driftcar building experience with world drift community!"
-msgid ""
-"Create your drift car setup!<br>Share your expirience<br>with worldwide "
-"community"
-msgstr "Создай сетап своей тачки</br>Поделись опытом постройки</br>со всем миром!"
+msgid "Create your drift car setup!<br>Share your expirience<br>with worldwide community"
+msgstr "Создай сетап своей тачки!</br>Поделись опытом постройки</br>со всем миром"
 
 #: templates/home.html:13
 msgid "TOP 4 Drift Car Setups"
