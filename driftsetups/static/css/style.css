@@ -1064,6 +1064,13 @@ label[for*='id_image_fields-'] {
 }
 .copyright {
     font-family: Oswald;
+    width:50%;
+    float:left;
+}
+.footer-social-buttons {
+    width: 50%;
+    float: right;
+    text-align: right;
 }
 .sticky {
     position: fixed;
