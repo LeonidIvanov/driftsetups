@@ -1072,6 +1072,16 @@ label[for*='id_image_fields-'] {
     float: right;
     text-align: right;
 }
+.footer-social-buttons i {
+    font-size: 24px;
+}
+.footer-privacy {
+    overflow: hidden;
+    width: 100%;
+}
+.footer-privacy a {
+    font-size: 14px;
+}
 .sticky {
     position: fixed;
     top: 200px;
