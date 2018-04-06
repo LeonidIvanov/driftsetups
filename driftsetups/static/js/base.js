@@ -58,8 +58,6 @@ $(document).on('click', '.menu-icon', function(e){
 
 $(document).ready(function(){
 
-    socialShare();
-
     $('.popup-close').click(function() {
             $('.popup-background').css('display', 'none');
             $('.popup-login-content').css('display', 'none');
@@ -96,5 +94,5 @@ $(document).ready(function(){
     // $('.patreon-close').click(function() {
     //     $('header').animate({top: '-50px'});
     // });
-
+    socialShare();
 });
