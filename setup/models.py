@@ -104,8 +104,10 @@ class SetupImage(models.Model):
         ordering = ['order']
 
     def __str__(self):
-        return self.image.url
-
+        try:
+            return self.image.url
+        except ValueError:
+            return 'https://driftsetups.s3.amazonaws.com/media/no-photos-thumbnail.png'
 
 class SetupField(models.Model):
     CATEGORIES = (
