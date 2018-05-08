@@ -102,3 +102,7 @@ media/
 /driftsetups/local_urls.py
 */migrations/
 !/locale/ru/LC_MESSAGES/django.mo
+/engines_scraper.py
+/engines.txt
+/driftsetups.dump
+/cleared_engines.txt
