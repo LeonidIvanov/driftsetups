@@ -109,6 +109,7 @@ class SetupImage(models.Model):
         except ValueError:
             return 'https://driftsetups.s3.amazonaws.com/media/no-photos-thumbnail.png'
 
+
 class SetupField(models.Model):
     CATEGORIES = (
         (0, _('Engine')),
